@@ -13,19 +13,17 @@ Mijn portfolio moet een singlepage met verschillende "webpagina's".
 ## Eisen voor portfolio
 
 ### Functionaliteiten
-- [ ] Homepagina
-- [ ] Projecten pagina
-- [ ] Detailpagina van de projecten met de link naar de prototypes
-- [ ] Overzicht van al mijn repositories
-- [ ] Details van de repository zoals aantal commits, issues, link naar readme, link naar live demo en de gebruikte programeer talen.
+- [x] Fetch data uit Github API
+- [x] Overzicht van al mijn repositories
+- [x] Details van de repository zoals  link naar readme, link naar live demo en de gebruikte programeer talen.
 - [ ] Thumbnail van de live demos
 - [ ] Progressive disclosure om meer informatie zichtbaar laten maken als je op mijn gebruikersnaam of button klikt 
 
 ### Portfolio inhoud
-- [ ] Mijn github gebruikersnaam
-- [ ] Mijn github profiel foto
-- [ ] Korte beschrijving over de soort ontwerper die ik ben 
-- [ ] Mijn repositories
+- [x] Mijn github gebruikersnaam
+- [x] Mijn github profiel foto
+- [x] Korte beschrijving over de soort ontwerper die ik ben 
+- [x] Mijn repositories
 - [ ] Programeertalen die ik ken
 
 ### CSS Technieken
