@@ -84,11 +84,11 @@ function displayUserData(user) {
     
           <article>
                 <img src="${user.avatar_url}" alt="gebruikers foto">
-                <section>
+                <div>
                 <p>${user.login}</p>
                 <p>${user.name}</p>
                 <p>${user.bio}</p>
-                </section>
+                </div>
                 
             </article>
             <a href="${user.html_url}">Github Account</a>
