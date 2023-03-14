@@ -3,33 +3,36 @@ const username = "K3A101"
 const accesToken = "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"
 const repoList = document.getElementById('repository-list');
 
-fetch(`${API_URL}/users/${username}/repos`, {
-    headers: {
-        Authorization: `token${accesToken}`
-    }
-})
-.then((response) => response.json())
-.then((repos)=> {
-    repos.forEach(repo => {
-        const repoName = repo.name;
-        const repoDescription = repo.description;
-        const githubPages = repo.homepage; 
-        const starredRepo = repo.stargazers_count;
-        const REPO_URL = `${API_URL}/repos/${username}/${repoName}/commits`
-        if (starredRepo != 0) {
+fetchRepoData()
+
+function fetchRepoData() {
+    fetch(`${API_URL}/users/${username}/repos`, {
+        headers: {
+            Authorization: `token${accesToken}`
+        }
+    })
+        .then((response) => response.json())
+        .then((repos) => {
+            repos.forEach(repo => {
+                const repoName = repo.name;
+                const repoDescription = repo.description;
+                const githubPages = repo.homepage;
+                const starredRepo = repo.stargazers_count;
+                const REPO_URL = `${API_URL}/repos/${username}/${repoName}/commits`
+                if (starredRepo != 0) {
 
 
-            fetch(REPO_URL, {
-                headers: {
-                    Authorization: `token${accesToken}`
-                }
-            })
-                .then((response) => response.json())
-                .then((commits) => {
-                    const commitCount = commits.length
+                    fetch(REPO_URL, {
+                        headers: {
+                            Authorization: `token${accesToken}`
+                        }
+                    })
+                        .then((response) => response.json())
+                        .then((commits) => {
+                            const commitCount = commits.length
 
 
-                    let repoElement = `
+                            let repoElement = `
              <article>
                 <h1>${repoName}</h1>
                 <p>${repoDescription}</p>
@@ -41,14 +44,22 @@ fetch(`${API_URL}/users/${username}/repos`, {
                  </ul>           
              </article>`;
 
-                    repoList.insertAdjacentHTML('beforeend', repoElement);
+                            repoList.insertAdjacentHTML('beforeend', repoElement);
 
-                })
-                .catch((error) => { console.error(error) });
-        }});
-    
+                        })
+                        .catch((error) => { console.error(error) });
+                }
+            });
+
         })
-    .catch((error) => { console.error(error) });
+        .catch((error) => { console.error(error) });
+}
+
+
+function displayRepoData() {
+    
+}
+
 
 // console.log('hello')
 // const REPO_URL = "https://api.github.com/users/K3A101/repos";
