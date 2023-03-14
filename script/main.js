@@ -31,6 +31,7 @@ function displayRepositories(data) {
            <article>
            <h1>${item.name}</h1>
            <p>${item.description}</p>
+            <iframe src="${item.homepage}" frameborder="0" width="100%" height="400"></iframe>
             <ul>
                 <li><a href="#">README</a></li>
                 <li>Commits</li>
@@ -38,6 +39,9 @@ function displayRepositories(data) {
                 <li><a href="${item.homepage}">Demo</a></li>
                 </ul>
            </article>`
+
+
+
                 ;
 
 
@@ -66,7 +70,6 @@ fetch(USER_API)
 
 function displayUserData(user) {
     let userHTML =``
-   
     userHTML = `
     
           <article>
@@ -75,16 +78,13 @@ function displayUserData(user) {
                 <p>${user.name}</p>
                 <p>${user.bio}</p>
             </article>
-
             <a href="${user.html_url}">Github Account</a>
-
             <figure>
                 <img src="#" alt="HTML banner">
                 <img src="#" alt="CSS banner">
                 <img src="#" alt="Js Banner">
             </figure>
     `;
-
     userSection.insertAdjacentHTML('beforeend', userHTML)
    
 }
