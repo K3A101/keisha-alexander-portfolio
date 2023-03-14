@@ -1,14 +1,14 @@
 const API_URL = "https://api.github.com"
 const username = "K3A101"
-const accesToken = "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"
+const accessToken = "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"
 const repoList = document.getElementById('repository-list');
 
 fetchRepoData()
 
-function fetchRepoData() {
+ function fetchRepoData() {
     fetch(`${API_URL}/users/${username}/repos`, {
         headers: {
-            Authorization: `token${accesToken}`
+            Authorization: `token ${accessToken}`
         }
     })
         .then((response) => response.json())
@@ -18,36 +18,24 @@ function fetchRepoData() {
                 const repoDescription = repo.description;
                 const githubPages = repo.homepage;
                 const starredRepo = repo.stargazers_count;
-                const REPO_URL = `${API_URL}/repos/${username}/${repoName}/commits`
+                const programmingLanguage = repo.language;
+              
                 if (starredRepo != 0) {
+                 const REPO_DOCS_URL = `${API_URL}/repos/${username}/${repoName}/readme`
+                            fetch(REPO_DOCS_URL, {
+                                headers: {
+                                    Authorization: `token ${accessToken}`
+                                }
+                            })
+                            .then((response)=> response.json())
+                            .then((readmes) => {
+                                const readmePage = readmes.html_url
+                               let repoElement = displayRepoData(repoName, repoDescription,  githubPages, readmePage, programmingLanguage)
+                               repoList.insertAdjacentHTML('beforeend', repoElement);  
+                            })
+                                .catch((error) => { console.error(error) });                        
 
-
-                    fetch(REPO_URL, {
-                        headers: {
-                            Authorization: `token${accesToken}`
-                        }
-                    })
-                        .then((response) => response.json())
-                        .then((commits) => {
-                            const commitCount = commits.length
-
-
-                            let repoElement = `
-             <article>
-                <h1>${repoName}</h1>
-                <p>${repoDescription}</p>
-                  <ul>
-                    <li><a href="#">README</a></li>
-                    <li>${commitCount}</li>
-                    <li>issue</li>
-                    <li><a href="${githubPages}">Demo</a></li>
-                 </ul>           
-             </article>`;
-
-                            repoList.insertAdjacentHTML('beforeend', repoElement);
-
-                        })
-                        .catch((error) => { console.error(error) });
+                       
                 }
             });
 
@@ -56,9 +44,23 @@ function fetchRepoData() {
 }
 
 
-function displayRepoData() {
+function displayRepoData(repoName, repoDescription,  githubPages, readmePage, programmingLanguage) {
+    return `
+             <article>
+                <h1>${repoName}</h1>
+                <p>${repoDescription}</p>
+                  <ul>
+                    <li>${programmingLanguage}</li>
+                    <li><a href="${githubPages}">Demo</a></li>
+                    <li><a href="${readmePage}">README</a></li>
+                 </ul>           
+             </article>
+             `;
     
 }
+
+
+
 
 
 // console.log('hello')
