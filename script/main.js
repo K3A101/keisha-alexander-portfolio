@@ -1,9 +1,9 @@
 const API_URL = "https://api.github.com"
 const username = "K3A101"
-const accesToken = "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"
+const accesToken = "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"
 const repoList = document.getElementById('repository-list');
 
-fetch(`${API_URL}/user/${username}/repos`, {
+fetch(`${API_URL}/users/${username}/repos`, {
     headers: {
         Authorization: `token${accesToken}`
     }
@@ -13,23 +13,26 @@ fetch(`${API_URL}/user/${username}/repos`, {
     repos.forEach(repo => {
         const repoName = repo.name;
         const repoDescription = repo.description;
-        const githubPages = repo.homepage;
-        const REPO_URL = `${API_URL}/repos/${username}/commits`
+        const githubPages = repo.homepage; 
+        const starredRepo = repo.stargazers_count;
+        const REPO_URL = `${API_URL}/repos/${username}/${repoName}/commits`
+        if (starredRepo != 0) {
 
-        fetch(REPO_URL, {
-            headers: {
-                Authorization: `token${accesToken}`
-            }
-        })
-        .then((response) => response.json())
-        .then((commits)=>{
-            const commitCount = commits.length
-            
-            const repoElement = `
+
+            fetch(REPO_URL, {
+                headers: {
+                    Authorization: `token${accesToken}`
+                }
+            })
+                .then((response) => response.json())
+                .then((commits) => {
+                    const commitCount = commits.length
+
+
+                    let repoElement = `
              <article>
                 <h1>${repoName}</h1>
                 <p>${repoDescription}</p>
-                <iframe src="${githubPages}" frameborder="0" width="100%" height="400"></iframe>
                   <ul>
                     <li><a href="#">README</a></li>
                     <li>${commitCount}</li>
@@ -38,12 +41,13 @@ fetch(`${API_URL}/user/${username}/repos`, {
                  </ul>           
              </article>`;
 
-             repoList.insertAdjacentHTML('beforeend', repoElement);           
-        })
-            .catch((error) => {console.error(error) });
-    });
+                    repoList.insertAdjacentHTML('beforeend', repoElement);
+
+                })
+                .catch((error) => { console.error(error) });
+        }});
     
-})
+        })
     .catch((error) => { console.error(error) });
 
 // console.log('hello')
