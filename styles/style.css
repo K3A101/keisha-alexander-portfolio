@@ -21,23 +21,73 @@
 
 body {
     font-family: var(--algemene-tekst);
+    color: var(--donker-blauw);
+    background-color: var(--grijs);
 }
 
-main  input {
-  display:none;
+h1 {
+    font-family: var(--algemene-tekst);
 }
 
-main  label {
-    background-color: var(--paars);
+header h1 {
+    font-size: clamp(2em, 10vw, 5em);
+    text-align: center;
+}
+
+
+/*******************/
+/* USER COMNTAINER */
+/*******************/
+main {
+    display: grid;
+    place-items: center;
+}
+
+main input {
+    display: none;
+}
+
+main label {
+    background-color: var(--roze);
     color: var(--grijs);
-    /* padding: 1em; */
+    padding: .5em 1.5em;
 }
 
 section:nth-of-type(1) {
+    padding: 3em;
+    width: 100%;
     display: none;
+    background-color: var(--roze);
+}
+
+section:nth-of-type(1) article {
+    display: flex;
+    flex-direction: column;
+    /* width: 80%;
+  margin: 0 auto; */
+    align-items: center;
+}
+
+section:nth-of-type(1) article>img {
+    width: 100%;
+    border-radius: 1em;
 }
 
 body:has(#user-data:checked) #user {
     display: block;
 }
 
+@media (min-width: 30em) {
+    section:nth-of-type(1) article {
+
+        flex-direction: row;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    section:nth-of-type(1) article>img {
+        width: 30%;
+        border-radius: 1em;
+    }
+}
