@@ -241,8 +241,7 @@ function displayUserData(user) {
 
 ---
 
+## Bronnen
 
-
-1. render data
 
 
