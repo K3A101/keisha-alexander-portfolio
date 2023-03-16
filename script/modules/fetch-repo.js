@@ -25,7 +25,6 @@ export function fetchRepoData() {
                         })
                         .catch((error) => { console.error(error) });
 
-
                 }
             });
 

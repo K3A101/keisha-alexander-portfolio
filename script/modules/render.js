@@ -47,15 +47,21 @@ export function languageColorCode() {
     const language = document.querySelectorAll('article ul > li:nth-of-type(1)');
 
     language.forEach((lang) => {
-        //   If de programeertaal is css dan voegt deze class toe
+        //   Ik pak de inhoud vanlanguage variabele
         switch (lang.textContent) {
+            // if(lang === "CSS")
             case 'CSS':
                 console.log(lang);
+                // voegt een class .blue toe
                 lang.classList.add('blue')
                 break;
+
+                 // if(lang === "HTML")
             case 'HTML':
                 lang.classList.add('red')
                 break;
+                
+                // if(lang === "JavaScript")
             case 'JavaScript':
                 lang.classList.add('yellow')
                 break;
