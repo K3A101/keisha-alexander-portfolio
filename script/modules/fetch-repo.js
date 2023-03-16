@@ -12,7 +12,7 @@ export function fetchRepoData() {
                 const starredRepo = repo.stargazers_count;
                 const programmingLanguage = repo.language;
                 const repoLink = repo.html_url
-                console.log(programmingLanguage)
+                
                 if (starredRepo != 0) {
                     const REPO_DOCS_URL = `${API_URL}/repos/${username}/${repoName}/readme`
                     fetch(REPO_DOCS_URL)
