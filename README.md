@@ -1,6 +1,7 @@
 # Github portfolio
 Mijn portfolio is een onepage single page application. Het bestaat namelijk uit mijn persoonlijke gegevens en mijn projecten. Ik heb mijn portfolio gemaakt met vanilla HTML, CSS en JavaScript. Verder heb ik de Github API gebruikt om het data van mijn Github account te gebruiken als inhoud. De inhoud in mijn portfolio zijn mijn persoonlijke gegevens, mijn gepinde repositories en details van mijn repository. 
 
+![Portfolio poster](./images/portfolio-poster.png)
 
 
 
