@@ -90,8 +90,9 @@ button[type="submit"]:hover::before,
 button[type="submit"]:focus::before,
 button[type="submit"]:active::before {
     -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-} 
+    transform: scaleX(1);
+}
+
 nav ul {
     position: absolute;
     z-index: 1;
@@ -114,6 +115,34 @@ nav ul.show-menu {
 }
 
 
+nav ul li:nth-child(n+2) {
+    font-size: clamp(2em, 2vw, 3em);
+    font-weight: bold;
+    margin: .3em 0;
+
+}
+
+/*Kleur van de tekst glijdt naar rechts naar een ander kleur */
+nav a {
+    background-image: linear-gradient(to right,
+            var(--grijs),
+            var(--grijs) 50%,
+            var(--donker-blauw) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all ease-in-out 0.3s;
+    /* color: var(--donker-blauw); */
+}
+
+nav a:hover {
+    background-position: 0;
+}
 
 /*******************/
 /* USER COMNTAINER */
@@ -189,7 +218,44 @@ section:nth-of-type(1) article div a {
     color: white;
     padding: 1em 1.5em;
     width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+}
 
+/* Shuift naar de rechterkant */
+
+
+/* Link animatie voor de repo */
+section:nth-of-type(1) article div a::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--grijs);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
+}
+
+section:nth-of-type(1) article div a:hover,
+section:nth-of-type(1) article div a:focus,
+section:nth-of-type(1) article div a:active {
+    color: var(--donker-blauw);
+}
+
+section:nth-of-type(1) article div a:hover::before,
+section:nth-of-type(1) article div a:focus::before,
+section:nth-of-type(1) article div a:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 section:nth-of-type(1) article div a img {
@@ -249,7 +315,7 @@ section:nth-of-type(2) article ul li:nth-of-type(n+2) {
 }
 
 
-
+/* Link animatie voor de repo */
 section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
     content: "";
     transition: 0.5s all ease;
