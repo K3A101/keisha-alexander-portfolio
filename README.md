@@ -11,6 +11,10 @@ Mijn portfolio is een onepage single page application. Het bestaat namelijk uit 
 - [Opdracht]()
 - [Eisen voor portfolio]()
 - [Ideegeneratie]()
+- [Github API]()
+- [Fetch data]()
+- [Render data]()
+- [Bronnen]()
 
 
 --- 
