@@ -18,6 +18,7 @@ function fetchRepoData() {
                 const githubPages = repo.homepage;
                 const starredRepo = repo.stargazers_count;
                 const programmingLanguage = repo.language;
+                const repoLink = repo.html_url
                 console.log(programmingLanguage)
                 if (starredRepo != 0) {
                     const REPO_DOCS_URL = `${API_URL}/repos/${username}/${repoName}/readme`
@@ -25,7 +26,7 @@ function fetchRepoData() {
                         .then((response) => response.json())
                         .then((readmes) => {
                             const readmePage = readmes.html_url;
-                            let repoElement = displayRepoData(repoName, repoDescription, githubPages, readmePage, programmingLanguage)
+                            let repoElement = displayRepoData(repoName, repoDescription, githubPages, repoLink, programmingLanguage)
                             languageColorCode(programmingLanguage)
                             repoList.insertAdjacentHTML('beforeend', repoElement);
                         })
@@ -40,7 +41,7 @@ function fetchRepoData() {
 }
 
 
-function displayRepoData(repoName, repoDescription, githubPages, readmePage, programmingLanguage) {
+function displayRepoData(repoName, repoDescription, githubPages, repoLink, programmingLanguage) {
     return `
              <article>
                 <h1>${repoName}</h1>
@@ -48,7 +49,7 @@ function displayRepoData(repoName, repoDescription, githubPages, readmePage, pro
                   <ul>
                     <li>${programmingLanguage}</li>
                     <li><a href="${githubPages}">Demo</a></li>
-                    <li><a href="${readmePage}">README</a></li>
+                    <li><a href="${repoLink}">README</a></li>
                  </ul>           
              </article>
              `;
@@ -117,3 +118,7 @@ function displayUserData(user) {
     userSection.insertAdjacentHTML('beforeend', userHTML)
 
 }
+
+
+
+

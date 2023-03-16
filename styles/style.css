@@ -47,6 +47,8 @@ li {
     list-style: none;
 }
 
+
+
 /*******************/
 /* USER COMNTAINER */
 /*******************/
@@ -55,7 +57,7 @@ main {
     place-items: center;
 }
 
-main > h2 {
+main>h2 {
     justify-self: left;
     margin-left: 1em;
 }
@@ -92,8 +94,8 @@ section:nth-of-type(1) article>img {
 }
 
 section:nth-of-type(1) article div p:nth-child(1) {
-   font-weight: bold; 
-   font-size: clamp(1em, 3vw , 5em);
+    font-weight: bold;
+    font-size: clamp(1em, 3vw, 5em);
 }
 
 body:has(#user-data:checked) #user {
@@ -129,25 +131,119 @@ section:nth-of-type(2) article h1 {
 
 section:nth-of-type(2) article ul {
     display: flex;
-    gap: 1em;
+    gap: .5em;
     position: absolute;
     /* left: 6em; */
     bottom: 2em;
 }
 
+
 section:nth-of-type(2) article ul li:nth-of-type(n+2) {
     --donker-blauw: #2e3553;
     background-color: var(--donker-blauw);
-   
+    position: relative;
     padding: .5em 1.5em;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
 }
+
+/* section:nth-of-type(2) article ul li:nth-of-type(n+2):hover {
+    background-color: var(--paars);
+} */
+
+section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--roze);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out ;
+   -webkit-transition: 0.3s transform ease-out;
+}
+
+section:nth-of-type(2) article ul li:nth-of-type(n+2):hover,
+section:nth-of-type(2) article ul li:nth-of-type(n+2):focus,
+section:nth-of-type(2) article ul li:nth-of-type(n+2):active {
+    color: var(--donker-blauw);
+}
+
+section:nth-of-type(2) article ul li:nth-of-type(n+2):hover:before,
+section:nth-of-type(2) article ul li:nth-of-type(n+2):focus:before,
+section:nth-of-type(2) article ul li:nth-of-type(n+2):active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
 section:nth-of-type(2) article ul a {
-     color: var(--wit);
+    color: var(--wit);
 }
+
+
+
 section:nth-of-type(2) article h1::first-letter {
     text-transform: uppercase;
 }
 
+
+/* Sweep To Right */
+.hvr-sweep-to-right {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-right:hover,
+.hvr-sweep-to-right:focus,
+.hvr-sweep-to-right:active {
+    color: white;
+}
+
+.hvr-sweep-to-right:hover:before,
+.hvr-sweep-to-right:focus:before,
+.hvr-sweep-to-right:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/* bRON: https: //github.com/IanLunn/Hover */
+/* https: //ianlunn.github.io/Hover/ */
 /***********************/
 /* LANGUAGE cOLOR CODE */
 /***********************/
@@ -169,6 +265,9 @@ section:nth-of-type(2) article h1::first-letter {
     background-color: #F9F99F;
 }
 
+
+/* Voor grotere schermen */
+
 @media (min-width: 45em) {
     section:nth-of-type(1) article {
 
@@ -184,12 +283,14 @@ section:nth-of-type(2) article h1::first-letter {
         border-radius: 1em;
     }
 
-        section:nth-of-type(2) {
-            grid-template-columns: 1fr 1fr;
-        }
+    section:nth-of-type(2) {
+        grid-template-columns: 1fr 1fr;
+    }
 
 
-
+    section:nth-of-type(2) article ul {
+        gap: 1em;
+    }
 
 
 }
