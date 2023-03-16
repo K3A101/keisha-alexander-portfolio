@@ -47,18 +47,111 @@ li {
     list-style: none;
 }
 
+/*****************/
+/* NAVIGATIEMENU */
+/*****************/
+button[type="submit"] {
+    font-weight: bold;
+    top: 1em;
+    left: 1em;
+    position: absolute;
+    z-index: 2;
+    border: none;
+    background-color: var(--donker-blauw);
+    color: var(--grijs);
+    padding: .5em 1em;
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+}
+/* kleur schuift naar rechts */
+button[type="submit"]::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: var(--roze);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:focus,
+button[type="submit"]:active {
+    color: var(--donker-blauw);
+}
+
+button[type="submit"]:hover::before,
+button[type="submit"]:focus::before,
+button[type="submit"]:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+nav ul {
+    position: absolute;
+    z-index: 1;
+    padding: 4em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* bottom: 0;
+    left: 0;
+    right: 0; */
+    background-color: var(--roze);
+
+    transform: translateY(-200%);
+    transition: all ease 0.5s;
+}
 
 
+nav ul.show-menu {
+    transform: translateY(0);
+}
+
+
+nav ul li:nth-child(n+2) {
+    font-size: clamp(2em, 2vw, 3em);
+    font-weight: bold;
+    margin: .3em 0;
+
+}
+
+/*Kleur van de tekst glijdt naar rechts naar een ander kleur */
+nav a {
+    background-image: linear-gradient(to right,
+            var(--grijs),
+            var(--grijs) 50%,
+            var(--donker-blauw) 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all ease-in-out 0.3s;
+    /* color: var(--donker-blauw); */
+}
+
+nav a:hover {
+    background-position: 0;
+}
+
+/* Bron voor de effect: https: //css-tricks.com/css-link-hover-effects/ */
 /*******************/
 /* USER COMNTAINER */
 /*******************/
 main {
     display: grid;
     place-items: center;
-   
 }
-
-
 
 main>h2 {
     justify-self: left;
@@ -67,7 +160,6 @@ main>h2 {
 
 main input {
     appearance: none;
-    /* display: none; */
 }
 
 main label {
@@ -77,19 +169,16 @@ main label {
 }
 
 section:nth-of-type(1) {
-   
+
     padding: 3em;
     width: 100%;
-   display: none;
+    display: none;
     background-color: var(--roze);
-   
-   
 }
 
 section:nth-of-type(1) figure {
     margin-top: 1em;
 }
-
 
 section:nth-of-type(1) article {
     display: flex;
@@ -114,24 +203,59 @@ section:nth-of-type(1) article div p:nth-child(2) {
 }
 
 section:nth-of-type(1) article div p:nth-child(3) {
-   margin-bottom: .5em;
+    margin-bottom: .5em;
 }
 
 section:nth-of-type(1) article div a {
     display: inline-block;
-background-color: var(--donker-blauw);
-color: white;
-padding: 1em 1.5em;
-width: fit-content;
-
+    background-color: var(--donker-blauw);
+    color: white;
+    padding: 1em 1.5em;
+    width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
 }
 
-section:nth-of-type(1) article div a  img {
-width: 10%;
+/* Shuift naar de rechterkant */
+/* Link animatie voor de repo */
+section:nth-of-type(1) article div a::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--grijs);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
 }
+
+section:nth-of-type(1) article div a:hover,
+section:nth-of-type(1) article div a:focus,
+section:nth-of-type(1) article div a:active {
+    color: var(--donker-blauw);
+}
+
+section:nth-of-type(1) article div a:hover::before,
+section:nth-of-type(1) article div a:focus::before,
+section:nth-of-type(1) article div a:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+section:nth-of-type(1) article div a img {
+    width: 10%;
+}
+
 body:has(#user-data:checked) #user {
     display: block;
-    
 }
 
 
@@ -182,7 +306,7 @@ section:nth-of-type(2) article ul li:nth-of-type(n+2) {
 }
 
 
-
+/* Link animatie voor de repo */
 section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
     content: "";
     transition: 0.5s all ease;
@@ -197,8 +321,8 @@ section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
     transform-origin: 0 50%;
     /* Transform = transition-property: transform; */
     /* ease-out = transition-timing-function: ease-out */
-    transition: 0.3s transform ease-out ;
-   -webkit-transition: 0.3s transform ease-out;
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
 }
 
 section:nth-of-type(2) article ul li:nth-of-type(n+2):hover,
@@ -207,9 +331,9 @@ section:nth-of-type(2) article ul li:nth-of-type(n+2):active {
     color: var(--donker-blauw);
 }
 
-section:nth-of-type(2) article ul li:nth-of-type(n+2):hover:before,
-section:nth-of-type(2) article ul li:nth-of-type(n+2):focus:before,
-section:nth-of-type(2) article ul li:nth-of-type(n+2):active:before {
+section:nth-of-type(2) article ul li:nth-of-type(n+2):hover::before,
+section:nth-of-type(2) article ul li:nth-of-type(n+2):focus::before,
+section:nth-of-type(2) article ul li:nth-of-type(n+2):active::before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
@@ -275,5 +399,12 @@ section:nth-of-type(2) article h1::first-letter {
         gap: 1em;
     }
 
-
+    /* Een overlay effect bij de navigatiemenu */
+    body nav ul {
+        background-color: transparent;
+        background-image:
+            linear-gradient(180deg,
+                var(--roze) 0 50%,
+                rgba(0, 0, 0, 0.499) 50%);
+    }
 }
