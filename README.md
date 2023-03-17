@@ -6,15 +6,15 @@ Mijn portfolio is een onepage single page application. Het bestaat namelijk uit 
 
 
 ## Inhoud
-- [Concept]()
-- [Het Proces]()
-- [Opdracht]()
-- [Eisen voor portfolio]()
-- [Ideegeneratie]()
-- [Github API]()
-- [Fetch data]()
-- [Render data]()
-- [Bronnen]()
+- [Concept](https://github.com/K3A101/github-portfolio-project-week#github-portfolio)
+- [Het Proces](https://github.com/K3A101/github-portfolio-project-week#het-proces)
+- [Opdracht](https://github.com/K3A101/github-portfolio-project-week#opdracht)
+- [Eisen voor portfolio](https://github.com/K3A101/github-portfolio-project-week#eisen-voor-portfolio)
+- [Ideegeneratie](https://github.com/K3A101/github-portfolio-project-week#ideegeneratie)
+- [Github API](https://github.com/K3A101/github-portfolio-project-week#github-api)
+- [Fetch data](https://github.com/K3A101/github-portfolio-project-week#fetch-data)
+- [Render data](https://github.com/K3A101/github-portfolio-project-week#fetch-data)
+- [Bronnen](https://github.com/K3A101/github-portfolio-project-week#bronnen)
 
 
 --- 
@@ -30,21 +30,22 @@ In de project week  ga ik de kennis van CSS to the rescue  en Web App from scrat
 - [ ] Thumbnail van de live demos
 - [x] Progressive disclosure om meer informatie zichtbaar laten maken als je op mijn gebruikersnaam of button klikt 
 - [ ] Loading state
-- [ ] Geanimeerde Navigatie menu met haschange event
-- [ ] 
+- [x] Geanimeerde Navigatie menu 
+- [ ] Navigatiemenu met haschange event
 
 ### Portfolio inhoud
 - [x] Mijn github gebruikersnaam
 - [x] Mijn github profiel foto
 - [x] Korte beschrijving over de soort ontwerper die ik ben 
 - [x] Mijn repositories
-- [ ] Programeertalen die ik ken
+- [x] Programeertalen die ik ken
 - [ ] Afbeelding toevoegen bij de Repository
 
 ### CSS Technieken
 - [ ] Scroll-snap
 - [x] has() selector
 - [ ] 3D Transform animatie
+- [x] Gradients
 - [x] Transform-property
 
 ---
@@ -246,6 +247,9 @@ function displayUserData(user) {
 ---
 
 ## Bronnen
-
-
-
+- GitHub REST API documentation - GitHub Docs. (2001, 10 maart). GitHub Docs. https://docs.github.com/en/rest
+- Josh Rivera. (2020, 19 juni). How to Automate Your Portfolio With the GitHub API! [Video]. YouTube. https://www.youtube.com/watch?v=9PiKeByjOVU
+- Hover.css - A collection of CSS3 powered hover effects. (z.d.). Hover.css. https://ianlunn.github.io/Hover/
+- Patel, H. (2022, 22 september). 6 Creative Ideas for CSS Link Hover Effects | CSS-Tricks. CSS-Tricks. https://css-tricks.com/css-link-hover-effects/#aa-the-right-to-left-color-swap-link-hover-effect
+- switch - JavaScript | MDN. (2023, 21 februari). https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch
+- transition-property - CSS: Cascading Style Sheets | MDN. (2023, 21 februari). https://developer.mozilla.org/en-US/docs/Web/CSS/transition-property
