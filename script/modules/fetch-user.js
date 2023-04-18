@@ -5,7 +5,7 @@ export function fetchUserData() {
     fetch(`${API_URL}/users/${username}`)
         .then((response) => response.json())
         .then((user) => {
-            console.log(user);
+            
             displayUserData(user)
         })
         .catch((error) => {

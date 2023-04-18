@@ -51,7 +51,7 @@ export function languageColorCode() {
         switch (lang.textContent) {
             // if(lang === "CSS")
             case 'CSS':
-                console.log(lang);
+               
                 // voegt een class .blue toe
                 lang.classList.add('blue')
                 break;
