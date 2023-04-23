@@ -5,55 +5,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="./styles/style.css">
-<link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
-<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Portfolio</title>
 </head>
 
 
 
-<body>
-<header>
-    <h1>Portfolio</h1> 
-   <button type="submit">Menu</button>
-    <nav> 
+<body id="home-page">
+    <header>
+        <h1>Portfolio</h1>
+        <button type="submit">Menu</button>
+        <nav>
+
+            <ul>
+                <li>Navigatie</li>
+                <li><a href="./index.html">Home</a></li>
         
-        <ul>
-            <li>Navigatie</li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="#repository-list">Projecten</a></li>
-            <li><a href="#user">Over Mij</a></li>
-            <li><a href="./project-github.html">Github projecten</a></li>
-            <li><a href="https://k3a101.github.io/stress-relief-quotes/visitekaartje/">Visitekaart</a></li>
-        </ul>
-    </nav>
-   
+                <li><a href="#">Over Mij</a></li>
+                <li><a href="./project-github.html">Github projecten</a></li>
+                <li><a href="https://k3a101.github.io/stress-relief-quotes/visitekaartje/">Visitekaart</a></li>
+            </ul>
+        </nav>
 
-</header>
-   
-    <main id="router-view" >  
-         <input type="checkbox" name="show-info" id="user-data">
-         <label for="user-data">About me</label>
-         
+
+    </header>
+
+    <main id="router-view">
+        <input type="checkbox" name="show-info" id="user-data">
+        <label for="user-data">Over Mij</label>
+
         <section id="user">
-         
-          <!-- Gegevens van mijn github profiel -->
+
+            <!-- Gegevens van mijn github profiel -->
+        </section>
+        <!-- Section 2 -->
+        <h2>Projecten </h2>
+
+        <section>
+
+            <!-- recente projecten -->
+            <article class="thumbnail">
+    
+
+                <img src="./images/schets1.png" alt="thumbnail">
+                <a href="#">
+                    <div class="position-text">
+
+                        <p>Design quotes is een single page applicatie voor studenten die opzoek zijn naar inspirerende
+                            design citaten om in hun werk te
+                            gebruiken.</p>
+                    </div>
+                    <h3>Design quotes for Students</h3>
+                </a>
+            </article>
+            <article class="thumbnail">
+
+                <img src="./images/schets1.png" alt="thumbnail">
+                <a href="#">
+                    <div class="position-text">
+                        <p>
+                        Mijn prototype is een aantrekkelijk tijdlijn van het klassieke karakter Mario. De Manier hoe ik
+                        de tijdlijn had
+                        gevisualiseerd is door de verschillende versies van Mario te laten zien. </p>
+                    </div>
+                    <h3>Super Mario Tijdlijn</h3>
+                </a>
+            </article>
+            <article class="thumbnail">
+
+                <img src="./images/schets1.png" alt="thumbnail">
+                <a href="#">
+                    <div class="position-text">
+
+                        <p>Een  visuele interface van het artikel uit het Correspondent Kunstmatige intelligentie is geen gevaar voor de
+                            Kunstenaars; integendeel.</p>
+                    </div>
+                    <h3>Kunstmatige intelligentie</h3>
+                </a>
+            </article>
+          
+
+
         </section>
 
-        <h2>Projects</h2>
-        <section id="repository-list">
-            
-        <!-- Dynamische lijst van mijn repository  -->
+        <h2>Vormgeving Projecten</h2>
 
-        </section>
+    <section>
+        <!-- Vormgeving projecten -->
+        <article class="thumbnail">
+        
+        
+            <img src="./images/schets1.png" alt="thumbnail">
+            <a href="#">
+                <div class="position-text">
+        
+                    <p>Design quotes is een single page applicatie voor studenten die opzoek zijn naar inspirerende
+                        design citaten om in hun werk te
+                        gebruiken.</p>
+                </div>
+                <h3>Design quotes for Students</h3>
+            </a>
+        </article>
+        <article class="thumbnail">
+        
+            <img src="./images/schets1.png" alt="thumbnail">
+            <a href="#">
+                <div class="position-text">
+                    <p>
+                    Voor web typografie heb ik een filmfragment vormgegeven voor mensen die doof zijn geboren. De filmfragment gaat over het
+                    film blade runner. Hoe kan ik met CSS het filmfragment spannender maken voor mensen die doof zijn? </p>
+                </div>
+                <h3>Film Fragment Vormgeven</h3>
+            </a>
+        </article>
+        <article class="thumbnail">
+        
+            <img src="./images/schets1.png" alt="thumbnail">
+            <a href="#">
+                <div class="position-text">
+        
+                    <p>Voor interface en beweging heb ik een interface gemaakt op XD van een karakter en drie functie laten uitvoeren met
+                    behulp van animatie. Mijn Karakter heet Coral en zij is een zeemermin. Zij kan zingen, dansen en zwemmen. Om de animatie
+                    te maken heb ik gebruikt gemaakt van Adobe After effects.</p>
+                </div>
+                <h3>Animatie: Coral de zeemermin</h3>
+            </a>
+        </article>
+
+    </section>
+
+
+
     </main>
-   
- 
+
+
     <secion id="pagina-1">
 
     </secion>
-    <script type ="module" src="./script/main.js"></script>
+    <script type="module" src="./script/main.js"></script>
 </body>
 
 </html>

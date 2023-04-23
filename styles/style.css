@@ -11,6 +11,7 @@
     --grijs: #eff4f5;
     --paars: #6f7de2;
     --roze: #e4a7a3;
+    --low-opacity-roze: #e4a7a3c9;
 
     /* lettertype */
     --headers: 'highgate', sans-serif;
@@ -23,6 +24,10 @@ body {
     font-family: var(--algemene-tekst);
     color: var(--donker-blauw);
     background-color: var(--grijs);
+}
+
+#github-page:has(#user-data:checked) #user {
+    display: block;
 }
 
 h1 {
@@ -63,6 +68,7 @@ button[type="submit"] {
     transform: perspective(1px) translateZ(0);
     transition: color 0.3s;
 }
+
 /* kleur schuift naar rechts */
 button[type="submit"]::before {
     content: "";
@@ -144,69 +150,71 @@ nav a:hover {
     background-position: 0;
 }
 
-/* Bron voor de effect: https: //css-tricks.com/css-link-hover-effects/ */
-/*******************/
-/* USER COMNTAINER */
-/*******************/
-main {
+/************/
+/* HOMEPAGE */
+/************/
+#home-page main {
     display: grid;
-    place-items: center;
+
 }
 
-main>h2 {
+
+
+#home-page main section:nth-of-type(1)h2 {
     justify-self: left;
     margin-left: 1em;
 }
 
-main input {
+#home-page main input {
     appearance: none;
 }
 
-main label {
+#home-page main label {
     background-color: var(--roze);
     color: var(--grijs);
     padding: .5em 1.5em;
+    place-self: center;
 }
 
-section:nth-of-type(1) {
+#home-page section:nth-of-type(1) {
 
     padding: 3em;
     width: 100%;
-    display: none;
+
     background-color: var(--roze);
 }
 
-section:nth-of-type(1) figure {
+#home-page section:nth-of-type(1) figure {
     margin-top: 1em;
 }
 
-section:nth-of-type(1) article {
+#home-page section:nth-of-type(1) article {
     display: flex;
     flex-direction: column;
     gap: 1em;
     align-items: center;
 }
 
-section:nth-of-type(1) article>img {
+#home-page section:nth-of-type(1) article>img {
     width: 100%;
     border-radius: 1em;
 }
 
-section:nth-of-type(1) article div p:nth-child(1) {
+#home-page section:nth-of-type(1) article div p:nth-child(1) {
     font-weight: bold;
     font-size: clamp(1em, 3vw, 5em);
     margin-bottom: .3em;
 }
 
-section:nth-of-type(1) article div p:nth-child(2) {
+#home-page section:nth-of-type(1) article div p:nth-child(2) {
     font-weight: bold;
 }
 
-section:nth-of-type(1) article div p:nth-child(3) {
+#home-page section:nth-of-type(1) article div p:nth-child(3) {
     margin-bottom: .5em;
 }
 
-section:nth-of-type(1) article div a {
+#home-page section:nth-of-type(1) article div a {
     display: inline-block;
     background-color: var(--donker-blauw);
     color: white;
@@ -219,7 +227,7 @@ section:nth-of-type(1) article div a {
 
 /* Shuift naar de rechterkant */
 /* Link animatie voor de repo */
-section:nth-of-type(1) article div a::before {
+#home-page section:nth-of-type(1) article div a::before {
     content: "";
     transition: 0.5s all ease;
     position: absolute;
@@ -237,39 +245,240 @@ section:nth-of-type(1) article div a::before {
     -webkit-transition: 0.3s transform ease-out;
 }
 
-section:nth-of-type(1) article div a:hover,
-section:nth-of-type(1) article div a:focus,
-section:nth-of-type(1) article div a:active {
+#home-page section:nth-of-type(1) article div a:hover,
+#home-page section:nth-of-type(1) article div a:focus,
+#home-page section:nth-of-type(1) article div a:active {
     color: var(--donker-blauw);
 }
 
-section:nth-of-type(1) article div a:hover::before,
-section:nth-of-type(1) article div a:focus::before,
-section:nth-of-type(1) article div a:active::before {
+#home-page section:nth-of-type(1) article div a:hover::before,
+#home-page section:nth-of-type(1) article div a:focus::before,
+#home-page section:nth-of-type(1) article div a:active::before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-section:nth-of-type(1) article div a img {
+#home-page section:nth-of-type(1) article div a img {
     width: 10%;
 }
 
-body:has(#user-data:checked) #user {
-    display: block;
+
+/*****************************/
+/* RECENTE PROJECTEN SECTION */
+/*****************************/
+
+#home-page section:nth-of-type(2),
+#home-page section:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+
+    width: auto;
+    height: auto;
+    margin: 1em;
 }
+
+#home-page h2 {
+    text-align: center;
+}
+
+#home-page section:nth-of-type(2) article,
+#home-page section:nth-of-type(3) article {
+    position: relative;
+    background-color: rgb(236, 196, 196);
+    width: 100%;
+    height: fit-content;
+    border-radius:1em;
+    filter: drop-shadow(1px 1px 2px var(--donker-blauw));
+}
+
+#home-page section:nth-of-type(2) article img,
+#home-page section:nth-of-type(3) article img {
+    height: 100%;
+    width: 100%;
+    border-radius: 1em;
+
+}
+
+#home-page section:nth-of-type(2) a,
+#home-page section:nth-of-type(3) a {
+    display: inline-block;
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#home-page section:nth-of-type(2) h3,
+#home-page section:nth-of-type(3) h3 {
+    position: absolute;
+    bottom: 0;
+    background-color: var(--donker-blauw);
+    width: 100%;
+    height: auto;
+    color: var(--grijs);
+    padding: .5em;
+    border-radius: 0 0 .5em .5em;
+}
+
+
+
+#home-page section:nth-of-type(2) article .position-text,
+#home-page section:nth-of-type(3) article .position-text {
+    display: inline-block;
+    position: absolute;
+    padding: 1em;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--roze);
+    border-radius: 1em;
+}
+
+#home-page section:nth-of-type(2) p,
+#home-page section:nth-of-type(2) p {
+    color: var(--donker-blauw);
+    line-height: 1.5;
+}
+
+#home-page section:nth-of-type(2) article:hover .position-text,
+#home-page section:nth-of-type(3) article:hover .position-text {
+    opacity: 1;
+}
+
+/***************/
+/* GITHUB PAGE */
+/***************/
+
+/* Bron voor de effect: https: //css-tricks.com/css-link-hover-effects/ */
+/*******************/
+/* USER COMNTAINER in Github pages */
+/*******************/
+#github-page main {
+    display: grid;
+    place-items: center;
+}
+
+#github-page main>h2 {
+    justify-self: left;
+    margin-left: 1em;
+}
+
+#github-page main input {
+    appearance: none;
+}
+
+#github-page main label {
+    background-color: var(--roze);
+    color: var(--grijs);
+    padding: .5em 1.5em;
+}
+
+#github-page section:nth-of-type(1) {
+
+    padding: 3em;
+    width: 100%;
+    display: none;
+    background-color: var(--roze);
+}
+
+#github-page section:nth-of-type(1) figure {
+    margin-top: 1em;
+}
+
+#github-page section:nth-of-type(1) article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+#github-page section:nth-of-type(1) article>img {
+    width: 100%;
+    border-radius: 1em;
+}
+
+#github-page section:nth-of-type(1) article div p:nth-child(1) {
+    font-weight: bold;
+    font-size: clamp(1em, 3vw, 5em);
+    margin-bottom: .3em;
+}
+
+#github-page section:nth-of-type(1) article div p:nth-child(2) {
+    font-weight: bold;
+}
+
+#github-page section:nth-of-type(1) article div p:nth-child(3) {
+    margin-bottom: .5em;
+}
+
+#github-page section:nth-of-type(1) article div a {
+    display: inline-block;
+    background-color: var(--donker-blauw);
+    color: white;
+    padding: 1em 1.5em;
+    width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+}
+
+/* Shuift naar de rechterkant */
+/* Link animatie voor de repo */
+#github-page section:nth-of-type(1) article div a::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--grijs);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
+}
+
+#github-page section:nth-of-type(1) article div a:hover,
+#github-page section:nth-of-type(1) article div a:focus,
+#github-page section:nth-of-type(1) article div a:active {
+    color: var(--donker-blauw);
+}
+
+#github-page section:nth-of-type(1) article div a:hover::before,
+#github-page section:nth-of-type(1) article div a:focus::before,
+#github-page section:nth-of-type(1) article div a:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#github-page section:nth-of-type(1) article div a img {
+    width: 10%;
+}
+
+
 
 
 /*******************/
 /* REPOSITORY-LIST */
 /*******************/
-section:nth-of-type(2) {
+#github-page section:nth-of-type(2) {
     display: grid;
+
     grid-template-columns: 1fr;
     margin: 1em;
     gap: 1em;
 }
 
-section:nth-of-type(2) article {
+#github-page section:nth-of-type(2) article {
     position: relative;
     width: 100%;
     height: 25em;
@@ -280,13 +489,13 @@ section:nth-of-type(2) article {
     padding: 2em;
 }
 
-section:nth-of-type(2) article h1 {
+#github-page section:nth-of-type(2) article h1 {
     /* color: var(--roze); */
     font-size: clamp(1.5em, 3vw, 5em);
     margin-bottom: .3em;
 }
 
-section:nth-of-type(2) article ul {
+#github-page section:nth-of-type(2) article ul {
     display: flex;
     gap: .5em;
     position: absolute;
@@ -295,7 +504,7 @@ section:nth-of-type(2) article ul {
 }
 
 /* Shuift naar de rechterkant */
-section:nth-of-type(2) article ul li:nth-of-type(n+2) {
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2) {
     --donker-blauw: #2e3553;
     background-color: var(--donker-blauw);
     position: relative;
@@ -307,7 +516,7 @@ section:nth-of-type(2) article ul li:nth-of-type(n+2) {
 
 
 /* Link animatie voor de repo */
-section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
     content: "";
     transition: 0.5s all ease;
     position: absolute;
@@ -325,26 +534,26 @@ section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
     -webkit-transition: 0.3s transform ease-out;
 }
 
-section:nth-of-type(2) article ul li:nth-of-type(n+2):hover,
-section:nth-of-type(2) article ul li:nth-of-type(n+2):focus,
-section:nth-of-type(2) article ul li:nth-of-type(n+2):active {
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):hover,
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):focus,
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):active {
     color: var(--donker-blauw);
 }
 
-section:nth-of-type(2) article ul li:nth-of-type(n+2):hover::before,
-section:nth-of-type(2) article ul li:nth-of-type(n+2):focus::before,
-section:nth-of-type(2) article ul li:nth-of-type(n+2):active::before {
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):hover::before,
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):focus::before,
+#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):active::before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
 
-section:nth-of-type(2) article ul a {
+#github-page section:nth-of-type(2) article ul a {
     color: var(--wit);
 }
 
 
 
-section:nth-of-type(2) article h1::first-letter {
+#github-page section:nth-of-type(2) article h1::first-letter {
     text-transform: uppercase;
 }
 
@@ -373,12 +582,18 @@ section:nth-of-type(2) article h1::first-letter {
 }
 
 
+
+
+
+
 /* Voor grotere schermen */
 
 
 
 @media (min-width: 45em) {
-    section:nth-of-type(1) article {
+
+    #github-page section:nth-of-type(1) article,
+    #home-page section:nth-of-type(1) article {
 
         flex-direction: row;
         justify-content: space-evenly;
@@ -387,22 +602,34 @@ section:nth-of-type(2) article h1::first-letter {
 
     }
 
-    section:nth-of-type(1) article>img {
+    #github-page section:nth-of-type(1) article>img,
+    #home-page section:nth-of-type(1) article>img {
         width: 30%;
         border-radius: 1em;
     }
-/* 
-    section:nth-of-type(2) {
-        grid-template-columns: 1fr 1fr 1fr;
+
+
+    #home-page section:nth-of-type(2) article,
+    #home-page section:nth-of-type(3) article {
+        max-width: 20em;
+        height: 15em;
     }
 
-        section:nth-of-type(2) article {
-            max-width: 30vw;
-        } */
+    #home-page section:nth-of-type(2) article img,
+    #home-page section:nth-of-type(3) article img {
 
-    section:nth-of-type(2) article ul {
-        gap: 1em;
+        width: inherit;
+        height: 15em;
     }
+
+    #home-page section:nth-of-type(2),
+    #home-page section:nth-of-type(3) {
+
+        flex-direction: row;
+
+
+    }
+
 
     /* Een overlay effect bij de navigatiemenu */
     body nav ul {
@@ -416,21 +643,23 @@ section:nth-of-type(2) article h1::first-letter {
 
 
 @media (min-width: 900px) {
-section:nth-of-type(2) {
-        grid-template-columns: 1fr 1fr ;
+    #github-page section:nth-of-type(2) {
+        grid-template-columns: 1fr 1fr;
     }
 
-    section:nth-of-type(2) article {
+    #github-pagesection:nth-of-type(2) article {
         max-width: 40vw;
     }
 }
 
 @media (min-width: 1000px) {
-    section:nth-of-type(2) {
-        grid-template-columns: 1fr 1fr 1fr;
+    #github-page section:nth-of-type(2) {
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        width: 80%;
     }
 
-    section:nth-of-type(2) article {
+    #github-pagesection:nth-of-type(2) article {
         max-width: 40vw;
     }
 }
