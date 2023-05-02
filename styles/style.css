@@ -24,6 +24,7 @@ body {
     font-family: var(--algemene-tekst);
     color: var(--donker-blauw);
     background-color: var(--grijs);
+    /* overflow-x: hidden; */
 }
 
 #github-page:has(#user-data:checked) #user {
@@ -50,6 +51,10 @@ a {
 
 li {
     list-style: none;
+}
+
+.hidden {
+    display: none;
 }
 
 /*****************/
@@ -118,6 +123,11 @@ nav ul {
 
 nav ul.show-menu {
     transform: translateY(0);
+
+}
+
+:has(nav ul.show-menu) body {
+    overflow: hidden;
 }
 
 
@@ -156,6 +166,15 @@ nav a:hover {
 #home-page main {
     display: grid;
 
+}
+
+#home-page main>h2:nth-of-type(1) {
+    padding: 3em 2em;
+    font-size: clamp(1.5em, 2vw, 6em);
+}
+
+#home-page section {
+    margin: 2em 0;
 }
 
 
@@ -273,7 +292,7 @@ nav a:hover {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-
+    position: relative;
     width: auto;
     height: auto;
     margin: 1em;
@@ -289,20 +308,21 @@ nav a:hover {
     background-color: rgb(236, 196, 196);
     width: 100%;
     height: fit-content;
-    border-radius:1em;
+    border-radius: 1em;
     filter: drop-shadow(1px 1px 2px var(--donker-blauw));
 }
 
 #home-page section:nth-of-type(2) article img,
 #home-page section:nth-of-type(3) article img {
-    height: 100%;
+    object-fit: fill;
+    height: auto;
     width: 100%;
     border-radius: 1em;
 
 }
 
-#home-page section:nth-of-type(2) a,
-#home-page section:nth-of-type(3) a {
+#home-page section:nth-of-type(2) .thumbnail a,
+#home-page section:nth-of-type(3) .thumbnail a {
     display: inline-block;
     position: absolute;
     inset: 0;
@@ -340,7 +360,7 @@ nav a:hover {
 }
 
 #home-page section:nth-of-type(2) p,
-#home-page section:nth-of-type(2) p {
+#home-page section:nth-of-type(3) p {
     color: var(--donker-blauw);
     line-height: 1.5;
 }
@@ -350,6 +370,67 @@ nav a:hover {
     opacity: 1;
 }
 
+#home-page .link-project {
+    /* display: inline-block; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    margin: 1em auto;
+
+}
+
+#home-page .link-project a {
+    /* align-self: flex-end; */
+    justify-self: end;
+}
+
+#home-page .link-project a {
+    display: inline-block;
+    background-color: var(--donker-blauw);
+    color: white;
+    padding: 1em 1.5em;
+    width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+}
+
+/* Shuift naar de rechterkant */
+/* Link animatie voor de repo */
+#home-page .link-project a::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--roze);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
+}
+
+#home-page .link-project a:hover,
+#home-page .link-project a:focus,
+#home-page .link-project a:active {
+    color: var(--donker-blauw);
+}
+
+#home-page .link-project a:hover::before,
+#home-page .link-project a:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/* #home-page section:nth-of-type(1) article div a img {
+    width: 10%;
+} */
 /***************/
 /* GITHUB PAGE */
 /***************/
@@ -583,9 +664,139 @@ nav a:hover {
 
 
 
+/****************/
+/* PROJECT PAGE */
+/****************/
+#project-page main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10em;
+    /* overflow-x: hidden; */
+    scroll-snap-type: y mandatory;
+}
+
+#project-page main div {
+    scroll-snap-align: center;
+
+}
+
+#project-page h1 {
+    font-size: 4em;
+}
+
+#project-page h2 {
+    font-size: 2em;
+}
 
 
+#project-page section:nth-of-type(1) {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-color: var(--roze);
+    padding: 3em;
+}
 
+#project-page section:nth-of-type(1) article {
+    place-self: center;
+}
+
+#project-page section:nth-of-type(1) img {
+    width: 100%;
+}
+
+/* De opdracht onderdeel */
+#project-page section:nth-of-type(2) {
+    background-color: white;
+    grid-template-columns: 2fr 1fr;
+    padding: 1em;
+    margin: 1em;
+    height: fit-content;
+
+    gap: 3em;
+
+    align-items: center;
+}
+
+
+#project-page section:nth-of-type(2) p {
+
+    line-height: 1.7;
+}
+
+#project-page section:nth-of-type(2) p span {
+    display: block;
+    margin: .8em 0;
+}
+
+#project-page section:nth-of-type(2) article {
+    display: grid;
+    place-self: top;
+
+}
+
+
+#project-page section:nth-of-type(2) img {
+    width: 80% !important;
+}
+
+.project-info {
+    display: flex;
+    gap: 2em;
+}
+
+.project-info a {
+    /* align-self: flex-end; */
+    margin: 1em 0;
+    justify-self: end;
+}
+
+.project-info a {
+    display: inline-block;
+    background-color: var(--donker-blauw);
+    color: white;
+    padding: 1em 1.5em;
+    width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+}
+
+/* Shuift naar de rechterkant */
+/* Link animatie voor de repo */
+.project-info a::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--roze);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
+}
+
+.project-info a:hover,
+.project-info a:focus,
+.project-info a:active {
+    color: var(--donker-blauw);
+}
+
+.project-info a:hover::before,
+.project-info a:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
 /* Voor grotere schermen */
 
 
@@ -611,7 +822,7 @@ nav a:hover {
 
     #home-page section:nth-of-type(2) article,
     #home-page section:nth-of-type(3) article {
-        max-width: 20em;
+        max-width: 22em;
         height: 15em;
     }
 
@@ -631,6 +842,46 @@ nav a:hover {
     }
 
 
+    #project-page section:nth-of-type(1) {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        height: 80vh;
+        width: 100%;
+        background-color: var(--roze);
+    }
+
+    #project-page section:nth-of-type(1) article {
+        place-self: center;
+
+    }
+
+    #project-page section:nth-of-type(1) img {
+        max-width: 78%;
+    }
+
+    /* De opdracht onderdeel */
+    #project-page section:nth-of-type(2) {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 2fr 1fr;
+
+        margin: 0 auto;
+        height: fit-content;
+        gap: 3em;
+        width: 80%;
+        align-items: center;
+    }
+
+    #project-page section:nth-of-type(2) article {
+        max-width: 80%;
+    }
+
+    #project-page section:nth-of-type(2) img {
+        width: 80%;
+    }
+
+
+
     /* Een overlay effect bij de navigatiemenu */
     body nav ul {
         background-color: transparent;
@@ -641,6 +892,70 @@ nav a:hover {
     }
 }
 
+/*******************/
+/* OVER MIJ PAGINA */
+/*******************/
+#over-mij p {
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+
+#over-mij main section:nth-of-type(n+2) {
+    margin: 1em;
+    display: grid;
+    padding: 2em;
+}
+
+#over-mij main section:nth-of-type(n+2) article figure {
+    /* margin: 1em; */
+    width: 100%;
+    display: flex;
+    gap: 2em;
+}
+
+#over-mij main section:nth-of-type(n+2) article ul {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    gap: 1em;
+}
+
+#over-mij main section:nth-of-type(n+2) article li {
+    background-color: var(--donker-blauw);
+    color: white;
+    align-self: center;
+    padding: 1em 1.5em;
+    width: 15em;
+}
+
+/* #over-mij main section:nth-of-type(n+2) article img {
+    width: 30%;
+    max-width: 50%;
+} */
+
+#over-mij section:nth-of-type(1) {
+    padding: 3em;
+    width: 100%;
+    background-color: var(--roze);
+}
+
+#over-mij section:nth-of-type(1) img {
+    width: 100%;
+    height: auto;
+}
+
+#over-mij main section:nth-of-type(1) h2 {
+    font-size: clamp(1.5em, 5vw, 6em);
+}
+
+#over-mij main section:nth-of-type(1) p {
+    font-size: clamp(1em, 2vw, 2em);
+}
+
+#over-mij main section:nth-of-type(n+2) h2 {
+    font-size: clamp(3em, 5vw, 3em);
+}
 
 @media (min-width: 900px) {
     #github-page section:nth-of-type(2) {
@@ -650,7 +965,42 @@ nav a:hover {
     #github-pagesection:nth-of-type(2) article {
         max-width: 40vw;
     }
+
+    #over-mij main section:nth-of-type(1) {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        background-color: var(--roze);
+    }
+
+    #over-mij section:nth-of-type(1) img {
+        width: 30%;
+        height: auto;
+    }
+
+    #over-mij main section:nth-of-type(n+2)  {
+      display: grid;
+      place-items: center;
+    }
+
+    #over-mij main section:nth-of-type(n+2) article  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* align-items: center; */
+    }
+
+         #over-mij section:nth-of-type(2) img {
+             width: 80%;
+             height: auto;
+         }
+    #over-mij main section:nth-of-type(n+2) article p {
+        width: 30em;
+        padding: 1em;
+    }
+
 }
+
 
 @media (min-width: 1000px) {
     #github-page section:nth-of-type(2) {

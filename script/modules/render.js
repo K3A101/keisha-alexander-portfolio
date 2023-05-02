@@ -8,7 +8,7 @@ export function displayUserData(user) {
           <article>
                 <img src="${user.avatar_url}" alt="gebruikers foto">
                 <div>
-                    <p>${user.name}</p>
+                    <p>Ik ben ${user.name}</p>
                     <p>${user.login}</p>
                     <p>${user.bio}</p>
                     <a href="${user.html_url}">Github</a>
