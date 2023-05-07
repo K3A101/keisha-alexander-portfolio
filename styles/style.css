@@ -11,6 +11,7 @@
     --grijs: #eff4f5;
     --paars: #6f7de2;
     --roze: #e4a7a3;
+    --licht-roze: #fdcfcc;
     --low-opacity-roze: #e4a7a3c9;
 
     /* lettertype */
@@ -57,6 +58,19 @@ li {
     display: none;
 }
 
+footer {
+    background-color: var(--donker-blauw);
+    color: var(--grijs);
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
+}
+
+footer p {
+
+    font-size: clamp(1em, 2vw, 1em);
+    font-weight: bold;
+}
 /*****************/
 /* NAVIGATIEMENU */
 /*****************/
@@ -165,11 +179,12 @@ nav a:hover {
 /************/
 #home-page main {
     display: grid;
+    gap: 1em;
 
 }
 
 #home-page main>h2:nth-of-type(1) {
-    padding: 3em 2em;
+    padding: 2em;
     font-size: clamp(1.5em, 2vw, 6em);
 }
 
@@ -287,7 +302,8 @@ nav a:hover {
 /*****************************/
 
 #home-page section:nth-of-type(2),
-#home-page section:nth-of-type(3) {
+#home-page section:nth-of-type(3),
+#home-page section:nth-of-type(4) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -303,7 +319,8 @@ nav a:hover {
 }
 
 #home-page section:nth-of-type(2) article,
-#home-page section:nth-of-type(3) article {
+#home-page section:nth-of-type(3) article,
+#home-page section:nth-of-type(4) article {
     position: relative;
     background-color: rgb(236, 196, 196);
     width: 100%;
@@ -313,7 +330,8 @@ nav a:hover {
 }
 
 #home-page section:nth-of-type(2) article img,
-#home-page section:nth-of-type(3) article img {
+#home-page section:nth-of-type(3) article img,
+#home-page section:nth-of-type(4) article img {
     object-fit: fill;
     height: auto;
     width: 100%;
@@ -322,7 +340,8 @@ nav a:hover {
 }
 
 #home-page section:nth-of-type(2) .thumbnail a,
-#home-page section:nth-of-type(3) .thumbnail a {
+#home-page section:nth-of-type(3) .thumbnail a,
+#home-page section:nth-of-type(4) .thumbnail a {
     display: inline-block;
     position: absolute;
     inset: 0;
@@ -332,7 +351,8 @@ nav a:hover {
 
 
 #home-page section:nth-of-type(2) h3,
-#home-page section:nth-of-type(3) h3 {
+#home-page section:nth-of-type(3) h3,
+#home-page section:nth-of-type(4) h3 {
     position: absolute;
     bottom: 0;
     background-color: var(--donker-blauw);
@@ -346,7 +366,8 @@ nav a:hover {
 
 
 #home-page section:nth-of-type(2) article .position-text,
-#home-page section:nth-of-type(3) article .position-text {
+#home-page section:nth-of-type(3) article .position-text,
+#home-page section:nth-of-type(4) article .position-text {
     display: inline-block;
     position: absolute;
     padding: 1em;
@@ -360,13 +381,15 @@ nav a:hover {
 }
 
 #home-page section:nth-of-type(2) p,
-#home-page section:nth-of-type(3) p {
+#home-page section:nth-of-type(3) p,
+#home-page section:nth-of-type(4) p {
     color: var(--donker-blauw);
     line-height: 1.5;
 }
 
 #home-page section:nth-of-type(2) article:hover .position-text,
-#home-page section:nth-of-type(3) article:hover .position-text {
+#home-page section:nth-of-type(3) article:hover .position-text,
+#home-page section:nth-of-type(4) article:hover .position-text {
     opacity: 1;
 }
 
@@ -797,9 +820,183 @@ nav a:hover {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }
+
 /* Voor grotere schermen */
 
 
+
+
+
+/*******************/
+/* OVER MIJ PAGINA */
+/*******************/
+#over-mij p {
+    font-size: 1.2em;
+    line-height: 1.7;
+}
+
+
+#over-mij main section:nth-of-type(n+2) {
+    margin: 1em;
+    display: grid;
+    padding: 2em;
+}
+
+#over-mij main section:nth-of-type(n+2) article figure {
+    /* margin: 1em; */
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+#over-mij main section:nth-of-type(n+2) article ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5em;
+    gap: 1em;
+}
+
+#over-mij main section:nth-of-type(n+2) article li {
+    background-color: var(--donker-blauw);
+    color: white;
+    align-self: center;
+    padding: 1em 1.5em;
+    width: 15em;
+}
+
+/* #over-mij main section:nth-of-type(n+2) article img {
+    width: 30%;
+    max-width: 50%;
+} */
+
+#over-mij section:nth-of-type(1) {
+    padding: 3em;
+    width: 100%;
+    background-color: var(--roze);
+}
+
+#over-mij section:nth-of-type(1) img {
+    width: 100%;
+    height: auto;
+}
+
+#over-mij main section:nth-of-type(1) h2 {
+    font-size: clamp(1.5em, 5vw, 6em);
+}
+
+#over-mij main section:nth-of-type(1) p {
+    font-size: clamp(1em, 2vw, 2em);
+}
+
+#over-mij main section:nth-of-type(n+2) h2 {
+    font-size: clamp(3em, 5vw, 3em);
+    padding: 2em 0;
+}
+
+
+
+#over-mij section:nth-of-type(2) a {
+    display: inline-block;
+    margin-top: 1em;
+    background-color: var(--donker-blauw);
+    color: white;
+    padding: 1em 1.5em;
+    width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+}
+
+/* Shuift naar de rechterkant */
+/* Link animatie voor de repo */
+#over-mij section:nth-of-type(2) a::before {
+    content: "";
+    transition: 0.5s all ease;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: var(--roze);
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    /* Transform = transition-property: transform; */
+    /* ease-out = transition-timing-function: ease-out */
+    transition: 0.3s transform ease-out;
+    -webkit-transition: 0.3s transform ease-out;
+}
+
+#over-mij section:nth-of-type(2) a:hover,
+#over-mij section:nth-of-type(2) a:focus,
+#over-mij section:nth-of-type(2) a:active {
+    color: var(--donker-blauw);
+}
+
+#over-mij section:nth-of-type(2) a:hover::before,
+#over-mij section:nth-of-type(2) a:active::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#over-mij section:nth-of-type(4) article figure img {
+    width: 50%;
+}
+
+#over-mij section:nth-of-type(5) article img {
+    width: 50px;
+    height: 50px;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+}
+#over-mij section:nth-of-type(5) {
+    place-items: center;
+}
+
+#over-mij section:nth-of-type(5) article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--roze);
+    justify-content: center;
+    align-items: center;
+    color: var(--donker-blauw);
+    font-weight: bold;
+    padding: 1em;
+    gap:.5em;
+    border-radius: .5em;
+    transition: .3s ease-in-out;
+}
+
+#over-mij section:nth-of-type(5) article:hover {
+    /* background-color: var(--licht-roze); */
+    animation: zoom-in-out .5s ease-in-out infinite alternate both;
+}
+
+@keyframes zoom-in-out {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+#over-mij section:nth-of-type(5) article a {
+    color: var(--donker-blauw);
+    font-weight: bold;
+    text-decoration: none;
+}
+/* .contact-container article {
+    display: flex;
+    flex-direction: column;
+} */
 
 @media (min-width: 45em) {
 
@@ -819,22 +1016,28 @@ nav a:hover {
         border-radius: 1em;
     }
 
+    #home-page section:nth-of-type(1) article>img {
+        width: 20%;
+    }
 
     #home-page section:nth-of-type(2) article,
-    #home-page section:nth-of-type(3) article {
+    #home-page section:nth-of-type(3) article,
+    #home-page section:nth-of-type(4) article {
         max-width: 22em;
         height: 15em;
     }
 
     #home-page section:nth-of-type(2) article img,
-    #home-page section:nth-of-type(3) article img {
+    #home-page section:nth-of-type(3) article img,
+    #home-page section:nth-of-type(4) article img {
 
         width: inherit;
         height: 15em;
     }
 
     #home-page section:nth-of-type(2),
-    #home-page section:nth-of-type(3) {
+    #home-page section:nth-of-type(3),
+    #home-page section:nth-of-type(4) {
 
         flex-direction: row;
 
@@ -881,7 +1084,6 @@ nav a:hover {
     }
 
 
-
     /* Een overlay effect bij de navigatiemenu */
     body nav ul {
         background-color: transparent;
@@ -890,71 +1092,16 @@ nav a:hover {
                 var(--roze) 0 70%,
                 rgba(0, 0, 0, 0.499) 50%);
     }
-}
 
-/*******************/
-/* OVER MIJ PAGINA */
-/*******************/
-#over-mij p {
-    font-size: 1.2em;
-    line-height: 1.7;
-}
+    #over-mij section:nth-of-type(5) article {
+        display: flex;
+        flex-direction: column;
+    }
 
-
-#over-mij main section:nth-of-type(n+2) {
-    margin: 1em;
-    display: grid;
-    padding: 2em;
-}
-
-#over-mij main section:nth-of-type(n+2) article figure {
-    /* margin: 1em; */
-    width: 100%;
-    display: flex;
-    gap: 2em;
-}
-
-#over-mij main section:nth-of-type(n+2) article ul {
-    display: flex;
-    flex-direction: column;
-    padding: 2em;
-    gap: 1em;
-}
-
-#over-mij main section:nth-of-type(n+2) article li {
-    background-color: var(--donker-blauw);
-    color: white;
-    align-self: center;
-    padding: 1em 1.5em;
-    width: 15em;
-}
-
-/* #over-mij main section:nth-of-type(n+2) article img {
-    width: 30%;
-    max-width: 50%;
-} */
-
-#over-mij section:nth-of-type(1) {
-    padding: 3em;
-    width: 100%;
-    background-color: var(--roze);
-}
-
-#over-mij section:nth-of-type(1) img {
-    width: 100%;
-    height: auto;
-}
-
-#over-mij main section:nth-of-type(1) h2 {
-    font-size: clamp(1.5em, 5vw, 6em);
-}
-
-#over-mij main section:nth-of-type(1) p {
-    font-size: clamp(1em, 2vw, 2em);
-}
-
-#over-mij main section:nth-of-type(n+2) h2 {
-    font-size: clamp(3em, 5vw, 3em);
+    .contact-container {
+        /* display: flex; */
+        flex-direction: row;
+    }
 }
 
 @media (min-width: 900px) {
@@ -979,27 +1126,37 @@ nav a:hover {
         height: auto;
     }
 
-    #over-mij main section:nth-of-type(n+2)  {
-      display: grid;
-      place-items: center;
+    #over-mij main section:nth-of-type(n+2) {
+        display: grid;
+        place-items: center;
     }
 
-    #over-mij main section:nth-of-type(n+2) article  {
+    #over-mij main section:nth-of-type(2) article,
+    #over-mij main section:nth-of-type(3) article,
+    #over-mij main section:nth-of-type(4) article {
         display: grid;
         grid-template-columns: 1fr 1fr;
         /* align-items: center; */
     }
 
-         #over-mij section:nth-of-type(2) img {
-             width: 80%;
-             height: auto;
-         }
+    #over-mij section:nth-of-type(2) img {
+        width: 80%;
+        height: auto;
+    }
+
     #over-mij main section:nth-of-type(n+2) article p {
         width: 30em;
         padding: 1em;
     }
 
+    #over-mij section:nth-of-type(5) article {
+        display: flex;
+        flex-direction: column;
+    }
+
 }
+
+
 
 
 @media (min-width: 1000px) {
