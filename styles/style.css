@@ -25,7 +25,18 @@ body {
     font-family: var(--algemene-tekst);
     color: var(--donker-blauw);
     background-color: var(--grijs);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
     /* overflow-x: hidden; */
+}
+body::-webkit-scrollbar{
+    background-color: var(--grijs);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: var(--donker-blauw);
+    border-radius: 10px;
 }
 
 #github-page:has(#user-data:checked) #user {
