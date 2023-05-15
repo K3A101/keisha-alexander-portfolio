@@ -59,7 +59,9 @@
             })
             main.insertAdjacentHTML('beforeend', html);
             const sections = document.querySelectorAll(' main div.sections');
+            
             console.log('section list',sections);  
+          
         }
         
      
