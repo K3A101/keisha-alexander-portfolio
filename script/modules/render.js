@@ -3,41 +3,41 @@ import { userSection } from "./variabele.js";
 
 export function displayUserData(user) {
     let userHTML = ``
-    if (user) {
-        userHTML = `
+    // if (user != undefined) {
+    //     userHTML = `
     
-          <article>
-                <img src="${user.avatar_url}" alt="gebruikers foto">
-                <div>
-                    <p>Ik ben ${user.name}</p>
-                    <p>${user.login}</p>
-                    <p>${user.bio}</p>
-                    <a href="${user.html_url}">Github</a>
-                    <a href="./over-mij.html">Over mezelf</a>
-                </div>              
-            </article>
+    //       <article>
+    //             <img src="${user.avatar_url}" alt="gebruikers foto">
+    //             <div>
+    //                 <p>Ik ben ${user.name}</p>
+    //                 <p>${user.login}</p>
+    //                 <p>${user.bio}</p>
+    //                 <a href="${user.html_url}">Github</a>
+    //                 <a href="./over-mij.html">Over mezelf</a>
+    //             </div>              
+    //         </article>
            
            
-    `;
-    } else {
-        userHTML = `
+    // `;
+    // } else {
+    //     userHTML = `
     
-          <article>
-                <img src="https://avatars.githubusercontent.com/u/90068272?v=4" alt="gebruikers foto">
-                <div>
-                    <p>Ik ben Keïsha Alexander</p>
-                    <p>K3A101</p>
-                    <p>k ben een UI/UX designer en een Frontend Developer. Momenteel studeer ik Communication and Multimedia Design bij Hogeschool van Amsterdam</p>
-                    <a href="https://github.com/K3A101">Github</a>
-                    <a href="./over-mij.html">Over mezelf</a>
-                </div>              
-            </article>
+    //       <article>
+    //             <img src="https://avatars.githubusercontent.com/u/90068272?v=4" alt="gebruikers foto">
+    //             <div>
+    //                 <p>Ik ben Keïsha Alexander</p>
+    //                 <p>K3A101</p>
+    //                 <p>k ben een UI/UX designer en een Frontend Developer. Momenteel studeer ik Communication and Multimedia Design bij Hogeschool van Amsterdam</p>
+    //                 <a href="https://github.com/K3A101">Github</a>
+    //                 <a href="./over-mij.html">Over mezelf</a>
+    //             </div>              
+    //         </article>
            
            
-    `;
-    }
+    // `;
+    // }
   
-    userSection.insertAdjacentHTML('beforeend', userHTML)
+    // userSection.insertAdjacentHTML('beforeend', userHTML)
 
 }
 
