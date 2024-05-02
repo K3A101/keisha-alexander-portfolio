@@ -336,17 +336,22 @@ nav a:hover {
     width: 100%;
     height: fit-content;
     border-radius: 1em;
-    filter: drop-shadow(1px 1px 2px var(--donker-blauw));
+    box-shadow: 1px 1px 7px var(--donker-blauw);
 }
 
 #home-page section:nth-of-type(2) article img,
 #home-page section:nth-of-type(3) article img,
 #home-page section:nth-of-type(4) article img {
-    object-fit: fill;
+    object-fit: cover;
     height: auto;
     width: 100%;
     border-radius: 1em;
 
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
 }
 
 #home-page section:nth-of-type(2) .thumbnail a,
@@ -400,6 +405,11 @@ nav a:hover {
 #home-page section:nth-of-type(2) article:hover .position-text,
 #home-page section:nth-of-type(3) article:hover .position-text,
 #home-page section:nth-of-type(4) article:hover .position-text {
+    opacity: 1;
+}
+#home-page section:nth-of-type(2) article:focus-within .position-text,
+#home-page section:nth-of-type(3) article:focus-within .position-text,
+#home-page section:nth-of-type(4) article:focus-within .position-text {
     opacity: 1;
 }
 
