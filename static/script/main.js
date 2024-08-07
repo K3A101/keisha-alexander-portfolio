@@ -4,10 +4,11 @@ import { fetchUserData } from "./modules/fetch-user.js";
 import { menuButton } from "./modules/variabele.js";
 import { showNavMenu } from "./modules//nav.js";
 import { onRouteChanged } from "./modules/routing.js";
+import { getYear } from "./modules/copyright.js";
 // functies die de data fetchen
 fetchRepoData()
 fetchUserData()
 
-
+window.addEventListener('load', getYear);
 window.addEventListener('haschange',onRouteChanged)
 menuButton.addEventListener('click', showNavMenu)
