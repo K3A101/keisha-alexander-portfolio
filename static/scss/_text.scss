@@ -27,19 +27,19 @@ h2 {
 }
 
 h3 {
-    font-size:  2rem;
+    font-size: 2rem;
 }
 
 .menu-button {
     font-weight: bold;
-    top: 1em;
-    left: 1em;
+    top: 1rem;
+    left: 1rem;
     position: absolute;
     z-index: 2;
     border: none;
-    background-color: var(--donker-blauw);
-    color: var(--grijs);
-    padding: .5em 1em;
+    background-color: color(background-variation-1);
+    color: color(background);
+    padding: .5rem 1rem;
     transform: perspective(1px) translateZ(0);
     transition: color 0.3s;
 
@@ -49,12 +49,10 @@ h3 {
         position: absolute;
         inset: 0;
         z-index: -1;
-        background-color: var(--roze);
+        background-color: color(primary);
         transform: scaleX(0);
         -webkit-transform-origin: 0 50%;
         transform-origin: 0 50%;
-        /* Transform = transition-property: transform; */
-        /* ease-out = transition-timing-function: ease-out */
         transition: 0.3s transform ease-out;
         -webkit-transition: 0.3s transform ease-out;
     }
@@ -62,11 +60,81 @@ h3 {
     &:hover,
     &:focus,
     &:active {
-        color: var(--donker-blauw);
+        color: color(background-variation-1);
 
         &::before {
             -webkit-transform: scaleX(1);
             transform: scaleX(1);
         }
     }
+}
+
+.button {
+    display: inline-block;
+    background-color: color(background-variation-1);
+    color: color(text-light);
+    padding: 1em 1.5em;
+    width: fit-content;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    transition: color 0.3s;
+    font-size: 1.6rem;
+
+
+    &::before {
+        content: "";
+        transition: 0.5s all ease;
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        transition: 0.3s transform ease-out;
+        -webkit-transition: 0.3s transform ease-out;
+    }
+
+    &.primary {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: color(text);
+
+            &::before {
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+
+        &::before {
+
+            background-color: color(background);
+
+        }
+
+    }
+
+    &.secondary {
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: color(text);
+
+            &::before {
+                -webkit-transform: scaleX(1);
+                transform: scaleX(1);
+            }
+        }
+
+        &::before {
+
+            background-color: color(primary);
+
+        }
+
+    }
+
 }

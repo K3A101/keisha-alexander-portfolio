@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
     <link rel="stylesheet" href="./static/lib/swiper/swiper-bundle.min.css">
+    <script defer src="./static/script/swiper.js"></script>
     <title>Portfolio</title>
 </head>
 
@@ -46,12 +47,13 @@
                         <img src="./static/images/user-profile.svg" alt="gebruikers foto">
                         <div>
                             <h2 class="name">Ik ben Keïsha Alexander</h2>
-                            <p class="user-description">Ik ben een UI/UX designer en een Frontend Developer. Momenteel studeer
+                            <p class="user-description">Ik ben een UI/UX designer en een Frontend Developer. Momenteel
+                                studeer
                                 ik Communication and
                                 Multimedia Design
                                 bij Hogeschool van Amsterdam</p>
-                            <a href="https://github.com/K3A101">Github</a>
-                            <a href="./over-mij.html">Over mezelf</a>
+                            <a class="button primary" href="https://github.com/K3A101">Github</a>
+                            <a class="button primary" href="./over-mij.html">Over mezelf</a>
                         </div>
                     </article>
 
@@ -67,9 +69,15 @@
 
 
         <!-- Section 2 -->
-        <div class="link-project">
-            <h2>Projecten </h2>
-            <a href="./projecten.html">Meer Projecten</a>
+
+        <div class="container">
+            <div class="row">
+                <div class="link-project">
+                    <h2>Projecten </h2>
+                    <a class="button secondary" href="./projecten.html">Meer Projecten</a>
+                </div>
+            </div>
+
         </div>
 
         <section class="container projects">
@@ -210,62 +218,89 @@
 
         </section>
         <small class="quote">
-            Vormgeving projecten
+            Portfolio van voorgaande jaren
         </small>
-        <h2>Vormgeving Projecten</h2>
+        <section class="carrousel">
+            <div class="container">
+                <div class="row">
 
-        <section>
-            <!-- Vormgeving projecten -->
+                    <div class="swiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <article class="">
 
+                                    <div class="img-container">
 
+                                        <img src="./images/jaar-1.png" alt="thumbnail">
+                                    </div>
+                                    <a
+                                        href="https://oege.ie.hva.nl/~alexank/cmd-portofolio-jaar1-ke%c3%afsha-alexander/">
+                                        <div class="position-text">
 
+                                            <p>Dit is mijn portfolio gemaakt in mijn propedeuse</p>
+                                        </div>
+                                        <h3>Jaar 1: portfolio</h3>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article>
+                                    <div class="img-container">
+                                        <img src="./images/jaar-2.png" alt="thumbnail">
+                                    </div>
 
+                                    <a href="https://k3a101.github.io/Portfolio/">
+                                        <div class="position-text">
+                                            <p>
+                                                Dit portfolio is gemaakt in mijn tweede jaar van de opleiding
+                                                Communication and Multimedia
+                                                Design.
+                                            </p>
+                                        </div>
+                                        <h3>Jaar 2: Portfolio</h3>
+                                    </a>
+                                </article>
+                            </div>
+                            <div class="swiper-slide">
+                                <article class="slide">
+                                    <div class="img-container">
+                                        <img src="./images/minor-vid.png" alt="thumbnail">
+                                    </div>
+                                    <a href="https://k3a101.github.io/Minor-portfolio/">
+                                        <div class="position-text">
+
+                                            <p>Dit is mijn portfolio van alle opdrachten die ik tijdens de Minor Visual
+                                                Interface And Design
+                                                heb gedaan. </p>
+                                        </div>
+                                        <h3>Visual Interface portfolio</h3>
+                                    </a>
+                                </article>
+                            </div>
+                            ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+
+                        <!-- If we need scrollbar -->
+
+                    </div>
+
+                </div>
+            </div>
         </section>
-        <h2>Portfolio van voorgaande jaren</h2>
+
         <section>
             <!-- Oude portfolio -->
-            <article class="thumbnail">
 
-                <div class="img-container">
 
-                    <img src="./images/jaar-1.png" alt="thumbnail">
-                </div>
-                <a href="https://oege.ie.hva.nl/~alexank/cmd-portofolio-jaar1-ke%c3%afsha-alexander/">
-                    <div class="position-text">
 
-                        <p>Dit is mijn portfolio gemaakt in mijn propedeuse</p>
-                    </div>
-                    <h3>Jaar 1: portfolio</h3>
-                </a>
-            </article>
-            <article class="thumbnail">
-                <div class="img-container">
-                    <img src="./images/jaar-2.png" alt="thumbnail">
-                </div>
-
-                <a href="https://k3a101.github.io/Portfolio/">
-                    <div class="position-text">
-                        <p>
-                            Dit portfolio is gemaakt in mijn tweede jaar van de opleiding Communication and Multimedia
-                            Design.
-                        </p>
-                    </div>
-                    <h3>Jaar 2: Portfolio</h3>
-                </a>
-            </article>
-            <article class="thumbnail">
-                <div class="img-container">
-                    <img src="./images/minor-vid.png" alt="thumbnail">
-                </div>
-                <a href="https://k3a101.github.io/Minor-portfolio/">
-                    <div class="position-text">
-
-                        <p>Dit is mijn portfolio van alle opdrachten die ik tijdens de Minor Visual Interface And Design
-                            heb gedaan. </p>
-                    </div>
-                    <h3>Visual Interface portfolio</h3>
-                </a>
-            </article>
 
         </section>
 
@@ -280,7 +315,7 @@
     <script src="./static/lib/bootstrap/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-        <script src="./static/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="./static/lib/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="./static/script/main.js"></script>
 </body>
 

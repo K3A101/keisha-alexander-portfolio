@@ -1,3 +1,6 @@
+@import "./helper/variabele";
+@import "./helper/functions";
+
 html {
     font-size: 62.5%; // Set default px to 10px, so 16px is 1.6rem
 }
@@ -19,6 +22,27 @@ html {
     text-align: center;
 }
 
+.position-text {
+    display: inline-block;
+    position: absolute;
+    padding: 1em;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: var(--roze);
+    border-radius: 1em;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &:focus-within {
+        opacity: 1;
+    }
+}
+
 /************/
 /* Homepage */
 /************/
@@ -36,65 +60,9 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 60%;
-        margin: 1em auto;
+        
 
-        a {
-            /* align-self: flex-end; */
-            justify-self: end;
-            display: inline-block;
-            background-color: var(--donker-blauw);
-            color: white;
-            padding: 1em 1.5em;
-            width: fit-content;
-            -webkit-transform: perspective(1px) translateZ(0);
-            transform: perspective(1px) translateZ(0);
-            transition: color 0.3s;
-
-            /* Shuift naar de rechterkant */
-            /* Link animatie voor de repo */
-            &::before {
-                content: "";
-                transition: 0.5s all ease;
-                position: absolute;
-                inset: 0;
-                z-index: -1;
-                background-color: var(--roze);
-                -webkit-transform: scaleX(0);
-                transform: scaleX(0);
-                -webkit-transform-origin: 0 50%;
-                transform-origin: 0 50%;
-                transition: 0.3s transform ease-out;
-                -webkit-transition: 0.3s transform ease-out;
-            }
-
-            &:hover {
-                color: var(--donker-blauw);
-
-                &::before {
-                    -webkit-transform: scaleX(1);
-                    transform: scaleX(1);
-                }
-            }
-
-            &:focus {
-                color: var(--donker-blauw);
-
-                &::before {
-                    -webkit-transform: scaleX(1);
-                    transform: scaleX(1);
-                }
-            }
-
-            &:active {
-                color: var(--donker-blauw);
-
-                &::before {
-                    -webkit-transform: scaleX(1);
-                    transform: scaleX(1);
-                }
-            }
-        }
+        
     }
 }
 
@@ -186,26 +154,7 @@ html {
         line-height: 1.5;
     }
 
-    .position-text {
-        display: inline-block;
-        position: absolute;
-        padding: 1em;
-        inset: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: var(--roze);
-        border-radius: 1em;
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &:focus-within {
-            opacity: 1;
-        }
-    }
+    .position-text {}
 }
 
 @media (min-width: 45rem) {
@@ -219,5 +168,66 @@ html {
         }
 
     }
+
+}
+
+.carrousel {
+    article {
+        border-radius: 1rem;
+        box-shadow: 0px 12px 20px var(--donker-blauw);
+
+        img {
+                object-fit: cover;
+                height: 100%;
+                width: 100%;
+                border-radius: 1em;
+            }
+
+        a {
+            display: inline-block;
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        h3 {
+            position: absolute;
+            bottom: -1rem;
+            background-color: color(background-variation-1);
+            width: 100%;
+
+            font-weight: bold;
+            color: color(text-light);
+            padding: 1.6rem;
+            border-radius: 0 0 .5em .5em;
+        }
+
+
+
+
+        .position-text {
+            display: grid;
+            place-items: center;
+            align-items: center;
+            width: 100%;
+
+            p {
+                font-size: 2.5rem;
+                color: color(background-variation-1);
+                line-height: 1.5;
+                width: 70%;
+                text-align: center;
+                font-weight: bold;
+            }
+
+
+        }
+
+
+    }
+
+
+
 
 }
