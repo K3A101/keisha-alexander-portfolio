@@ -3,6 +3,7 @@
     $background-var-1: white;
     $text: #2e3553;
     $button: #2e3553;
+    $background-var-4: #2e3553;
     $background: #eff4f5;
     $accent: #6f7de2;
     $background-var-2: #e4a7a3;
@@ -13,3 +14,16 @@
     $headers: 'highgate', sans-serif;
     $bodytext: 'interstate', sans-serif;
 }
+
+$colors: (
+    primary: #e4a7a3,
+    background: #eff4f5,
+    background-light: #fff,
+    background-variation-1: #2e3553,
+    background-variation-2: #d2ebe1,
+    background-variation-3: #6f7de2,
+    background-variation-4:#fdcfcc,
+    background-variation-4-low-opacity:#e4a7a3c9,
+    text: #2e3553,
+    text-light: #eff4f5,
+);
