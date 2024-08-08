@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./static/lib/bootstrap/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./static/css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
     <title>Portfolio</title>
 </head>
@@ -16,9 +17,9 @@
 
 
 <body id="home-page">
-    <header>
+    <header id="top">
         <h1>Portfolio</h1>
-        <button type="submit">Menu</button>
+        <button class="menu-button" type="submit">Menu</button>
         <nav>
 
             <ul>
@@ -37,139 +38,186 @@
 
 
         <section id="user">
+            <div class="container">
+                <div class="row">
+
+                    <article>
+                        <img src="./static/images/user-profile.svg" alt="gebruikers foto">
+                        <div>
+                            <h2 class="name">Ik ben Keïsha Alexander</h2>
+                            <p class="user-description">Ik ben een UI/UX designer en een Frontend Developer. Momenteel studeer
+                                ik Communication and
+                                Multimedia Design
+                                bij Hogeschool van Amsterdam</p>
+                            <a href="https://github.com/K3A101">Github</a>
+                            <a href="./over-mij.html">Over mezelf</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
 
             <!-- Gegevens van mijn github profiel -->
-            <article>
-                <img src="https://avatars.githubusercontent.com/u/90068272?v=4" alt="gebruikers foto">
-                <div>
-                    <p>Ik ben Keïsha Alexander</p>
-                    <p>K3A101</p>
-                    <p>k ben een UI/UX designer en een Frontend Developer. Momenteel studeer ik Communication and
-                        Multimedia Design
-                        bij Hogeschool van Amsterdam</p>
-                    <a href="https://github.com/K3A101">Github</a>
-                    <a href="./over-mij.html">Over mezelf</a>
-                </div>
-            </article>
         </section>
-        <h2>Ik maak digitale en interactieve producten</h2>
-        <!-- Section 2 -->7
+        <small class="quote">
+            Ik maak digitale en interactieve producten
+        </small>
+
+
+
+        <!-- Section 2 -->
         <div class="link-project">
             <h2>Projecten </h2>
             <a href="./projecten.html">Meer Projecten</a>
         </div>
 
-        <section>
+        <section class="container projects">
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="thumbnail">
+                        <div class="img-container">
+                            <img src="./images/stageverslag-lange-stage.png" alt="thumbnail">
+                        </div>
+
+                        <a href="https://k3a101.github.io/stageverslag/">
+                            <div class="position-text">
+
+                                <p>Dit is mijn stageverslag die ik heb gemaakt tijdens mij afstudeerstage bij go2people.
+                                    Het is
+                                    helemaal gecodeerd met de kennis die ik heb opgedaan bij het stage bedrijf. </p>
+                            </div>
+                            <h3>Stageverslag</h3>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="thumbnail">
+                        <div class="img-container">
+                            <img src="https://github.com/K3A101/interface-interactie-tijdlijn/raw/main/readme-images/versie3-pagina.png"
+                                alt="thumbnail">
+                        </div>
+
+                        <a href="https://k3a101.github.io/interface-interactie-tijdlijn/">
+                            <div class="position-text">
+                                <p>
+                                    Mijn prototype is een aantrekkelijk tijdlijn van het klassieke karakter Mario. De
+                                    Manier hoe
+                                    ik
+                                    de tijdlijn had
+                                    gevisualiseerd is door de verschillende versies van Mario te laten zien. </p>
+                            </div>
+                            <h3>Super Mario Tijdlijn</h3>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="thumbnail">
+                        <div class="img-container">
+                            <img src="./images/meesterproef-vid.png" alt="thumbnail">
+                        </div>
+
+                        <a href="https://k3a101.github.io/meesterproef/">
+                            <div class="position-text">
+
+                                <p>Een visuele interface van het artikel uit het Correspondent Kunstmatige intelligentie
+                                    is geen
+                                    gevaar voor de
+                                    Kunstenaars; integendeel.</p>
+                            </div>
+                            <h3>Kunstmatige intelligentie</h3>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+
+
+
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <article class="thumbnail">
+                        <div class="img-container">
+
+                            <img src="https://github.com/K3A101/real-time-web-2223/raw/main/readme-images/chatting-functionality.png"
+                                alt="thumbnail">
+                        </div>
+
+                        <a href="https://realtime-webapp.adaptable.app/">
+                            <div class="position-text">
+                                <p>DictoChat is een chat applicatie waar je het betekenis van het woord kan definiëren.
+                                </p>
+                            </div>
+
+                            <h3>Dictionary generator chat</h3>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="thumbnail">
+                        <div class="img-container">
+
+                            <img src="https://github.com/K3A101/web-typography-22-23/raw/main/images/tv-static-effect-v1.png"
+                                alt="thumbnail">
+                        </div>
+                        <a href="https://k3a101.github.io/web-typography-22-23/">
+                            <div class="position-text">
+                                <p>
+                                    Voor web typografie heb ik een filmfragment vormgegeven voor mensen die doof zijn
+                                    geboren.
+                                    De filmfragment gaat over het
+                                    film blade runner. Hoe kan ik met CSS het filmfragment spannender maken voor mensen
+                                    die doof
+                                    zijn? </p>
+                            </div>
+                            <h3>Film Fragment Vormgeven</h3>
+                        </a>
+                    </article>
+                </div>
+                <div class="col-md-4">
+                    <article class="thumbnail">
+                        <div class="img-container">
+
+                            <img src="./images/karakter-aan-het-zwemmen.png" alt="thumbnail">
+                        </div>
+
+                        <a href="https://xd.adobe.com/view/700fdc8b-8f43-4a36-b424-2b394ea6e577-255c/?fullscreen">
+                            <div class="position-text">
+
+                                <p>Voor interface en beweging heb ik een interface gemaakt op XD van een karakter en
+                                    drie
+                                    functie laten uitvoeren met
+                                    behulp van animatie. Mijn Karakter heet Coral en zij is een zeemermin. Zij kan
+                                    zingen,
+                                    dansen en zwemmen. Om de animatie
+                                    te maken heb ik gebruikt gemaakt van Adobe After effects.</p>
+                            </div>
+                            <h3>Animatie: Coral de zeemermin</h3>
+                        </a>
+                    </article>
+                </div>
+            </div>
 
             <!-- <a class="project-link" href="./projecten.html">Meer Projecten</a> -->
 
             <!-- recente projecten -->
-            <article class="thumbnail">
-                <div class="img-container">
-                    <img src="./images/stageverslag-lange-stage.png" alt="thumbnail">
-                </div>
-
-                <a href="https://k3a101.github.io/stageverslag/">
-                    <div class="position-text">
-
-                        <p>Dit is mijn stageverslag die ik heb gemaakt tijdens mij afstudeerstage bij go2people. Het is
-                            helemaal gecodeerd met de kennis die ik heb opgedaan bij het stage bedrijf. </p>
-                    </div>
-                    <h3>Stageverslag</h3>
-                </a>
-            </article>
-
-            <article class="thumbnail">
-                <div class="img-container">
-                    <img src="https://github.com/K3A101/interface-interactie-tijdlijn/raw/main/readme-images/versie3-pagina.png"
-                        alt="thumbnail">
-                </div>
-
-                <a href="https://k3a101.github.io/interface-interactie-tijdlijn/">
-                    <div class="position-text">
-                        <p>
-                            Mijn prototype is een aantrekkelijk tijdlijn van het klassieke karakter Mario. De Manier hoe
-                            ik
-                            de tijdlijn had
-                            gevisualiseerd is door de verschillende versies van Mario te laten zien. </p>
-                    </div>
-                    <h3>Super Mario Tijdlijn</h3>
-                </a>
-            </article>
-            <article class="thumbnail">
-                <div class="img-container">
-                    <img src="./images/meesterproef-vid.png" alt="thumbnail">
-                </div>
-
-                <a href="https://k3a101.github.io/meesterproef/">
-                    <div class="position-text">
-
-                        <p>Een visuele interface van het artikel uit het Correspondent Kunstmatige intelligentie is geen
-                            gevaar voor de
-                            Kunstenaars; integendeel.</p>
-                    </div>
-                    <h3>Kunstmatige intelligentie</h3>
-                </a>
-            </article>
 
 
 
         </section>
-
+        <small class="quote">
+            Vormgeving projecten
+        </small>
         <h2>Vormgeving Projecten</h2>
 
         <section>
             <!-- Vormgeving projecten -->
-            <article class="thumbnail">
-                <div class="img-container">
 
-                    <img src="https://github.com/K3A101/real-time-web-2223/raw/main/readme-images/chatting-functionality.png"
-                        alt="thumbnail">
-                </div>
 
-                <a href="https://realtime-webapp.adaptable.app/">
-                    <div class="position-text">
-                        <p>DictoChat is een chat applicatie waar je het betekenis van het woord kan definiëren.</p>
-                    </div>
 
-                    <h3>Dictionary generator chat</h3>
-                </a>
-            </article>
-            <article class="thumbnail">
-                <div class="img-container">
-
-                    <img src="https://github.com/K3A101/web-typography-22-23/raw/main/images/tv-static-effect-v1.png"
-                        alt="thumbnail">
-                </div>
-                <a href="https://k3a101.github.io/web-typography-22-23/">
-                    <div class="position-text">
-                        <p>
-                            Voor web typografie heb ik een filmfragment vormgegeven voor mensen die doof zijn geboren.
-                            De filmfragment gaat over het
-                            film blade runner. Hoe kan ik met CSS het filmfragment spannender maken voor mensen die doof
-                            zijn? </p>
-                    </div>
-                    <h3>Film Fragment Vormgeven</h3>
-                </a>
-            </article>
-            <article class="thumbnail">
-                <div class="img-container">
-
-                    <img src="./images/karakter-aan-het-zwemmen.png" alt="thumbnail">
-                </div>
-
-                <a href="https://xd.adobe.com/view/700fdc8b-8f43-4a36-b424-2b394ea6e577-255c/?fullscreen">
-                    <div class="position-text">
-
-                        <p>Voor interface en beweging heb ik een interface gemaakt op XD van een karakter en drie
-                            functie laten uitvoeren met
-                            behulp van animatie. Mijn Karakter heet Coral en zij is een zeemermin. Zij kan zingen,
-                            dansen en zwemmen. Om de animatie
-                            te maken heb ik gebruikt gemaakt van Adobe After effects.</p>
-                    </div>
-                    <h3>Animatie: Coral de zeemermin</h3>
-                </a>
-            </article>
 
         </section>
         <h2>Portfolio van voorgaande jaren</h2>

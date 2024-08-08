@@ -21,6 +21,7 @@
 
 
 
+
 body {
     font-family: var(--algemene-tekst);
     color: var(--donker-blauw);
@@ -29,12 +30,13 @@ body {
     scroll-behavior: smooth;
     /* overflow-x: hidden; */
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     background-color: var(--grijs);
-   
+
 }
 
-body::-webkit-scrollbar-thumb{
+body::-webkit-scrollbar-thumb {
     background-color: var(--donker-blauw);
 }
 
@@ -51,14 +53,7 @@ header h1 {
     text-align: center;
 }
 
-p {
-    font-size: clamp(1em, 2vw, 1em)
-}
 
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
 
 li {
     list-style: none;
@@ -81,6 +76,7 @@ footer p {
     font-size: clamp(1em, 2vw, 1em);
     font-weight: bold;
 }
+
 /*****************/
 /* NAVIGATIEMENU */
 /*****************/
@@ -187,72 +183,23 @@ nav a:hover {
 /************/
 /* HOMEPAGE */
 /************/
-#home-page main {
-    display: grid;
-    gap: 1em;
 
-}
-
-#home-page main>h2:nth-of-type(1) {
-    padding: 2em;
-    font-size: clamp(1.5em, 2vw, 6em);
-}
-
-#home-page section {
-    margin: 2em 0;
-}
-
-
-
-#home-page main section:nth-of-type(1)h2 {
-    justify-self: left;
-    margin-left: 1em;
-}
-
-#home-page main input {
-    appearance: none;
-}
-
-#home-page main label {
-    background-color: var(--roze);
-    color: var(--grijs);
-    padding: .5em 1.5em;
-    place-self: center;
-}
-
-#home-page section:nth-of-type(1) {
+/* #home-page section:nth-of-type(1) {
 
     padding: 3em;
     width: 100%;
 
     background-color: var(--roze);
-}
+} */
 
-#home-page section:nth-of-type(1) figure {
-    margin: 1em 0;
-}
 
-#home-page section:nth-of-type(1) article {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-}
 
-#home-page section:nth-of-type(1) article>img {
-    width: 100%;
-    border-radius: 1em;
-}
 
-#home-page section:nth-of-type(1) article div p:nth-child(1) {
-    font-weight: bold;
-    font-size: clamp(1em, 3vw, 5em);
-    margin-bottom: .3em;
-}
 
-#home-page section:nth-of-type(1) article div p:nth-child(2) {
-    font-weight: bold;
-}
+
+
+
+
 
 #home-page section:nth-of-type(1) article div p:nth-child(3) {
     margin-bottom: .5em;
@@ -311,169 +258,31 @@ nav a:hover {
 /* RECENTE PROJECTEN SECTION */
 /*****************************/
 
-#home-page section:nth-of-type(2),
-#home-page section:nth-of-type(3),
-#home-page section:nth-of-type(4) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 1em;
-}
-
-#home-page h2 {
-    text-align: center;
-}
-
-#home-page section:nth-of-type(2) article,
-#home-page section:nth-of-type(3) article,
-#home-page section:nth-of-type(4) article {
-    position: relative;
-    background-color: rgb(236, 196, 196);
-    width: 100%;
-    height: fit-content;
-    border-radius: 1em;
-    box-shadow: 1px 1px 7px var(--donker-blauw);
-}
-
-#home-page section:nth-of-type(2) article img,
-#home-page section:nth-of-type(3) article img,
-#home-page section:nth-of-type(4) article img {
-    object-fit: cover;
-    height: auto;
-    width: 100%;
-    border-radius: 1em;
-
-}
-
-.img-container {
-    width: 100%;
-    height: 100%;
-}
-
-#home-page section:nth-of-type(2) .thumbnail a,
-#home-page section:nth-of-type(3) .thumbnail a,
-#home-page section:nth-of-type(4) .thumbnail a {
-    display: inline-block;
-    position: absolute;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-}
-
-
-#home-page section:nth-of-type(2) h3,
-#home-page section:nth-of-type(3) h3,
-#home-page section:nth-of-type(4) h3 {
-    position: absolute;
-    bottom: 0;
-    background-color: var(--donker-blauw);
-    width: 100%;
-    height: auto;
-    color: var(--grijs);
-    padding: .5em;
-    border-radius: 0 0 .5em .5em;
-}
 
 
 
-#home-page section:nth-of-type(2) article .position-text,
-#home-page section:nth-of-type(3) article .position-text,
-#home-page section:nth-of-type(4) article .position-text {
-    display: inline-block;
-    position: absolute;
-    padding: 1em;
-    inset: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: var(--roze);
-    border-radius: 1em;
-}
 
-#home-page section:nth-of-type(2) p,
-#home-page section:nth-of-type(3) p,
-#home-page section:nth-of-type(4) p {
-    color: var(--donker-blauw);
-    line-height: 1.5;
-}
 
-#home-page section:nth-of-type(2) article:hover .position-text,
-#home-page section:nth-of-type(3) article:hover .position-text,
-#home-page section:nth-of-type(4) article:hover .position-text {
-    opacity: 1;
-}
-#home-page section:nth-of-type(2) article:focus-within .position-text,
-#home-page section:nth-of-type(3) article:focus-within .position-text,
-#home-page section:nth-of-type(4) article:focus-within .position-text {
-    opacity: 1;
-}
 
-#home-page .link-project {
-    /* display: inline-block; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    margin: 1em auto;
 
-}
 
-#home-page .link-project a {
-    /* align-self: flex-end; */
-    justify-self: end;
-}
 
-#home-page .link-project a {
-    display: inline-block;
-    background-color: var(--donker-blauw);
-    color: white;
-    padding: 1em 1.5em;
-    width: fit-content;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    transition: color 0.3s;
-}
 
-/* Shuift naar de rechterkant */
-/* Link animatie voor de repo */
-#home-page .link-project a::before {
-    content: "";
-    transition: 0.5s all ease;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
 
-    background-color: var(--roze);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    /* Transform = transition-property: transform; */
-    /* ease-out = transition-timing-function: ease-out */
-    transition: 0.3s transform ease-out;
-    -webkit-transition: 0.3s transform ease-out;
-}
 
-#home-page .link-project a:hover,
-#home-page .link-project a:focus,
-#home-page .link-project a:active {
-    color: var(--donker-blauw);
-}
 
-#home-page .link-project a:hover::before,
-#home-page .link-project a:active::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
 
-/* #home-page section:nth-of-type(1) article div a img {
-    width: 10%;
-} */
+
+
+
+
+
+
+
+
+
+
+
 /***************/
 /* GITHUB PAGE */
 /***************/
@@ -755,6 +564,7 @@ nav a:hover {
 #project-page section:nth-of-type(1) img {
     width: 100%;
 }
+
 /* De opdracht onderdeel */
 #project-page section:nth-of-type(2) {
     background-color: white;
@@ -856,7 +666,7 @@ nav a:hover {
 }
 
 .skills li {
-    
+
     font-weight: bold;
 }
 
@@ -987,8 +797,9 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    
+
 }
+
 #over-mij section:nth-of-type(5) {
     place-items: center;
 }
@@ -1002,7 +813,7 @@ nav a:hover {
     color: var(--donker-blauw);
     font-weight: bold;
     padding: 1em;
-    gap:.5em;
+    gap: .5em;
     border-radius: .5em;
     transition: .3s ease-in-out;
 }
@@ -1027,6 +838,7 @@ nav a:hover {
     font-weight: bold;
     text-decoration: none;
 }
+
 /* .contact-container article {
     display: flex;
     flex-direction: column;
@@ -1034,8 +846,7 @@ nav a:hover {
 
 @media (min-width: 45em) {
 
-    #github-page section:nth-of-type(1) article,
-    #home-page section:nth-of-type(1) article {
+    #github-page section:nth-of-type(1) article {
 
         flex-direction: row;
         justify-content: space-evenly;
@@ -1054,29 +865,9 @@ nav a:hover {
         width: 20%;
     }
 
-    #home-page section:nth-of-type(2) article,
-    #home-page section:nth-of-type(3) article,
-    #home-page section:nth-of-type(4) article {
-        max-width: 22em;
-        height: 15em;
-    }
-
-    #home-page section:nth-of-type(2) article img,
-    #home-page section:nth-of-type(3) article img,
-    #home-page section:nth-of-type(4) article img {
-
-        width: inherit;
-        height: 15em;
-    }
-
-    #home-page section:nth-of-type(2),
-    #home-page section:nth-of-type(3),
-    #home-page section:nth-of-type(4) {
-
-        flex-direction: row;
+  
 
 
-    }
 
 
     #project-page section:nth-of-type(1) {
@@ -1095,10 +886,11 @@ nav a:hover {
     #project-page section:nth-of-type(1) img {
         max-width: 78%;
     }
-  #project-page section:nth-of-type(1) img[src="https://k3a101.github.io/Minor-portfolio/images/visie-china.png"] {
-              max-width: 58%;
-          }
-        
+
+    #project-page section:nth-of-type(1) img[src="https://k3a101.github.io/Minor-portfolio/images/visie-china.png"] {
+        max-width: 58%;
+    }
+
     /* De opdracht onderdeel */
     #project-page section:nth-of-type(2) {
         display: grid;
