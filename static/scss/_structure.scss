@@ -5,6 +5,24 @@ html {
     font-size: 62.5%; // Set default px to 10px, so 16px is 1.6rem
 }
 
+body {
+    font-family: var(--algemene-tekst);
+    color: color(text);
+    background: color(background);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        background: color(background);
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: color(background-variation-1);
+    }
+}
+
+
+
 .row {
     padding-bottom: 1.5rem;
 }
@@ -12,6 +30,8 @@ html {
 .img-container {
     width: 100%;
     height: 100%;
+    background: color(primary);
+    border-radius: 1rem;
 }
 
 .quote {
@@ -31,7 +51,7 @@ html {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: var(--roze);
+    background-color: color(background-variation-4);
     border-radius: 1em;
 
     &:hover {
@@ -60,9 +80,9 @@ html {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
 
-        
+
+
     }
 }
 
@@ -119,26 +139,26 @@ html {
     background-color: rgb(236, 196, 196);
     width: 100%;
     height: fit-content;
-    border-radius: 1em;
-    box-shadow: 0px 12px 20px var(--donker-blauw);
+    border-radius: 1rem;
+    box-shadow: 0px 12px 20px color(background-variation-1);
 
     h3 {
         position: absolute;
         bottom: -1rem;
-        background-color: var(--donker-blauw);
+        background-color: color(background-variation-1);
         width: 100%;
 
         font-weight: bold;
-        color: var(--grijs);
-        padding: .5em;
-        border-radius: 0 0 .5em .5em;
+        color: color(background);
+        padding: .5rem;
+        border-radius: 0 0 .5rem .5rem;
     }
 
     img {
         object-fit: cover;
         height: 100%;
         width: 100%;
-        border-radius: 1em;
+        border-radius: 1rem;
     }
 
     a {
@@ -150,8 +170,10 @@ html {
     }
 
     p {
-        color: var(--donker-blauw);
+        color: color(background-variation-1);
         line-height: 1.5;
+        padding: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .position-text {}
@@ -177,11 +199,11 @@ html {
         box-shadow: 0px 12px 20px var(--donker-blauw);
 
         img {
-                object-fit: cover;
-                height: 100%;
-                width: 100%;
-                border-radius: 1em;
-            }
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 1em;
+        }
 
         a {
             display: inline-block;
@@ -229,5 +251,22 @@ html {
 
 
 
+
+}
+
+/**********/
+/* FOOTER */
+/**********/
+#bottom {
+    background: color(background-variation-1);
+    color: color(text-light);
+    padding: 1em;
+    text-align: center;
+    margin-top: 2em;
+
+    p {
+        font-size:2rem;
+        font-weight: bold;
+    }
 
 }
