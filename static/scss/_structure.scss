@@ -89,12 +89,12 @@ body {
 #user {
     padding: 3em 0;
     width: 100%;
-    background-color: var(--roze);
+    background-color: color(primary);
 
     article {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: 5rem;
         align-items: center;
 
 
@@ -108,7 +108,14 @@ body {
             margin-bottom: .3em;
         }
 
-        .user-description {}
+        .user-description {
+            width: 70%;
+            padding: 1.6rem 0;
+        }
+
+        a {
+            margin-right: 1.6rem;
+        }
 
 
     }
@@ -121,6 +128,10 @@ body {
             justify-content: space-evenly;
             width: 100%;
             margin: 0 auto;
+
+            img {
+                width: 50rem;
+            }
 
         }
 
