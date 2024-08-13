@@ -56,463 +56,87 @@
 
 
 
-/***************/
-/* GITHUB PAGE */
-/***************/
-
-/* Bron voor de effect: https: //css-tricks.com/css-link-hover-effects/ */
-/*******************/
-/* USER COMNTAINER in Github pages */
-/*******************/
-#github-page main {
-    display: grid;
-    place-items: center;
-}
-
-#github-page main>h2 {
-    justify-self: left;
-    margin-left: 1em;
-}
-
-#github-page main input {
-    appearance: none;
-}
-
-#github-page main label {
-    background-color: var(--roze);
-    color: var(--grijs);
-    padding: .5em 1.5em;
-}
-
-#github-page section:nth-of-type(1) {
-
-    padding: 3em;
-    width: 100%;
-    display: none;
-    background-color: var(--roze);
-}
-
-#github-page section:nth-of-type(1) figure {
-    margin-top: 1em;
-}
-
-#github-page section:nth-of-type(1) article {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
-}
-
-#github-page section:nth-of-type(1) article>img {
-    width: 100%;
-    border-radius: 1em;
-}
-
-#github-page section:nth-of-type(1) article div p:nth-child(1) {
-    font-weight: bold;
-    font-size: clamp(1em, 3vw, 5em);
-    margin-bottom: .3em;
-}
-
-#github-page section:nth-of-type(1) article div p:nth-child(2) {
-    font-weight: bold;
-}
-
-#github-page section:nth-of-type(1) article div p:nth-child(3) {
-    margin-bottom: .5em;
-}
-
-#github-page section:nth-of-type(1) article div a {
-    display: inline-block;
-    background-color: var(--donker-blauw);
-    color: white;
-    padding: 1em 1.5em;
-    width: fit-content;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    transition: color 0.3s;
-}
-
-/* Shuift naar de rechterkant */
-/* Link animatie voor de repo */
-#github-page section:nth-of-type(1) article div a::before {
-    content: "";
-    transition: 0.5s all ease;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
-    background-color: var(--grijs);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    /* Transform = transition-property: transform; */
-    /* ease-out = transition-timing-function: ease-out */
-    transition: 0.3s transform ease-out;
-    -webkit-transition: 0.3s transform ease-out;
-}
-
-#github-page section:nth-of-type(1) article div a:hover,
-#github-page section:nth-of-type(1) article div a:focus,
-#github-page section:nth-of-type(1) article div a:active {
-    color: var(--donker-blauw);
-}
-
-#github-page section:nth-of-type(1) article div a:hover::before,
-#github-page section:nth-of-type(1) article div a:focus::before,
-#github-page section:nth-of-type(1) article div a:active::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-#github-page section:nth-of-type(1) article div a img {
-    width: 10%;
-}
 
 
 
 
-/*******************/
-/* REPOSITORY-LIST */
-/*******************/
-#github-page section:nth-of-type(2) {
-    display: grid;
-
-    grid-template-columns: 1fr;
-    margin: 1em;
-    gap: 1em;
-}
-
-#github-page section:nth-of-type(2) article {
-    position: relative;
-    width: 100%;
-    height: 25em;
-    --donker-blauw: #2e35537b;
-    background-color: var(--wit);
-    border-radius: .5em;
-    box-shadow: 1px 1px 5px var(--donker-blauw);
-    padding: 2em;
-}
-
-#github-page section:nth-of-type(2) article h1 {
-    /* color: var(--roze); */
-    font-size: clamp(1.5em, 3vw, 5em);
-    margin-bottom: .3em;
-}
-
-#github-page section:nth-of-type(2) article ul {
-    display: flex;
-    gap: .5em;
-    position: absolute;
-    /* left: 6em; */
-    bottom: 2em;
-}
-
-/* Shuift naar de rechterkant */
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2) {
-    --donker-blauw: #2e3553;
-    background-color: var(--donker-blauw);
-    position: relative;
-    padding: .5em 1.5em;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    transition: color 0.3s;
-}
 
 
-/* Link animatie voor de repo */
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2)::before {
-    content: "";
-    transition: 0.5s all ease;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
-    background-color: var(--roze);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    /* Transform = transition-property: transform; */
-    /* ease-out = transition-timing-function: ease-out */
-    transition: 0.3s transform ease-out;
-    -webkit-transition: 0.3s transform ease-out;
-}
-
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):hover,
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):focus,
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):active {
-    color: var(--donker-blauw);
-}
-
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):hover::before,
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):focus::before,
-#github-page section:nth-of-type(2) article ul li:nth-of-type(n+2):active::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-#github-page section:nth-of-type(2) article ul a {
-    color: var(--wit);
-}
-
-
-
-#github-page section:nth-of-type(2) article h1::first-letter {
-    text-transform: uppercase;
-}
-
-
-/* bRON: https: //github.com/IanLunn/Hover */
-/* https: //ianlunn.github.io/Hover/ */
-/***********************/
-/* LANGUAGE cOLOR CODE */
-/***********************/
-/* CSS */
-.blue {
-    padding: .5em 1.5em;
-    background-color: #A5EDF1;
-}
-
-/* HTML */
-.red {
-    padding: .5em 1.5em;
-    background-color: #FD8FAF;
-}
-
-/* Javascript */
-.yellow {
-    padding: .5em;
-    background-color: #F9F99F;
-}
-
-
-
-/****************/
-/* PROJECT PAGE */
-/****************/
-#project-page main {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 10em;
-    /* overflow-x: hidden; */
-    scroll-snap-type: y mandatory;
-}
-
-#project-page main div {
-    scroll-snap-align: center;
-
-}
-
-#project-page h1 {
-    font-size: 4em;
-}
-
-#project-page h2 {
-    font-size: 2em;
-}
-
-
-#project-page section:nth-of-type(1) {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    height: auto;
-    width: 100%;
-    background-color: var(--roze);
-    padding: 3em;
-}
-
-#project-page section:nth-of-type(1) article {
-    place-self: center;
-}
-
-#project-page section:nth-of-type(1) img {
-    width: 100%;
-}
-
-#project-page section:nth-of-type(1) img {
-    width: 100%;
-}
-
-/* De opdracht onderdeel */
-#project-page section:nth-of-type(2) {
-    background-color: white;
-    grid-template-columns: 2fr 1fr;
-    padding: 1em;
-    margin: 1em;
-    height: fit-content;
-
-    gap: 3em;
-
-    align-items: center;
-}
-
-
-#project-page section:nth-of-type(2) p {
-
-    line-height: 1.7;
-}
-
-#project-page section:nth-of-type(2) p span {
-    display: block;
-    margin: .8em 0;
-}
-
-#project-page section:nth-of-type(2) article {
-    display: grid;
-    place-self: top;
-
-}
-
-
-#project-page section:nth-of-type(2) img {
+/* #project-page section:nth-of-type(2) img {
     width: 80% !important;
-}
+} */
 
 
 
-.project-info {
-    display: flex;
-    gap: 2em;
-}
 
-.project-info a {
-    /* align-self: flex-end; */
-    margin: 1em 0;
-    justify-self: end;
-}
 
-.project-info a {
-    display: inline-block;
-    background-color: var(--donker-blauw);
-    color: white;
-    padding: 1em 1.5em;
-    width: fit-content;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    transition: color 0.3s;
-}
 
-/* Shuift naar de rechterkant */
-/* Link animatie voor de repo */
-.project-info a::before {
-    content: "";
-    transition: 0.5s all ease;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
-    background-color: var(--roze);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    /* Transform = transition-property: transform; */
-    /* ease-out = transition-timing-function: ease-out */
-    transition: 0.3s transform ease-out;
-    -webkit-transition: 0.3s transform ease-out;
-}
-
-.project-info a:hover,
-.project-info a:focus,
-.project-info a:active {
-    color: var(--donker-blauw);
-}
-
-.project-info a:hover::before,
-.project-info a:active::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
-/* Voor grotere schermen */
-/* De skills onder projecte */
-.skills {
-    margin: 1em 0;
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
-}
-
-.skills li {
-
-    font-weight: bold;
-}
 
 
 /*******************/
 /* OVER MIJ PAGINA */
 /*******************/
-#over-mij p {
-    font-size: 1.2em;
-    line-height: 1.7;
-}
 
 
-#over-mij main section:nth-of-type(n+2) {
+
+/* #over-mij main section:nth-of-type(n+2) {
     margin: 1em;
     display: grid;
     padding: 2em;
-}
+} */
 
-#over-mij main section:nth-of-type(n+2) article figure {
-    /* margin: 1em; */
+/* #over-mij main section:nth-of-type(n+2) article figure {
+    margin: 1em;
     width: 100%;
     display: flex;
     gap: 1em;
     align-items: center;
-}
+} */
 
-#over-mij main section:nth-of-type(n+2) article ul {
+/* #over-mij main section:nth-of-type(n+2) article ul {
     display: flex;
     flex-direction: column;
     padding: 0 .5em;
     gap: 1em;
-}
+} */
 
-#over-mij main section:nth-of-type(n+2) article li {
+/* #over-mij main section:nth-of-type(n+2) article li {
     background-color: var(--donker-blauw);
     color: white;
     align-self: center;
     padding: 1em 1.5em;
     width: 15em;
-}
+} */
 
 /* #over-mij main section:nth-of-type(n+2) article img {
     width: 30%;
     max-width: 50%;
 } */
 
-#over-mij section:nth-of-type(1) {
+/* #over-mij section:nth-of-type(1) {
     padding: 3em;
     width: 100%;
     background-color: var(--roze);
-}
+} */
 
-#over-mij section:nth-of-type(1) img {
+/* #over-mij section:nth-of-type(1) img {
     width: 100%;
     height: auto;
-}
+} */
 
-#over-mij main section:nth-of-type(1) h2 {
+/* #over-mij main section:nth-of-type(1) h2 {
     font-size: clamp(1.5em, 5vw, 6em);
 }
 
-#over-mij main section:nth-of-type(1) p {
-    font-size: clamp(1em, 2vw, 2em);
-}
+
 
 #over-mij main section:nth-of-type(n+2) h2 {
     font-size: clamp(3em, 5vw, 3em);
     padding: 2em 0;
-}
+} */
 
 
-
+/* 
 #over-mij section:nth-of-type(2) a {
     display: block;
     margin-top: 1em;
@@ -527,36 +151,6 @@
 
 /* Shuift naar de rechterkant */
 /* Link animatie voor de repo */
-#over-mij section:nth-of-type(2) a::before {
-    content: "";
-    transition: 0.5s all ease;
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-
-    background-color: var(--roze);
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-    /* Transform = transition-property: transform; */
-    /* ease-out = transition-timing-function: ease-out */
-    transition: 0.3s transform ease-out;
-    -webkit-transition: 0.3s transform ease-out;
-}
-
-#over-mij section:nth-of-type(2) a:hover,
-#over-mij section:nth-of-type(2) a:focus,
-#over-mij section:nth-of-type(2) a:active {
-    color: var(--donker-blauw);
-}
-
-#over-mij section:nth-of-type(2) a:hover::before,
-#over-mij section:nth-of-type(2) a:active::before {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-}
-
 #over-mij section:nth-of-type(4) article figure img {
     width: 50%;
 }
@@ -643,48 +237,6 @@
 
 
 
-    #project-page section:nth-of-type(1) {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        height: 80vh;
-        width: 100%;
-        background-color: var(--roze);
-    }
-
-    #project-page section:nth-of-type(1) article {
-        place-self: center;
-
-    }
-
-    #project-page section:nth-of-type(1) img {
-        max-width: 78%;
-    }
-
-    #project-page section:nth-of-type(1) img[src="https://k3a101.github.io/Minor-portfolio/images/visie-china.png"] {
-        max-width: 58%;
-    }
-
-    /* De opdracht onderdeel */
-    #project-page section:nth-of-type(2) {
-        display: grid;
-        background-color: white;
-        grid-template-columns: 2fr 1fr;
-
-        margin: 0 auto;
-        height: fit-content;
-        gap: 3em;
-        width: 80%;
-        align-items: center;
-    }
-
-    #project-page section:nth-of-type(2) article {
-        max-width: 80%;
-    }
-
-    #project-page section:nth-of-type(2) img {
-        width: 80%;
-    }
-
 
     /* Een overlay effect bij de navigatiemenu */
     body nav ul {
@@ -707,49 +259,15 @@
 }
 
 @media (min-width: 900px) {
-    #github-page section:nth-of-type(2) {
-        grid-template-columns: 1fr 1fr;
-    }
 
-    #github-pagesection:nth-of-type(2) article {
-        max-width: 40vw;
-    }
 
-    #over-mij main section:nth-of-type(1) {
-        display: flex;
-        align-items: center;
-
-        width: 100%;
-        background-color: var(--roze);
-    }
-
-    #over-mij section:nth-of-type(1) img {
-        width: 30%;
-        height: auto;
-    }
-
-    #over-mij main section:nth-of-type(n+2) {
-        display: grid;
-        place-items: center;
-    }
-
-    #over-mij main section:nth-of-type(2) article,
-    #over-mij main section:nth-of-type(3) article,
-    #over-mij main section:nth-of-type(4) article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        /* align-items: center; */
-    }
 
     #over-mij section:nth-of-type(2) img {
         width: 80%;
         height: auto;
     }
 
-    #over-mij main section:nth-of-type(n+2) article p {
-        width: 30em;
-        padding: 1em;
-    }
+   
 
     #over-mij section:nth-of-type(5) article {
         display: flex;
@@ -761,14 +279,3 @@
 
 
 
-@media (min-width: 1000px) {
-    #github-page section:nth-of-type(2) {
-        grid-template-columns: 1fr 1fr;
-        margin: 0 auto;
-        width: 80%;
-    }
-
-    #github-pagesection:nth-of-type(2) article {
-        max-width: 40vw;
-    }
-}

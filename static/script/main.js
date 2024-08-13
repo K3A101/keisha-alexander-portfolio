@@ -7,11 +7,25 @@ import { onRouteChanged } from "./modules/routing.js";
 import { getYear } from "./modules/copyright.js";
 
 // functies die de data fetchen
-fetchRepoData()
-fetchUserData()
+// feature detection
 
-window.addEventListener('load', getYear);
-window.addEventListener('haschange',onRouteChanged)
-menuButton.addEventListener('click', showNavMenu)
+if (fetchRepoData) {
+    fetchRepoData()
+}
+
+if (fetchUserData) {
+    fetchUserData()
+}
+
+if (getYear, onRouteChanged) {
+
+    window.addEventListener('load', getYear);
+    window.addEventListener('haschange', onRouteChanged)
+}
+
+if (menuButton) {
+    menuButton.addEventListener('click', showNavMenu)
+}
+
 
 

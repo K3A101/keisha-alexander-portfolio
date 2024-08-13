@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
+    <link href="./static/lib/bootstrap/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./static/css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
+    <link rel="stylesheet" href="./static/lib/swiper/swiper-bundle.min.css">
+    <script defer src="./static/script/swiper.js"></script>
     <title>Over Mij</title>
 </head>
 
 
 
 <body id="over-mij">
-    <header>
+    <header id="top">
         <h1>Portfolio</h1>
-        <button type="submit">Menu</button>
+        <button class="menu-button" type="submit">Menu</button>
         <nav>
 
             <ul>
-                <li>Navigatie</li>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./projecten.html">Projecten</a></li>
                 <li><a href="./over-mij.html">Over Mij</a></li>
@@ -32,105 +36,137 @@
     </header>
 
     <main>
-        <section>
-            <img src="./images/profiel-3.png" alt="Foto van mezelf">
-            <div>
-                <h2>Keïsha Alexander</h2>
-                <p>Front-end Developer</p>
-                <p>UI/UX Designer</p>
+        <section class="about-header">
+            <div class="container">
+                <div class="row">
+                    <div class="wrapper">
+
+                        <img src="./images/profiel-3.png" alt="Foto van mezelf">
+                        <div>
+                            <h2>Keïsha Alexander</h2>
+                            <p>Front-end Developer</p>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <!-- Gegevens van mijn github profiel -->
         </section>
 
-        <section>
+        <section class="about-description">
+            <div class="container">
+                <div>
+                     <h2>Wie ben ik?</h2>
+                    <article  class="row">
+                        <img class="col-md-6" src="./images/me-standing.svg" alt="">
+                    
+                        <p class="col-md-6">
+                            Ik ben geboren op Curaçao en kwam naar Nederland om te studeren. Momenteel studeer ik Communication
+                            and Multimedia
+                            Design bij Hogeschool van Amsterdam. Ik wil graag groeien als een UI/UX ontwerper en Front-end
+                            Developer. Om dit te
+                            bereiken wil ik mijn vaardigheden verder ontwikkelen in een echt bedrijf.
+                    
+                            Ik kan in een multidisciplinaire omgeving werken en verricht ik zelfstandig al mijn werkzaamheden.
+                            <br>
+                            <br>
+                            Alle taken die aan
+                            mij worden toegewezen, zijn nauwkeurig uitgevoerd. Verder ben ik een creatieve persoon die een hoge
+                            probleemoplossing
+                            vermogen heeft. Ik heb een oog voor detail en een sterk verbeeldingskracht. Aan de andere kant ben
+                            ik structureel en
+                            werkt heel systematisch. Kortom hou ik van gestructureerd werken. Voor meer informatie zie mijn cv!
+                            <span class="cv-buttons">
+                               <a class="button secondary" href="./cv/cv-ui-ux-keisha-alexander.pdf" download="Mijn CV">Download
+                                UI/UX CV</a>
+                            <a class="button secondary" href="./cv/cv-keisha-alexander.pdf" download="Mijn CV">Download
+                                Front-end CV</a>  
+                            </span>
+                           
+                        </p>
+                    </article>
 
-            <h2>Wie ben ik?</h2>
-            <article>
-                <img src="./images/me-standing.svg" alt="">
+                </div>
+            </div>
 
-                <p>
-                    Ik ben geboren op Curaçao en kwam naar Nederland om te studeren. Momenteel studeer ik Communication
-                    and Multimedia
-                    Design bij Hogeschool van Amsterdam. Ik wil graag groeien als een UI/UX ontwerper en Front-end
-                    Developer. Om dit te
-                    bereiken wil ik mijn vaardigheden verder ontwikkelen in een echt bedrijf.
-
-                    Ik kan in een multidisciplinaire omgeving werken en verricht ik zelfstandig al mijn werkzaamheden.
-                    Alle taken die aan
-                    mij worden toegewezen, zijn nauwkeurig uitgevoerd. Verder ben ik een creatieve persoon die een hoge
-                    probleemoplossing
-                    vermogen heeft. Ik heb een oog voor detail en een sterk verbeeldingskracht. Aan de andere kant ben
-                    ik structureel en
-                    werkt heel systematisch. Kortom hou ik van gestructureerd werken. Voor meer informatie zie mijn cv!
-                    <a href="./cv/cv-ui-ux-keisha-alexander.pdf" download="Mijn CV">Download UI/UX CV</a>
-                    <a href="./cv/cv-keisha-alexander.pdf" download="Mijn CV">Download Front-end CV</a>
-                </p>
-            </article>
+           
+           
         </section>
 
-        <section>
-            <h2>Wat kan ik?</h2>
-            <article>
-                <figure>
-                    <img src="./images/brain.svg" alt="">
-                    <ul>
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Javascript</li>
-                        <li>Socket.io</li>
-                        <li>Express.js</li>
-                    </ul>
-                    <ul>
-                        <li>Github</li>
-                        <li>Adobe XD</li>
-                        <li>Adobe Photoshop</li>
-                        <li>Adobe Illustrator</li>
-                        <li>Figma</li>
-                    </ul>
+        <section class="about-skills">
+            <div class="container">
+                <h2>Wat kan ik?</h2>
 
-                </figure>
-                <p>
+                <article class="row">
+                    <figure class="col-md-6">
+                        <img src="./images/brain.svg" alt="">
+                        <ul class="">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                            <li>Bootstrap</li>
+                            <li>TWIG</li>
+                            <li>Github</li>
+                            <li>SCSS</li>
+                            <li>WordPress</li>
+                            <li>Adobe After Effects</li>
+                            <li>Adobe Photoshop</li>
+                            <li>Adobe Illustrator</li>
+                            <li>Figma</li>
+                        </ul>
+                        
+                     
+                    </figure>
+                    <p class="col-md-6">
+    
+                        Ik ben een Front-end Developer en UI/UX Designer. Ik heb ervaring met HTML, CSS, Javascript,
+                        Node.js,
+                        Express.js, Git, Github, Adobe XD, Adobe Photoshop, Adobe Illustrator, Adobe InDesign en Figma.
+                        <br>
+                        <br>
 
-                    Ik ben een Front-end Developer en UI/UX Designer. Ik heb ervaring met HTML, CSS, Javascript,
-                    Node.js,
-                    Express.js, Git, Github, Adobe XD, Adobe Photoshop, Adobe Illustrator, Adobe InDesign en Figma.
-                </p>
-            </article>
+                        Tijdens mij stage heb ik geleerd om in grotere dev environments moest werken waardoor ik in functionaliteiten in componenten moest bouwen. Hierdoor heb talen zoals TWIG, SCSS en PHP geleerd. 
+                    </p>
+                </article>
+            </div>
         </section>
 
-        <section>
+        <section class="about-hobbies">
             <h2>Mijn Hobbies</h2>
-            <article>
-                <figure>
-                    <img src="./images/me-working.svg" alt="">
-                    <ul>
-                        <li>Tekenen</li>
-                        <li>Lezen</li>
-                        <li>Muziek luisteren</li>
-                        <li>Digitale kunstwerken</li>
+            <div class="container">
 
-                    </ul>
-
-
-                </figure>
-                <p>
-
-                    Buiten school doe ik verschillende activiteiten om mezelf te vermaken. Sinds jongs af aan hield ik
-                    van
-                    tekenen en heb ik
-                    verschillende projecten gemaakt. Ik heb tijdens het maken van de projecten veel geëxperimenteerd met
-                    soft pastel
-                    krijten, plakkaatverf, waterverf, alcohol stiften en nog veel meer. Tegenwoordig hou ik mij bezig
-                    met
-                    het maken van
-                    digitale illustraties. Ook hou ik van lezen, ik hou ervan om meer kennis op te doen op verschillende
-                    onderwerpen. Verder
-                    luister ik graag naar muziek, dit is mijn inspiratiebron voor het maken van mijn illustraties.
-                </p>
-            </article>
+                <article class="row">
+                    <figure class="col-md-6">
+                        <img src="./images/me-working.svg" alt="">
+                        <ul>
+                            <li>Tekenen</li>
+                            <li>Lezen</li>
+                            <li>Muziek luisteren</li>
+                            <li>Digitale kunstwerken</li>
+    
+                        </ul>
+                        
+    
+                    </figure>
+                    <p class="col-md-6">
+    
+                        Buiten school doe ik verschillende activiteiten om mezelf te vermaken. Sinds jongs af aan hield ik
+                        van
+                        tekenen en heb ik
+                        verschillende projecten gemaakt. Ik heb tijdens het maken van de projecten veel geëxperimenteerd met
+                        soft pastel
+                        krijten, plakkaatverf, waterverf, alcohol stiften en nog veel meer. Tegenwoordig hou ik mij bezig
+                        met
+                        het maken van
+                        digitale illustraties. Ook hou ik van lezen, ik hou ervan om meer kennis op te doen op verschillende
+                        onderwerpen. Verder
+                        luister ik graag naar muziek, dit is mijn inspiratiebron voor het maken van mijn illustraties.
+                    </p>
+                </article>
+            </div>
         </section>
 
-        <section>
+        <section class="about-contact">
             <h2>Contact Mij</h2>
             <div class="contact-container">
                 <article>
@@ -139,7 +175,7 @@
                 </article>
                 <article>
                     <img src="./images/email-icon.svg" alt="email iccon">
-                    <a href="mailto:keisha.alexander@hva.nl">keisha.alexander@hva.nl</a>
+                    <a href="mailto:alexanderkeisha9@gmail.com">alexanderkeisha9@gmail.com</a>
                 </article>
                 <article>
                     <img src="./images/linkedin-icon.svg" alt="linkedin iccon">
@@ -153,12 +189,16 @@
 
     </main>
 
-    <footer>
-        <p>Keïsha Alexander - ©2024</p>
+    <footer id="bottom">
+        <p class="copyright">KEA</p>
     </footer>
 
 
 
+    <script src="./static/lib/bootstrap/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./static/lib/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="./static/script/main.js"></script>
 </body>
 

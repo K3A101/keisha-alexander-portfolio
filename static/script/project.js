@@ -26,28 +26,29 @@
         data.forEach(project => {
             html += `
             <div class="sections">
-            <section>
+            <section class="project-header">
             <article>
             <h1>${project.name} </h1>
-            <h2>${project.short_description} </h2>
-            </article>
-            
-            <img src="${project.projectImg}" alt="Schets van mijn poster">
-            </section>
-            
-            <section>
-            <article>
-            <h2>De opdracht </h2>
-            <p>${project.description}</p>
+            <h2 class="subtitle">${project.short_description} </h2>
             <ul class="skills">
             <li>${project.skill_1}</li>
             <li>${project.skill_2}</li>
             <li>${project.skill_3}</li>
             </ul>
+            </article>
+            
+            <img class="${project.custom_class}" src="${project.projectImg}" alt="Schets van mijn poster">
+            </section>
+            
+            <section class="project-description">
+            <article>
+            <h2>De opdracht </h2>
+            <p>${project.description}</p>
+            
             
             <div class="project-info">
-            <a href="${project.prototype_link}">Live Demo</a>
-            <a href="${project.readme_link}">Readme</a>
+            <a class="button primary" href="${project.prototype_link}">Live Demo</a>
+            <a class="button primary" href="${project.readme_link}">Readme</a>
             </div>
                 
                 </article>

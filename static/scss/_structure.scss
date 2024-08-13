@@ -63,6 +63,13 @@ body {
     }
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /************/
 /* Homepage */
 /************/
@@ -265,6 +272,337 @@ body {
 
 }
 
+
+/****************/
+/* PROJECT PAGE */
+/****************/
+#project-page {
+
+    main {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 10em;
+        scroll-snap-type: y mandatory;
+
+        .subtitle {
+            font-size: 3rem;
+        }
+
+        .project-header {
+            display: grid;
+            // align-items: center;
+            place-items: center;
+            width: 100%;
+            background-color: var(--roze);
+            padding: 3em;
+
+            article {
+                place-self: center;
+                width: 70%;
+
+                /* Voor grotere schermen */
+                /* De skills onder projecten */
+                .skills {
+                    font-size: 1.6rem;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 1em;
+                    padding: 0;
+                    margin-top: 2rem;
+
+
+
+                    li {
+                        padding: 1rem 2rem;
+                        border-radius: 1rem;
+                        background: color(background);
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+
+                &.digital-poster {
+                    width: 40%;
+                }
+
+
+            }
+        }
+
+
+        .project-description {
+            background-color: white;
+            grid-template-columns: 2fr 1fr;
+            padding: 1em;
+
+            height: fit-content;
+
+            gap: 3em;
+
+            align-items: center;
+
+            p {
+                line-height: 1.7;
+
+                span {
+                    display: block;
+                    margin: .8em 0;
+                }
+            }
+
+
+            article {
+                display: grid;
+                place-self: top;
+
+                .project-info {
+                    display: flex;
+                    gap: 2em;
+
+
+                }
+
+
+            }
+
+
+
+        }
+
+    }
+}
+
+
+
+
+/*************/
+/* ABOUT ME */
+/*************/
+
+#over-mij {
+
+section {
+
+        &:nth-of-type(n+2) {
+           h2 {
+            text-align: center;
+            padding: 2rem 0;
+           }
+
+           article {
+
+            li {
+                background-color: var(--donker-blauw);
+                    color: white;
+                    align-self: center;
+                    padding: 1em 1.5em;
+                    width: 15em;
+            }
+           }
+        }
+    }
+    .about {
+
+        &-header {
+            padding: 3em;
+            width: 100%;
+            background: color(primary);
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+        }
+
+        &-description {
+
+            article {
+
+                img {
+                    margin-bottom: 2rem;
+                    margin-right: 0;
+                    width: 100%;
+                }
+
+                .cv-buttons {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 1.8rem;
+                    flex-wrap: wrap;
+                }
+
+            }
+
+        }
+
+        &-skills {
+            article {
+
+                figure {
+                    
+                    ul {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+
+                        li {
+                            font-size: 1.6rem;
+                            margin: 1rem 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-hobbies {}
+
+        &-contact {}
+    }
+
+}
+
+
+/*****************/
+/* MEDIA QUERIES */
+/*****************/
+
+@media (min-width: 45rem) {
+
+    .project-header {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        height: 70rem;
+        width: 100%;
+        background-color: var(--roze);
+
+
+        article {
+            place-self: center;
+        }
+
+        img {
+            max-width: 78%;
+
+            &[src="https://k3a101.github.io/Minor-portfolio/images/visie-china.png"] {
+                max-width: 58%;
+            }
+        }
+
+
+    }
+
+    .project-description {
+        display: grid;
+        justify-content: center;
+        background-color: white;
+        grid-template-columns: 2fr 1fr;
+
+        margin: 0 auto;
+        height: fit-content;
+        gap: 3em;
+        width: 80%;
+        align-items: center;
+
+        article {
+            max-width: 80%;
+
+        }
+
+        img {
+            width: 80%;
+        }
+    }
+
+
+    #over-mij {
+        section {
+        
+                &:nth-of-type(n+2) {
+                    p {
+                        width: 30em;
+                        padding: 1em;
+                    }
+                }
+            }
+
+        .about {
+
+            &-header {}
+
+            &-description {
+
+                article {
+                    align-items: center;
+                    justify-content: center;
+
+
+                    img {
+                        margin-bottom: 0;
+                        margin-right: 2rem;
+                        width: 40%;
+                    }
+
+
+                }
+            }
+
+            &-skills {}
+
+            &-hobbies {}
+
+            &-contact {}
+        }
+
+    }
+
+}
+
+@media(min-width: 90rem) {
+    .wrapper {
+        flex-direction: row;
+    }
+
+    #over-mij {
+
+        
+            // section {
+
+            //     &:nth-of-type(n+2) {
+            //         p {
+            //             width: 30em;
+            //             padding: 1em;
+            //         }
+            //     }
+            // }
+        
+
+
+        .about {
+
+            &-header {
+
+                img {
+                    width: 30%;
+                    height: auto;
+                }
+            }
+
+            &-description {}
+
+            &-skills {}
+
+            &-hobbies {}
+
+            &-contact {}
+        }
+
+    }
+}
+
 /**********/
 /* FOOTER */
 /**********/
@@ -276,7 +614,7 @@ body {
     margin-top: 2em;
 
     p {
-        font-size:2rem;
+        font-size: 2rem;
         font-weight: bold;
     }
 
