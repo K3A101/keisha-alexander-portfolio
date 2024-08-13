@@ -47,8 +47,8 @@
             
             
             <div class="project-info">
-            <a class="button primary" href="${project.prototype_link}">Live Demo</a>
-            <a class="button primary" href="${project.readme_link}">Readme</a>
+            <a class="button secondary" href="${project.prototype_link}">Live Demo</a>
+            <a class="button secondary" href="${project.readme_link}">Readme</a>
             </div>
                 
                 </article>
