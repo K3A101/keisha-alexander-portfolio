@@ -4,6 +4,7 @@
     direction: 'horizontal',
      loop: true,
      centeredSlides: true,
+     centeredSlidesBounds: true,
      grabCursor: true,
      spaceBetween: 15,
      slidesPerView: 1.5,
