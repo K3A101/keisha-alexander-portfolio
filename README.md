@@ -1,7 +1,7 @@
 # Github portfolio
 Mijn portfolio is een onepage single page application. Het bestaat namelijk uit mijn persoonlijke gegevens en mijn projecten. Ik heb mijn portfolio gemaakt met vanilla HTML, CSS en JavaScript. Verder heb ik de Github API gebruikt om het data van mijn Github account te gebruiken als inhoud. De inhoud in mijn portfolio zijn mijn persoonlijke gegevens, mijn gepinde repositories en details van mijn repository. 
 
-![Portfolio poster](./images/portfolio-poster.png)
+![Portfolio poster](./static/images/portfolio-poster.png)
 
 
 
@@ -54,29 +54,29 @@ In de project week  ga ik de kennis van CSS to the rescue  en Web App from scrat
 Vervolgens heb ik wat inspiratie opgedaan op de manier hoe mijn portfolio eruit gaat zien. Ik heb verschillende schetsen gemaakt voor mobe versie als desktop versie. Toen ik de schets maken was ik heel erg ambitieus. Maar ik kon ze niet implementeren want ik had niet genoeg tijd daarvoor om alles te doen die ik wilde doen. Dus nu lijk het een beetje simpel. 
 
 ### Schets 1
-![schets 1](./images/schets1.png)
+![schets 1](./static/images/schets1.png)
 
 
 ### Schets 2
-![schets 2](./images/schets2.png)
+![schets 2](./static/images/schets2.png)
 
 
 ### Schets 3
-![schets 3](./images/schets3.png)
+![schets 3](./static/images/schets3.png)
 
 ### Schets 4
-![schets 4](./images/schets4.png)
+![schets 4](./static/images/schets4.png)
 
 
 
 
 ### Schets 5 
-![schets 5](./images/schets5.png)
+![schets 5](./static/images/schets5.png)
 
 
 Uiteindelijk heb ik een schets 6 gekozen die ik veder ging uitwerken. 
 ### Schets 6 
-![schets 6](./images/schets6.png)
+![schets 6](./static/images/schets6.png)
 
 ---
 ## Code achter dit project 
