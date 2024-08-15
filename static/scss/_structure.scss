@@ -299,11 +299,11 @@ body {
             place-items: center;
             width: 100%;
             background-color: var(--roze);
-            padding: 3em;
+            padding: 1.5rem;
 
             article {
                 place-self: center;
-                width: 70%;
+                width: 100%;
 
                 /* Voor grotere schermen */
                 /* De skills onder projecten */
@@ -311,6 +311,8 @@ body {
                     font-size: 1.6rem;
                     display: flex;
                     flex-direction: row;
+                    flex-wrap: wrap;
+                    
                     gap: 1em;
                     padding: 0;
                     margin-top: 2rem;
@@ -327,6 +329,7 @@ body {
 
             img {
                 width: 100%;
+                
 
                 &.digital-poster {
                     width: 40%;
@@ -372,6 +375,10 @@ body {
 
             }
 
+            img {
+                padding: 1.6rem 0;
+            }
+
 
 
         }
@@ -380,8 +387,17 @@ body {
 }
 
 
+@media (min-width: 45rem) {
+    #project-page {
 
+        main {
 
+            .project-header {
+                padding: 3rem;
+            }
+        }
+    }
+}
 
 
 /********************/
@@ -533,11 +549,13 @@ body {
 
                     ul {
                         display: grid;
-                        grid-template-columns: 1fr 1fr;
+                        grid-template-columns: 1fr;
+                        
 
                         li {
                             font-size: 1.6rem;
                             margin: 1rem 0;
+                            width: 100%;
                         }
                     }
                 }
@@ -559,7 +577,7 @@ body {
 
                 .hobby-list {
                     display: flex;
-
+                    font-size: 1.6rem;
                     flex-wrap: wrap;
                     justify-content: center;
                     flex-direction: row;
@@ -600,6 +618,7 @@ body {
                     a {
                         color: color(text);
                         font-weight: bold;
+                        font-size: 1.6rem;
                     }
 
                     &:hover {
@@ -634,14 +653,17 @@ body {
         align-items: center;
         height: 70rem;
         width: 100%;
-        background-color: var(--roze);
+        background-color: color(primary);
+        padding: 3rem;
 
 
         article {
             place-self: center;
+            width: 70%;
         }
 
         img {
+          
             max-width: 78%;
 
             &[src="https://k3a101.github.io/Minor-portfolio/images/visie-china.png"] {
@@ -711,7 +733,18 @@ body {
                 }
             }
 
-            &-skills {}
+            &-skills {
+                article {
+                    figure {
+                        ul {
+                            grid-template-columns: 1fr 1fr;
+                            width: auto;
+                            gap: 1.6rem;
+                            
+                        }
+                    }
+                }
+            }
 
             &-hobbies {}
 
