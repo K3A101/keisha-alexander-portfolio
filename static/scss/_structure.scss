@@ -295,7 +295,6 @@ body {
 
         .project-header {
             display: grid;
-            // align-items: center;
             place-items: center;
             width: 100%;
             background-color: var(--roze);
@@ -371,7 +370,6 @@ body {
 
 
                 }
-
 
             }
 
@@ -779,7 +777,6 @@ body {
             &-header {
 
                 img {
-                    // width: 30%;
                     height: auto;
                     
                     &.hand {
