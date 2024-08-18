@@ -96,6 +96,16 @@ h3 {
         -webkit-transition: 0.3s transform ease-out;
     }
 
+    &.icon {
+        display: inline-block;
+        text-align: left;
+        color: color(text-light);
+        // margin: 0;
+        margin-right: .2rem;
+
+
+    }
+
     &.primary {
 
         &:hover,
@@ -107,6 +117,15 @@ h3 {
                 -webkit-transform: scaleX(1);
                 transform: scaleX(1);
             }
+
+            .icon {
+
+
+                color: text;
+
+
+            }
+
         }
 
         &::before {
@@ -114,6 +133,9 @@ h3 {
             background-color: color(background);
 
         }
+
+
+
 
     }
 
