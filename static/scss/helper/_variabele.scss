@@ -1,15 +1,11 @@
+/*!
+ *SCSS custom variable
+ * By Go2People - https://go2people.nl/
+ * Copyright 2011-2024 Go2People.
+ * Licensed under MIT (https://github.com/sass/dart-sass/blob/main/LICENSE)
+ */
+ 
 :root {
-    /* Kleurpalette */
-    $background-var-1: white;
-    $text: #2e3553;
-    $button: #2e3553;
-    $background-var-4: #2e3553;
-    $background: #eff4f5;
-    $accent: #6f7de2;
-    $background-var-2: #e4a7a3;
-    $background-var-3: #fdcfcc;
-    --low-opacity-roze: #e4a7a3c9;
-
     /* lettertype */
     $headers: 'highgate', sans-serif;
     $bodytext: 'interstate', sans-serif;
@@ -23,6 +19,7 @@ $colors: (
     background-variation-2: #d2ebe1,
     background-variation-3: #6f7de2,
     background-variation-4:#fdcfcc,
+    background-thumbnail:#ecc4c4,
     background-variation-4-low-opacity:#e4a7a3c9,
     text: #2e3553,
     text-light: #eff4f5,

@@ -51,7 +51,7 @@ body {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: color(background-variation-4);
+    background: color(background-variation-4);
     border-radius: 1em;
 
     &:hover {
@@ -73,14 +73,15 @@ body {
 .icon {
     margin: 0 2rem;
 }
+
 /************/
 /* Homepage */
 /************/
 
 #home-page {
     label {
-        background-color: var(--roze);
-        color: var(--grijs);
+        background: color(primary);
+        color: color(background);
         padding: .5em 1.5em;
         place-self: center;
     }
@@ -157,7 +158,7 @@ body {
 
 .thumbnail {
     position: relative;
-    background-color: rgb(236, 196, 196);
+    background: color(background-variation-5);
     width: 100%;
     height: fit-content;
     border-radius: 1rem;
@@ -167,7 +168,7 @@ body {
     h3 {
         position: absolute;
         bottom: -1rem;
-        background-color: color(background-variation-1);
+        background: color(background-variation-1);
         width: 100%;
 
         font-weight: bold;
@@ -198,9 +199,9 @@ body {
         font-size: 1.8rem;
     }
 
-  
-    
-   
+
+
+
 }
 
 @media (min-width: 45rem) {
@@ -220,13 +221,13 @@ body {
 .carrousel {
     article {
         border-radius: 1rem;
-        box-shadow: 0px 12px 20px var(--donker-blauw);
+        box-shadow: 0px 1.2rem 20rem color(background-variation-1);
 
         img {
             object-fit: cover;
             height: 100%;
             width: 100%;
-            border-radius: 1em;
+            border-radius: 1rem;
         }
 
         a {
@@ -240,7 +241,7 @@ body {
         h3 {
             position: absolute;
             bottom: -1rem;
-            background-color: color(background-variation-1);
+            background: color(background-variation-1);
             width: 100%;
 
             font-weight: bold;
@@ -286,7 +287,7 @@ body {
         height: fit-content;
         display: flex;
         flex-direction: column;
-        gap: 10em;
+        gap: 10rem;
         scroll-snap-type: y mandatory;
 
         .subtitle {
@@ -297,7 +298,7 @@ body {
             display: grid;
             place-items: center;
             width: 100%;
-            background-color: var(--roze);
+            background: color(primary);
             padding: 1.5rem;
 
             article {
@@ -311,12 +312,10 @@ body {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    
+
                     gap: 1em;
                     padding: 0;
                     margin-top: 2rem;
-
-
 
                     li {
                         padding: 1rem 2rem;
@@ -328,12 +327,11 @@ body {
 
             img {
                 width: 100%;
-                
+
 
                 &.digital-poster {
                     width: 40%;
                 }
-
 
             }
         }
@@ -342,12 +340,9 @@ body {
         .project-description {
             background-color: white;
             grid-template-columns: 2fr 1fr;
-            padding: 1em;
-
+            padding: 1rem;
             height: fit-content;
-
-            gap: 3em;
-
+            gap: 3rem;
             align-items: center;
 
             p {
@@ -355,7 +350,7 @@ body {
 
                 span {
                     display: block;
-                    margin: .8em 0;
+                    margin: .8rem 0;
                 }
             }
 
@@ -366,7 +361,7 @@ body {
 
                 .project-info {
                     display: flex;
-                    gap: 2em;
+                    gap: 2rem;
 
 
                 }
@@ -376,8 +371,6 @@ body {
             img {
                 padding: 1.6rem 0;
             }
-
-
 
         }
 
@@ -405,9 +398,9 @@ body {
     display: grid;
     place-items: center;
     align-items: center;
-    background-color: var(--roze);
+    background: color(primary);
     position: relative;
-    border-radius: 0.5em 0.5em 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
 }
 
 /* Mij gezicht */
@@ -424,7 +417,7 @@ body {
     right: -40%;
     bottom: -30%;
 
-    filter: drop-shadow(-.1em .2em .2em var(--donker-blauw));
+    filter: drop-shadow(-.1rem .2rem .2rem color(background-variation-1));
     animation: waving 2.5s infinite;
     transform-origin: bottom center;
 
@@ -490,10 +483,10 @@ body {
             article {
 
                 li {
-                    background-color: color(background-variation-1);
+                    background: color(background-variation-1);
                     color: color(text-light);
                     align-self: center;
-                    padding: 1em 1.5em;
+                    padding: 1rem 1.5rem;
                     width: 15em;
                 }
             }
@@ -514,6 +507,16 @@ body {
                 &.hand {
                     width: 20rem;
                     bottom: -10%;
+                }
+            }
+
+            .skills-icons {
+                margin: 2rem 0;
+                
+                i {
+                    color: color(background-variation-1);
+                    font-size: 3rem;
+                    padding: 0 .5rem;
                 }
             }
 
@@ -548,7 +551,7 @@ body {
                     ul {
                         display: grid;
                         grid-template-columns: 1fr;
-                        
+
 
                         li {
                             font-size: 1.6rem;
@@ -582,7 +585,7 @@ body {
                     gap: 1rem;
 
                     li {
-                       text-align: center;
+                        text-align: center;
                     }
                 }
             }
@@ -597,18 +600,18 @@ body {
 
                 article {
                     display: flex;
-                        flex-direction: column;
-                        background-color: var(--roze);
-                        justify-content: center;
-                        align-items: center;
-                        color: var(--donker-blauw);
-                        font-weight: bold;
-                        padding: 1em;
-                        gap: .5em;
-                        border-radius: .5em;
-                        transition: .3s ease-in-out;
-                   
-                        img {
+                    flex-direction: column;
+                    background: color(primary);
+                    justify-content: center;
+                    align-items: center;
+                    color: color(text);
+                    font-weight: bold;
+                    padding: 1rem;
+                    gap: .5rem;
+                    border-radius: .5rem;
+                    transition: .3s ease-in-out;
+
+                    img {
                         width: 5rem;
                         height: 5rem;
                     }
@@ -651,7 +654,7 @@ body {
         align-items: center;
         height: 70rem;
         width: 100%;
-        background-color: color(primary);
+        background: color(primary);
         padding: 3rem;
 
 
@@ -661,7 +664,7 @@ body {
         }
 
         img {
-          
+
             max-width: 78%;
 
             &[src="https://k3a101.github.io/Minor-portfolio/images/visie-china.png"] {
@@ -675,7 +678,7 @@ body {
     .project-description {
         display: grid;
         justify-content: center;
-        background-color: white;
+        background: color(background-light);
         grid-template-columns: 2fr 1fr;
 
         margin: 0 auto;
@@ -693,7 +696,7 @@ body {
             width: 80%;
         }
     }
- 
+
     .hand {
         bottom: -10%;
         width: 20%;
@@ -738,7 +741,7 @@ body {
                             grid-template-columns: 1fr 1fr;
                             width: auto;
                             gap: 1.6rem;
-                            
+
                         }
                     }
                 }
@@ -753,7 +756,7 @@ body {
 
 
                     article {
-                    flex-direction: column;
+                        flex-direction: column;
                     }
 
                 }
@@ -778,7 +781,7 @@ body {
 
                 img {
                     height: auto;
-                    
+
                     &.hand {
                         width: 20rem;
                         bottom: -10%;

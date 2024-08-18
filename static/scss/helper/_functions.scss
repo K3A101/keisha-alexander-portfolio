@@ -1,3 +1,9 @@
+/*!
+ *SCSS custom variable
+ * By Go2People - https://go2people.nl/
+ * Copyright 2011-2024 Go2People.
+ * Licensed under MIT (https://github.com/sass/dart-sass/blob/main/LICENSE)
+ */
 // Returns a color from the $colors-map based on the supplied key
 @function color($key) {
     @if map-has-key($colors, $key) {
