@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    font-family: var(--algemene-tekst);
+    font-family: $bodytext;
     color: color(text);
     background: color(background);
     overflow-y: scroll;
@@ -71,7 +71,7 @@ body {
 }
 
 .icon {
-    margin: 0 2rem;
+    margin-right: 2rem;
 }
 
 /************/
@@ -221,7 +221,7 @@ body {
 .carrousel {
     article {
         border-radius: 1rem;
-        box-shadow: 0px 1.2rem 20rem color(background-variation-1);
+        box-shadow: 0px 1.2rem 2rem color(background-variation-1);
 
         img {
             object-fit: cover;
@@ -273,6 +273,17 @@ body {
 
 
     }
+
+    .swiper {
+        padding:4rem 0;
+
+        .swiper-pagination-bullet {
+            background: color(background-variation-1);
+
+        }
+    }
+
+
 
 }
 
@@ -466,6 +477,7 @@ body {
 /* ABOUT ME */
 /*************/
 #over-mij {
+    overflow-x: hidden;
     .row {
         justify-content: center;
     }
@@ -512,7 +524,7 @@ body {
 
             .skills-icons {
                 margin: 2rem 0;
-                
+
                 i {
                     color: color(background-variation-1);
                     font-size: 3rem;

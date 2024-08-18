@@ -1,8 +1,10 @@
+@import "./helper/variabele";
+@import "./helper/functions";
 p,
 h1,
 h2,
 a {
-    font-family: var(--algemene-tekst);
+    font-family: $bodytext;
 }
 
 

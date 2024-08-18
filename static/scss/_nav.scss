@@ -47,9 +47,9 @@ nav {
             font-weight: bold;
             margin: .3em 0;
         background-image: linear-gradient(to right,
-                var(--grijs),
-                var(--grijs) 50%,
-                var(--donker-blauw) 50%);
+                color(background),
+                color(background) 50%,
+                color(background-variation-1) 50%);
         background-size: 200% 100%;
         background-position: -100%;
         display: inline-block;
