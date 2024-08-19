@@ -8,6 +8,9 @@
      grabCursor: true,
      spaceBetween: 15,
      slidesPerView: 1.5,
+     autoplay: {
+         delay: 5000,
+     },
 
     // If we need pagination
     pagination: {
