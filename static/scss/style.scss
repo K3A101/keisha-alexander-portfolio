@@ -1,6 +1,6 @@
-@import './helper/variabele';
-@import './helper/functions';
-@import 'structure';
-@import 'nav';
-@import 'reset';
-@import 'text';
+@use './helper/variabele';
+@use './helper/functions';
+@use 'structure';
+@use 'nav';
+@use 'reset';
+@use 'text';

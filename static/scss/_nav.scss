@@ -1,4 +1,5 @@
-
+@use "./helper/variabele" as *;
+@use "./helper/functions" as *;
 
 #github-page:has(#user-data:checked) #user {
     display: block;

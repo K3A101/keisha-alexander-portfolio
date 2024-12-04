@@ -1,5 +1,5 @@
-@import "./helper/variabele";
-@import "./helper/functions";
+@use "./helper/variabele" as *;
+@use "./helper/functions" as *;
 p,
 h1,
 h2,
