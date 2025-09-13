@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <!-- Our symbol in its own coordinate system -->
+
+  <defs>
+  <symbol id="myDot" width="10" height="10" viewBox="0 0 2 2">
+    <circle cx="1" cy="1" r="1" />
+  </symbol>
+
+  <symbol id="hero-shape">
+  <path
+    d="M0,10 h80 M10,0 v20 M25,0 v20 M40,0 v20 M55,0 v20 M70,0 v20"
+    fill="none"
+    stroke="pink"/>
+  </symbol>
+
+  </defs>
+</svg>

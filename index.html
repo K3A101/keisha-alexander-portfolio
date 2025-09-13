@@ -1,354 +1,432 @@
 <!DOCTYPE html>
 <html lang="nl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./static/lib/bootstrap/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-    <link rel="shortcut icon" href="./static/images/favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/c37b867389.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./static/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./static/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <script
+      src="https://kit.fontawesome.com/c37b867389.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
-    <link rel="stylesheet" href="./static/lib/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./static/lib/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
     <script defer src="./static/script/swiper.js"></script>
     <title>Portfolio</title>
-</head>
+  </head>
 
-
-
-<body id="home-page">
-    <a class="skiplink" href="#user ">Ga naar hoofdinhoud</a>
+  <body id="home">
+    <a class="skiplink" href="#main">Ga naar hoofdinhoud</a>
+   
     <header id="top">
-        <h1>Portfolio</h1>
-        <button class="menu-button" type="submit">Menu</button>
-        <nav>
+      <nav class="header-nav">
+        <ul class="menu">
+          <li class="nav-links"><a href="/">Portfolio</a></li>
+          <li class="nav-links"><a href="./index.html">Home</a></li>
+          <li class="nav-links"><a href="./projecten.html">Projecten</a></li>
+          <li class="nav-links"><a href="./over-mij.html">Over Mij</a></li>
+        </ul>
 
-            <ul>
-                <li class="nav-links"><a href="./index.html">Home</a></li>
-                <li class="nav-links"><a href="./projecten.html">Projecten</a></li>
-                <li class="nav-links"><a href="./over-mij.html">Over Mij</a></li>
-            </ul>
-        </nav>
+        <ul class="utilities">
+          
+        </ul>
+      </nav>
 
-
+      <div class="menu-button">
+        <div id="nav-toggle">
+          <span class="hamburger-menu"></span>
+          <span class="button primary menu-text">Menu</span>
+        </div>
+      </div>
     </header>
 
-    <main id="main router-view">
-      
-
-        <section id="user">
-            <div class="container">
-                <div class="row">
-
-                    <article>
-                        <img src="./static/images/user-profile.svg" alt="gebruikers foto">
-                        <div>
-                            <h2 class="name">Ik ben Keïsha Alexander</h2>
-                            <p class="user-description">Als UI/UX designer en Front-end Developer breng ik mijn passie voor design en technologie samen. </p>
-                            <a class="button primary" href="./projecten.html">
-                                <i class=" icon fa-brands fa-readme fa-xl"></i>
-                                Projecten
-                            </a>
-                            <a class="button primary" href="https://github.com/K3A101">
-                                <i class=" icon fa-brands fa-square-github fa-xl" ></i>
-                                Github
-                            </a>
-                            
-                            <a class="button primary" href="./over-mij.html">
-                                <i class="icon fa-solid fa-user fa-xl"></i>
-                                Over mezelf
-                            </a>
-                        </div>
-                    </article>
-
-                </div>
-            </div>
-
-            <!-- Gegevens van mijn github profiel -->
-        </section>
-        <small class="quote">
-            Ik maak digitale en interactieve producten
-        </small>
-
-
-
-        <!-- Section 2 -->
-
+    <main id="main">
+      <section id="hero">
         <div class="container">
-            <div class="row">
-                <div class="link-project">
-                    <h2>Projecten </h2>
-                    <a class="button secondary" href="./projecten.html">Meer Projecten</a>
-                </div>
-            </div>
+          <div class="row">
+            <article>
+              <img
+                src="./static/images/user-profile.svg"
+                alt="gebruikers foto"
+              />
+              <div>
+                <h2 class="name">Ik ben Keïsha Alexander</h2>
+                <p class="user-description">
+                  Als UI/UX designer en Front-end Developer breng ik mijn passie
+                  voor design en technologie samen.
+                </p>
+                <a class="button primary" href="./projecten.html">
+                  <i class="icon fa-brands fa-readme fa-xl"></i>
+                  Projecten
+                </a>
+                <a class="button primary" href="https://github.com/K3A101">
+                  <i class="icon fa-brands fa-square-github fa-xl"></i>
+                  Github
+                </a>
 
+                <a class="button primary" href="./over-mij.html">
+                  <i class="icon fa-solid fa-user fa-xl"></i>
+                  Over mezelf
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <section class="container projects">
-            <div class="row">
+        <!-- Gegevens van mijn github profiel -->
+      </section>
+      <small class="quote"> Ik maak digitale en interactieve producten </small>
 
-                <div class=" col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-                            <img src="./static/images/stageverslag-lange-stage.png" alt="thumbnail">
-                        </div>
+      <!-- Section 2 -->
 
-                        <a href="https://k3a101.github.io/stageverslag/">
-                            <div class="position-text">
+      <div class="container">
+        <div class="row">
+          <div class="link-project">
+            <h2>Projecten</h2>
+            <a class="button secondary" href="./projecten.html"
+              >Meer Projecten</a
+            >
+          </div>
+        </div>
+      </div>
 
-                                <p>Dit is mijn stageverslag die ik heb gemaakt tijdens mij afstudeerstage bij go2people.
-                                    Het is
-                                    helemaal gecodeerd met de kennis die ik heb opgedaan bij het stage bedrijf. </p>
-                            </div>
-                            <h3>Stageverslag <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                        </a>
-                    </article>
+      <section class="container projects">
+        <div class="row">
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="./static/images/stageverslag-lange-stage.png"
+                  alt="thumbnail"
+                />
+              </div>
+
+              <a href="https://k3a101.github.io/stageverslag/">
+                <div class="position-text">
+                  <p>
+                    Dit is mijn stageverslag die ik heb gemaakt tijdens mij
+                    afstudeerstage bij go2people. Het is helemaal gecodeerd met
+                    de kennis die ik heb opgedaan bij het stage bedrijf.
+                  </p>
                 </div>
-                <div class="col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-                            <img src="https://github.com/K3A101/interface-interactie-tijdlijn/raw/main/readme-images/versie3-pagina.png"
-                                alt="thumbnail">
-                        </div>
+                <h3>
+                  Stageverslag
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="https://github.com/K3A101/interface-interactie-tijdlijn/raw/main/readme-images/versie3-pagina.png"
+                  alt="thumbnail"
+                />
+              </div>
 
-                        <a href="https://k3a101.github.io/interface-interactie-tijdlijn/">
-                            <div class="position-text">
-                                <p>
-                                    Mijn prototype is een aantrekkelijk tijdlijn van het klassieke karakter Mario. De
-                                    Manier hoe
-                                    ik
-                                    de tijdlijn had
-                                    gevisualiseerd is door de verschillende versies van Mario te laten zien. </p>
-                            </div>
-                            <h3>Super Mario Tijdlijn <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                        </a>
-                    </article>
+              <a href="https://k3a101.github.io/interface-interactie-tijdlijn/">
+                <div class="position-text">
+                  <p>
+                    Mijn prototype is een aantrekkelijk tijdlijn van het
+                    klassieke karakter Mario. De Manier hoe ik de tijdlijn had
+                    gevisualiseerd is door de verschillende versies van Mario te
+                    laten zien.
+                  </p>
                 </div>
-                <div class=" col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-                            <img src="./static/images/meesterproef-vid.png" alt="Project over kunstmatige intelligentie">
-                        </div>
+                <h3>
+                  Super Mario Tijdlijn
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="./static/images/meesterproef-vid.png"
+                  alt="Project over kunstmatige intelligentie"
+                />
+              </div>
 
-                        <a href="https://k3a101.github.io/meesterproef/">
-                            <div class="position-text">
-
-                                <p>Een visuele interface van het artikel uit het Correspondent Kunstmatige intelligentie
-                                    is geen
-                                    gevaar voor de
-                                    Kunstenaars; integendeel.</p>
-                            </div>
-                            <h3>Kunstmatige intelligentie <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                        </a>
-                    </article>
+              <a href="https://k3a101.github.io/meesterproef/">
+                <div class="position-text">
+                  <p>
+                    Een visuele interface van het artikel uit het Correspondent
+                    Kunstmatige intelligentie is geen gevaar voor de
+                    Kunstenaars; integendeel.
+                  </p>
                 </div>
-               
+                <h3>
+                  Kunstmatige intelligentie
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="https://github.com/K3A101/real-time-web-2223/raw/main/readme-images/chatting-functionality.png"
+                  alt="Dictionary chat bot"
+                />
+              </div>
 
-
-
-
-
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-
-                            <img src="https://github.com/K3A101/real-time-web-2223/raw/main/readme-images/chatting-functionality.png"
-                                alt="Dictionary chat bot">
-                        </div>
-
-                        <a href="https://realtime-webapp.adaptable.app/">
-                            <div class="position-text">
-                                <p>DictoChat is een chat applicatie waar je het betekenis van het woord kan definiëren.
-                                </p>
-                            </div>
-
-                            <h3>Dictionary generator chat <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                        </a>
-                    </article>
-                </div>
-                <div class=" col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-
-                            <img src="https://github.com/K3A101/web-typography-22-23/raw/main/images/tv-static-effect-v1.png"
-                                alt="thumbnail">
-                        </div>
-                        <a href="https://k3a101.github.io/web-typography-22-23/">
-                            <div class="position-text">
-                                <p>
-                                    Voor web typografie heb ik een filmfragment vormgegeven voor mensen die doof zijn
-                                    geboren.
-                                    De filmfragment gaat over het
-                                    film blade runner. Hoe kan ik met CSS het filmfragment spannender maken voor mensen
-                                    die doof
-                                    zijn? </p>
-                            </div>
-                            <h3>Film Fragment Vormgeven <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                        </a>
-                    </article>
-                </div>
-                <div class=" col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-
-                            <img src="./static/images/karakter-aan-het-zwemmen.png" alt="Zeemermin animatiue met After effects">
-                        </div>
-
-                        <a href="https://xd.adobe.com/view/700fdc8b-8f43-4a36-b424-2b394ea6e577-255c/?fullscreen">
-                            <div class="position-text">
-
-                                <p>Voor interface en beweging heb ik een interface gemaakt op XD van een karakter en
-                                    drie
-                                    functie laten uitvoeren met
-                                    behulp van animatie. Mijn Karakter heet Coral en zij is een zeemermin. Zij kan
-                                    zingen,
-                                    dansen en zwemmen. Om de animatie
-                                    te maken heb ik gebruikt gemaakt van Adobe After effects.</p>
-                            </div>
-                            <h3>Animatie: Coral de zeemermin <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                        </a>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-                            <img src="./static/images/afstudeerproject-poster-webpagina.png" alt="thumbnail">
-                        </div>
-                
-                        <a href="https://k3a101.github.io/digital-poster/">
-                            <div class="position-text">
-                
-                                <p>Voor mijn afstudeerproject heb ik onderzoek gedaan hoe ik Tweakers digitaal toegankelijk kan maken
-                                    volgens de WCAG richtlijnen voor Nederlandse Tech liefhebbers met visuele beperking.</p>
-                            </div>
-                            <h3>Een toegankelijke Tweakers.net <span class="icon"><i class="fa-solid fa-circle-arrow-right" style="color: #ffffff;"></i></span></h3>
-                            
-                        </a>
-                    </article>
-                </div><div class="col-md-4">
-                    <article class="thumbnail">
-                        <div class="img-container">
-                            <img src="./static/images/4stagiairs.png" alt="thumbnail">
-                        </div>
-                
-                        <a href="https://stagiairs.wpdev.go2people.nl/">
-                            <div class="position-text">
-                
-                                <p>Een Wordpress website met informatie voor go2people stagiairs.</p>
-                            </div>
-                            <h3>4stagiairs - Infopunt voor stagiairs <span class="icon"><i class="fa-solid fa-circle-arrow-right"
-                                        style="color: #ffffff;"></i></span></h3>
-                
-                        </a>
-                    </article>
+              <a href="https://realtime-webapp.adaptable.app/">
+                <div class="position-text">
+                  <p>
+                    DictoChat is een chat applicatie waar je het betekenis van
+                    het woord kan definiëren.
+                  </p>
                 </div>
 
+                <h3>
+                  Dictionary generator chat
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="https://github.com/K3A101/web-typography-22-23/raw/main/images/tv-static-effect-v1.png"
+                  alt="thumbnail"
+                />
+              </div>
+              <a href="https://k3a101.github.io/web-typography-22-23/">
+                <div class="position-text">
+                  <p>
+                    Voor web typografie heb ik een filmfragment vormgegeven voor
+                    mensen die doof zijn geboren. De filmfragment gaat over het
+                    film blade runner. Hoe kan ik met CSS het filmfragment
+                    spannender maken voor mensen die doof zijn?
+                  </p>
+                </div>
+                <h3>
+                  Film Fragment Vormgeven
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="./static/images/karakter-aan-het-zwemmen.png"
+                  alt="Zeemermin animatiue met After effects"
+                />
+              </div>
 
-                
-            </div>
+              <a
+                href="https://xd.adobe.com/view/700fdc8b-8f43-4a36-b424-2b394ea6e577-255c/?fullscreen"
+              >
+                <div class="position-text">
+                  <p>
+                    Voor interface en beweging heb ik een interface gemaakt op
+                    XD van een karakter en drie functie laten uitvoeren met
+                    behulp van animatie. Mijn Karakter heet Coral en zij is een
+                    zeemermin. Zij kan zingen, dansen en zwemmen. Om de animatie
+                    te maken heb ik gebruikt gemaakt van Adobe After effects.
+                  </p>
+                </div>
+                <h3>
+                  Animatie: Coral de zeemermin
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+        </div>
 
-        
+        <div class="row">
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img
+                  src="./static/images/afstudeerproject-poster-webpagina.png"
+                  alt="thumbnail"
+                />
+              </div>
 
+              <a href="https://k3a101.github.io/digital-poster/">
+                <div class="position-text">
+                  <p>
+                    Voor mijn afstudeerproject heb ik onderzoek gedaan hoe ik
+                    Tweakers digitaal toegankelijk kan maken volgens de WCAG
+                    richtlijnen voor Nederlandse Tech liefhebbers met visuele
+                    beperking.
+                  </p>
+                </div>
+                <h3>
+                  Een toegankelijke Tweakers.net
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="thumbnail">
+              <div class="img-container">
+                <img src="./static/images/4stagiairs.png" alt="thumbnail" />
+              </div>
 
-        </section>
-        <small class="quote">
-            Portfolio van voorgaande jaren
-        </small>
-        <section class="carrousel">
-            <div class="container">
-                <div class="row">
-
-                    <div class="swiper">
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <article class="">
-
-                                    <div class="img-container">
-
-                                        <img src="./static/images/jaar-1.png" alt="Portfolio van mijn propedeuse jaar">
-                                    </div>
-                                    <a
-                                        href="https://k3a101.github.io/freshman-portfolio/">
-                                        <div class="position-text">
-
-                                            <p>Dit is mijn portfolio gemaakt in mijn propedeuse</p>
-                                        </div>
-                                        <h3>Jaar 1: portfolio</h3>
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article>
-                                    <div class="img-container">
-                                        <img src="./static/images/jaar-2.png" alt="Portfolio van mijn tweede studie jaar">
-                                    </div>
-
-                                    <a href="https://k3a101.github.io/Portfolio/">
-                                        <div class="position-text">
-                                            <p>
-                                                Dit portfolio is gemaakt in mijn tweede jaar van de opleiding
-                                                Communication and Multimedia
-                                                Design.
-                                            </p>
-                                        </div>
-                                        <h3>Jaar 2: Portfolio</h3>
-                                    </a>
-                                </article>
-                            </div>
-                            <div class="swiper-slide">
-                                <article class="slide">
-                                    <div class="img-container">
-                                        <img src="./static/images/minor-vid.png" alt="Portfolio van Minor Visual Interface Design">
-                                    </div>
-                                    <a href="https://k3a101.github.io/Minor-portfolio/">
-                                        <div class="position-text">
-
-                                            <p>Dit is mijn portfolio van alle opdrachten die ik tijdens de Minor Visual
-                                                Interface And Design
-                                                heb gedaan. </p>
-                                        </div>
-                                        <h3>Visual Interface portfolio</h3>
-                                    </a>
-                                </article>
-                            </div>
-                            ...
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-                        <!-- If we need scrollbar -->
-
+              <a href="https://stagiairs.wpdev.go2people.nl/">
+                <div class="position-text">
+                  <p>
+                    Een Wordpress website met informatie voor go2people
+                    stagiairs.
+                  </p>
+                </div>
+                <h3>
+                  4stagiairs - Infopunt voor stagiairs
+                  <span class="icon"
+                    ><i
+                      class="fa-solid fa-circle-arrow-right"
+                      style="color: #ffffff"
+                    ></i
+                  ></span>
+                </h3>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <small class="quote"> Portfolio van voorgaande jaren </small>
+      <section class="carrousel">
+        <div class="container">
+          <div class="row">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <article class="">
+                    <div class="img-container">
+                      <img
+                        src="./static/images/jaar-1.png"
+                        alt="Portfolio van mijn propedeuse jaar"
+                      />
+                    </div>
+                    <a href="https://k3a101.github.io/freshman-portfolio/">
+                      <div class="position-text">
+                        <p>Dit is mijn portfolio gemaakt in mijn propedeuse</p>
+                      </div>
+                      <h3>Jaar 1: portfolio</h3>
+                    </a>
+                  </article>
+                </div>
+                <div class="swiper-slide">
+                  <article>
+                    <div class="img-container">
+                      <img
+                        src="./static/images/jaar-2.png"
+                        alt="Portfolio van mijn tweede studie jaar"
+                      />
                     </div>
 
+                    <a href="https://k3a101.github.io/Portfolio/">
+                      <div class="position-text">
+                        <p>
+                          Dit portfolio is gemaakt in mijn tweede jaar van de
+                          opleiding Communication and Multimedia Design.
+                        </p>
+                      </div>
+                      <h3>Jaar 2: Portfolio</h3>
+                    </a>
+                  </article>
                 </div>
+                <div class="swiper-slide">
+                  <article class="slide">
+                    <div class="img-container">
+                      <img
+                        src="./static/images/minor-vid.png"
+                        alt="Portfolio van Minor Visual Interface Design"
+                      />
+                    </div>
+                    <a href="https://k3a101.github.io/Minor-portfolio/">
+                      <div class="position-text">
+                        <p>
+                          Dit is mijn portfolio van alle opdrachten die ik
+                          tijdens de Minor Visual Interface And Design heb
+                          gedaan.
+                        </p>
+                      </div>
+                      <h3>Visual Interface portfolio</h3>
+                    </a>
+                  </article>
+                </div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
             </div>
-        </section>
-
-
-
+          </div>
+        </div>
+      </section>
     </main>
     <footer id="bottom">
-        <p class="copyright">KEA</p>
+      <p class="copyright">KEA</p>
     </footer>
 
-
-    <script src="./static/lib/bootstrap/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script
+      src="./static/lib/bootstrap/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./static/lib/swiper/swiper-bundle.min.js"></script>
     <script type="module" src="./static/script/main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,85 +1,76 @@
-@use "./helper/variabele" as *;
-@use "./helper/functions" as *;
+@use "./helper/mixins" as *;
 
-#github-page:has(#user-data:checked) #user {
-    display: block;
-}
-:has(nav ul.show-menu) body {
-    overflow: hidden;
-}
 
-#top {
+header#top {
+    grid-template-columns: auto auto 1fr auto;
+    width: 100%;
+    max-width: 100%;
+    z-index: 160;
+    position: sticky;
+    top: 0;
 
-    h1 {
-            font-size: clamp(2em, 10vw, 5em);
-            text-align: center;
-        }
-    
+
     nav {
-        
-
-        ul {
-            position: absolute;
-            z-index: 1;
-            padding: 4em;
-            width: 100%;
-            height: 100%;
+        &.header-nav {
+            background: var(--secondary);
+            position: fixed;
+            width: 100vw;
             top: 0;
-            transform: translateY(-200%);
-            transition: all ease 0.5s;
-            background: color(primary);
+            left: 0;
+            transform: translateY(0);
+            height: 100%;
+            padding: 10rem;
+            z-index: 150;
 
-            &.show-menu {
-                transform: translateY(0);
-
+            @include respond-to('from-md') {
+                width: 50vw;
             }
-        }
-    }
 
-
-}
-
-
-
-/*Kleur van de tekst glijdt naar rechts naar een ander kleur */
-nav {
-    a {
-        font-size: 4rem;
-            font-weight: bold;
-            margin: .3em 0;
-        background-image: linear-gradient(to right,
-                color(background),
-                color(background) 50%,
-                color(background-variation-1) 50%);
-        background-size: 200% 100%;
-        background-position: -100%;
-        display: inline-block;
-        padding: 5px 0;
-        position: relative;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: all ease-in-out 0.3s;
-        /* color: var(--donker-blauw); */
-
-        &:hover, &:focus-within, &:active    {
-                background-position: 0;
+            @include respond-to('from-lg'){
+                padding: 20rem;
             }
-    }
-}
+
+            .menu {
+                li.nav-links {
+                    width: 100%;
+                    a {
+                        display: block;
+                        font-family: var(--font-heading);
+                        color: var(--text-light);
+                        font-size: 2rem;
+                        padding: 1rem 1.6rem;
+                        width: 100%;
+                        transition: all var(--transition);
+                        transform-origin: left;
 
 
-@media (min-width: 45rem) {
-    #top {
+                        @include respond-to('from-md') {
+                            font-size: 4rem;
+                        }
+                    }
 
-        nav {
+                    &:nth-child(even) {
+                        a {
+                             transform-origin: right; 
+                        }
 
-            ul {
-                background-color: transparent;
-                    background-image:
-                        linear-gradient(180deg,
-                            color(primary) 0 70%,
-                            rgba(0, 0, 0, 0.499) 50%);
+                        &:hover, &:focus {
+                            a {
+                                 transform: rotate(-5deg);
+                            }
+                           
+                        }
+            
+                    }
+
+                    &:hover, &:focus {
+                        a {
+                             transform: rotate(5deg);
+                        }
+                       
+                    }
+
+                }
             }
         }
     }

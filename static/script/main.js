@@ -23,9 +23,8 @@ if (getYear, onRouteChanged) {
     window.addEventListener('haschange', onRouteChanged)
 }
 
-if (menuButton) {
-    menuButton.addEventListener('click', showNavMenu)
-}
+
+menuButton.addEventListener('click', showNavMenu);
 
 
 

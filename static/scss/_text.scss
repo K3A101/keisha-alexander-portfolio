@@ -1,165 +1,73 @@
-@use "./helper/variabele" as *;
-@use "./helper/functions" as *;
-p,
-h1,
-h2,
-a {
-    font-family: $bodytext;
+@use "./helper/mixins" as *;
+
+
+
+
+.button,
+button.button {
+  align-items: center;
+  border: .2rem solid var(--secondary);
+  border-radius: .8rem;
+  box-sizing: border-box;
+  color: var;
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  height: 4.8rem;
+  justify-content: center;
+  line-height: 2.4rem;
+  max-width: 100%;
+  padding: 0 2.5rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  &.primary {
+    background: var(--primary);
+    color: var(--text);
+  }
+
+  &.secondary {
+    background: var(--primary);
+    color: var(--text);
+    
+  }
 }
 
-
-p {
-    font-size: 1.6rem;
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
 }
 
-a {
-    text-decoration: none;
-    cursor: pointer;
+.button-56:hover:after {
+  transform: translate(0, 0);
 }
 
-h1 {
-    font-weight: bold;
-    font-size: 5rem;
-
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 4rem;
+.button-56:hover {
+  outline: 0;
 }
 
-h3 {
-    font-size: 2rem;
-}
-
-.menu-button {
-    font-weight: bold;
-    top: 1rem;
-    left: 1rem;
-    position: absolute;
-    font-size: 1.8rem;
-    z-index: 2;
-    border: none;
-    background-color: color(background-variation-1);
-    color: color(background);
-    padding: .5rem 1rem;
-    transform: perspective(1px) translateZ(0);
-    transition: color 0.3s;
-
-    &::before {
-        content: "";
-        transition: 0.5s all ease;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        background-color: color(primary);
-        transform: scaleX(0);
-        -webkit-transform-origin: 0 50%;
-        transform-origin: 0 50%;
-        transition: 0.3s transform ease-out;
-        -webkit-transition: 0.3s transform ease-out;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-        color: color(background-variation-1);
-
-        &::before {
-            -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-        }
-    }
-}
-
-.button {
-    display: inline-block;
-    background-color: color(background-variation-1);
-    color: color(text-light);
-    padding: 1em 1.5em;
-    width: fit-content;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    transition: color 0.3s;
-    font-size: 1.6rem;
-
-
-    &::before {
-        content: "";
-        transition: 0.5s all ease;
-        position: absolute;
-        inset: 0;
-        z-index: -1;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transform-origin: 0 50%;
-        transform-origin: 0 50%;
-        transition: 0.3s transform ease-out;
-        -webkit-transition: 0.3s transform ease-out;
-    }
-
-    &.icon {
-        display: inline-block;
-        text-align: left;
-        color: color(text-light);
-        // margin: 0;
-        margin-right: .2rem;
-
-
-    }
-
-    &.primary {
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: color(text);
-
-            &::before {
-                -webkit-transform: scaleX(1);
-                transform: scaleX(1);
-            }
-
-            .icon {
-
-
-                color: text;
-
-
-            }
-
-        }
-
-        &::before {
-
-            background-color: color(background);
-
-        }
-
-
-
-
-    }
-
-    &.secondary {
-
-        &:hover,
-        &:focus,
-        &:active {
-            color: color(text);
-
-            &::before {
-                -webkit-transform: scaleX(1);
-                transform: scaleX(1);
-            }
-        }
-
-        &::before {
-
-            background-color: color(primary);
-
-        }
-
-    }
-
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
 }
