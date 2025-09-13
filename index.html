@@ -22,9 +22,9 @@
 
   <body id="home">
     <a class="skiplink" href="#main">Ga naar hoofdinhoud</a>
-   
+
     <header id="top">
-      <nav class="header-nav">
+      <nav class="header-nav tear-left">
         <ul class="menu">
           <li class="nav-links"><a href="/">Portfolio</a></li>
           <li class="nav-links"><a href="./index.html">Home</a></li>
@@ -33,8 +33,22 @@
         </ul>
 
         <ul class="utilities">
-          
+          <li class="icon">
+            <a href="#">
+              <svg width="50" height="50">
+                <use href="./static/svg/general.svg#linkedin"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="icon">
+            <a href="#">
+              <svg width="50" height="50">
+                <use href="./static/svg/general.svg#github"></use>
+              </svg>
+            </a>
+          </li>
         </ul>
+        <div class="menu-overlay"></div>
       </nav>
 
       <div class="menu-button">
@@ -46,40 +60,47 @@
     </header>
 
     <main id="main">
-      <section id="hero">
-        <div class="container">
-          <div class="row">
-            <article>
-              <img
-                src="./static/images/user-profile.svg"
-                alt="gebruikers foto"
-              />
-              <div>
-                <h2 class="name">Ik ben Keïsha Alexander</h2>
-                <p class="user-description">
-                  Als UI/UX designer en Front-end Developer breng ik mijn passie
-                  voor design en technologie samen.
-                </p>
-                <a class="button primary" href="./projecten.html">
-                  <i class="icon fa-brands fa-readme fa-xl"></i>
-                  Projecten
-                </a>
-                <a class="button primary" href="https://github.com/K3A101">
-                  <i class="icon fa-brands fa-square-github fa-xl"></i>
-                  Github
-                </a>
-
-                <a class="button primary" href="./over-mij.html">
-                  <i class="icon fa-solid fa-user fa-xl"></i>
-                  Over mezelf
-                </a>
+        <div class="layout-grid">
+          <section id="hero" class="full-width">
+        <div class="hero-background">
+          <div class="color"></div>
+          <div class="hero-content">
+            <article class="layout-grid">
+              <picture class="profile"
+                ><img
+                  src="./static/images/user-profile.svg"
+                  alt="gebruikers foto"
+                 
+              /></picture>
+              <div class="content">
+                <h1 id="hero-title">Keisha Alexander</h1>
+                <p class="hero-description"> Als UI/UX designer en Front-end Developer breng ik mijn passie
+                  voor design en technologie samen.</p>
+                  <nav class="button-container">
+                      <a class="" href="./projecten.html">
+                          <i class="icon fa-brands fa-readme fa-xl"></i>
+                          Projecten
+                        </a>
+                        <a class="" href="https://github.com/K3A101">
+                          <i class="icon fa-brands fa-square-github fa-xl"></i>
+                          Github
+                        </a>
+                        <a class="" href="./over-mij.html">
+                          <i class="icon fa-solid fa-user fa-xl"></i>
+                          Over mezelf
+                        </a> 
+                  </nav>
+  
               </div>
             </article>
           </div>
         </div>
 
+
         <!-- Gegevens van mijn github profiel -->
-      </section>
+      </section>  
+        </div>
+      
       <small class="quote"> Ik maak digitale en interactieve producten </small>
 
       <!-- Section 2 -->

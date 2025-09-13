@@ -8,7 +8,7 @@ header#top {
     z-index: 160;
     position: sticky;
     top: 0;
-
+    padding: var(--gap-sm-md);
 
     nav {
         &.header-nav {
@@ -17,11 +17,14 @@ header#top {
             width: 100vw;
             top: 0;
             left: 0;
-            transform: translateY(0);
             height: 100%;
             padding: 10rem;
-            z-index: 150;
-
+            transform: translateX(-100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: cubic-bezier(0.165, 0.84, 0.44, 1) transform 1s;
+        
             @include respond-to('from-md') {
                 width: 50vw;
             }
@@ -43,7 +46,6 @@ header#top {
                         transition: all var(--transition);
                         transform-origin: left;
 
-
                         @include respond-to('from-md') {
                             font-size: 4rem;
                         }
@@ -56,22 +58,87 @@ header#top {
 
                         &:hover, &:focus {
                             a {
-                                 transform: rotate(-5deg);
+                                 transform: rotate(-2deg);
+
+                                 @include respond-to('from-md') {
+                                    transform: rotate(-5deg);
+
+                                 }
                             }
-                           
                         }
-            
                     }
 
                     &:hover, &:focus {
                         a {
-                             transform: rotate(5deg);
-                        }
-                       
-                    }
+                             transform: rotate(2deg);
 
+                             @include respond-to('from-md') {
+                                transform: rotate(5deg);
+                             }
+                        } 
+                    }
+                }
+            }
+
+            &.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            .menu-overlay {
+                background: var(--overlay);
+                position: absolute;
+                pointer-events: none;
+                opacity: 0;
+                transition: opacity .3s ease;
+                transform: translateX(-150%);
+                top: 0;
+                left: 100%;
+                height: calc(100% + 2px);
+                width: 500%;
+                z-index: -2;
+            }
+
+            &:has(.menu.active) {
+                .menu-overlay {
+                    opacity: 1;
+                    transform: translateX(0);
                 }
             }
         }
+
+        .utilities {
+            display: flex;
+            gap: var(--gap-md);
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            li {
+
+                a {
+                    display: block;
+                    width: fit-content;
+                    height: fit-content;
+                    
+                    svg use {
+                        fill: var(--background);
+                        transition: all 1s ease-in-out;
+                        transform-origin: center;
+                        transform: rotate(0);
+                        } 
+
+                    &:hover, &:focus 
+                        
+                        svg {
+
+                            use {
+                                fill: var(--primary);
+                                transform: rotate(1turn);
+                            }
+                        }
+                    }
+                }  
+            }
+        }
     }
-}
+

@@ -7,20 +7,14 @@ html {
 
 body {
     font-family: var(--bodytext);
-  
-
-    &::-webkit-scrollbar {
-        background: var(--background);
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background: var(--background-variation-1);
-    }
+    color: var(--text);
+    overflow: clip visible;
 }
 
 header#top,
 footer#bottom,
-.content-grid {
+.content-grid,
+.layout-grid {
     --padding-inline: 3rem;
     --content-max-width: 123rem;
     --breakout-max-size: 134rem;
@@ -72,4 +66,53 @@ footer#bottom,
     }
 }
 
-
+// Wave styling
+[class*="no-tear"] {
+    &::before,
+    &::after {
+        content: none;
+    }
+}
+ 
+[class*="tear"] {
+    position: relative;
+    z-index: 10;
+ 
+    &::before {
+        content: '';
+        mask-repeat: no-repeat;
+        pointer-events: none;
+        position: absolute;
+        height: 100vw;
+        mask-size: 100% 100%;
+        top: 0;
+        bottom: 0;
+        background: var(--modal);
+    }
+}
+ 
+[class*="tear-left"] {
+    &::before {
+        aspect-ratio: 71.29/1440;
+        mask-image: url(../svg/hero-shape.svg);
+        mask-position: left top;
+        left: calc(100% - 0.1rem);
+        mask-size: cover;
+ 
+    }
+ 
+    &::after {
+        transform: translateX(4rem) translateY(.2rem);
+ 
+    }
+}
+ 
+[class*="tear-right"] {
+    &::before {
+        aspect-ratio: 71.29/1440;
+        mask-image: url(../svg/masks/tear-right.svg);
+        mask-position: right top;
+        right: calc(100% - 0.1rem);
+ 
+    }
+}

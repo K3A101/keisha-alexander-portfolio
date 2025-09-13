@@ -12,8 +12,9 @@
 
 export function showNavMenu(e) {
     const button = e.currentTarget; 
-    const nav = document.querySelector('.menu');
-    nav.classList.toggle('active');
+    const menu = document.querySelector('.menu');
+    const header = document.querySelector('.header-nav');
+    menu.classList.toggle('active');
+    header.classList.toggle('active');
     console.log('Button added class on');
-    
 }

@@ -1,7 +1,25 @@
 @use "./helper/mixins" as *;
 
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--font-heading);
+  color: var(--text);
+}
 
+h1 {
+  font-size: 3rem;
 
+  @include respond-to('from-md') {
+    font-size: 6rem;
+  }
+}
+
+a {
+  color: var(--text);
+
+  &:hover, &:focus {
+    color: var(--primary);
+  }
+}
 
 .button,
 button.button {
@@ -9,7 +27,6 @@ button.button {
   border: .2rem solid var(--secondary);
   border-radius: .8rem;
   box-sizing: border-box;
-  color: var;
   cursor: pointer;
   display: flex;
   font-family: var(--font-body);
@@ -25,6 +42,14 @@ button.button {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  z-index: 1;
+  box-shadow: 11px 9px 0px 0px var(--background-dark);
+  transition: all var(--transition);
+
+
+  @include respond-to('from-md') {
+    padding: 0 4rem;
+  }
 
   &.primary {
     background: var(--primary);
@@ -36,38 +61,12 @@ button.button {
     color: var(--text);
     
   }
-}
 
-.button-56:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
-  display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
-  position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform .2s ease-out;
-  z-index: -1;
-}
 
-.button-56:hover:after {
-  transform: translate(0, 0);
-}
 
-.button-56:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
-.button-56:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
+  &:hover, &:focus {
+    box-shadow: 0 0 0 0 var(--background-dark);
   }
 }
+
+
