@@ -19,3 +19,8 @@ input {
     appearance: none;
     -webkit-appearance: none;
 }
+
+img {
+    block-size: auto;
+    max-inline-size: 100%;
+}

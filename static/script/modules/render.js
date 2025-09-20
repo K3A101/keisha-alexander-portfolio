@@ -1,47 +1,6 @@
 import { userSection } from "./variabele.js";
 
 
-export function displayUserData(user) {
-    let userHTML = ``
-    // if (user != undefined) {
-    //     userHTML = `
-    
-    //       <article>
-    //             <img src="${user.avatar_url}" alt="gebruikers foto">
-    //             <div>
-    //                 <p>Ik ben ${user.name}</p>
-    //                 <p>${user.login}</p>
-    //                 <p>${user.bio}</p>
-    //                 <a href="${user.html_url}">Github</a>
-    //                 <a href="./over-mij.html">Over mezelf</a>
-    //             </div>              
-    //         </article>
-           
-           
-    // `;
-    // } else {
-    //     userHTML = `
-    
-    //       <article>
-    //             <img src="https://avatars.githubusercontent.com/u/90068272?v=4" alt="gebruikers foto">
-    //             <div>
-    //                 <p>Ik ben Keïsha Alexander</p>
-    //                 <p>K3A101</p>
-    //                 <p>k ben een UI/UX designer en een Frontend Developer. Momenteel studeer ik Communication and Multimedia Design bij Hogeschool van Amsterdam</p>
-    //                 <a href="https://github.com/K3A101">Github</a>
-    //                 <a href="./over-mij.html">Over mezelf</a>
-    //             </div>              
-    //         </article>
-           
-           
-    // `;
-    // }
-  
-    // userSection.insertAdjacentHTML('beforeend', userHTML)
-
-}
-
-
 export function displayRepoData(repoName, repoDescription, githubPages, repoLink, programmingLanguage) {
     if (repoName, repoDescription, githubPages, repoLink, programmingLanguage) {
 
@@ -52,7 +11,7 @@ export function displayRepoData(repoName, repoDescription, githubPages, repoLink
                       <ul>
                         <li>${programmingLanguage}</li>
                         <li><a href="${githubPages}">Demo</a></li>
-                        <li><a href="${repoLink}">README</a></li>
+                        <li><a class="button primary" href="${repoLink}">README</a></li>
                      </ul>           
                  </article>
                  `;

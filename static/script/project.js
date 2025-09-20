@@ -1,5 +1,5 @@
 
-    const URL = 'https://opensheet.elk.sh/1fH02oItqR9vj_-rTEA4Fj8L2UYaFXMnZiEkLn9VpsJQ/sheet1'
+    const URL = 'https://opensheet.elk.sh/1akGZ5OVoG3OMe2Eha_Zui9NQU2sH2yPIT0-EwH5pZmY/projecten'
     const nextButton = document.getElementById('next');
     const prevButton = document.getElementById('previous');
     const sectionImg = document.querySelectorAll(' main div.sections > img');

@@ -1,6 +1,5 @@
-import { displayRepoData, displayUserData } from "./render.js";
+import { displayRepoData } from "./render.js";
 import { fetchRepoData } from "./fetch-repo.js";
-import { fetchUserData } from "./fetch-user.js";
 
 export async function onRouteChanged() {
     console.log(window.location.hash);

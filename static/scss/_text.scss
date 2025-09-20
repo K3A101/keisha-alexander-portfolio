@@ -13,6 +13,26 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 2.5rem;
+
+  @include respond-to('from-md') {
+    font-size: 4rem;
+  }
+}
+
+h3 {
+  font-size: 1.8rem;
+
+  @include respond-to('from-md') {
+    font-size: 3rem;
+  }
+}
+
+.h4,h4 {
+  font-size: 1.8rem;
+}
+
 a {
   color: var(--text);
 
@@ -48,7 +68,17 @@ button.button {
 
 
   @include respond-to('from-md') {
+    width: auto;
     padding: 0 4rem;
+  }
+
+  &:has(svg) {
+    gap:1rem;
+
+    svg use {
+      fill: var(--secondary);
+      transition: all var(--transition);
+    }
   }
 
   &.primary {
@@ -57,16 +87,51 @@ button.button {
   }
 
   &.secondary {
-    background: var(--primary);
-    color: var(--text);
-    
+    background: var(--background);
+    box-shadow: 11px 9px 0px 0px var(--primary);
+
+    &:hover, &:focus {
+      box-shadow: 0 0 0 0 var(--primary);
+
+      svg use {
+        fill: var(--primary);
+      }
+    }
   }
 
+  &.tertiary {
+    background: var(--secondary);
+    color: var(--text-light);
+  border: .2rem solid var(--background-light);
 
+
+    box-shadow: 11px 9px 0px 0px var(--primary);
+
+    &:hover, &:focus {
+      box-shadow: 0 0 0 0 var(--primary);
+    }
+  }
 
   &:hover, &:focus {
     box-shadow: 0 0 0 0 var(--background-dark);
   }
 }
 
+main ul,
+main ol,
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
 
+
+.button-container {
+  display: flex;
+  gap: var(--gap-sm);
+  margin-block: var(--gap-sm-md);
+  flex-direction: column;
+
+  @include respond-to('from-md') {
+    flex-direction: row;
+  }
+}

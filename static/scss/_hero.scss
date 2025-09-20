@@ -35,11 +35,43 @@
 
                 .content {
                     padding: var(--gap-md);
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--gap-sm);
 
-                    h1#hero-title {
-                        
+                    .place span:not(.flag) {
+                        color: var(--text-opaque);
+                    }
+
+                    .work {
+                        display: flex;
+                        flex-direction: column;
+                        @include respond-to('from-md') {
+                        flex-direction: row;
+                        }
+
+                        li {
+                            position: relative;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                background: var(--primary);
+                                height: 1rem;
+                                width: 1rem;
+                                border-radius: var(--radius-round);
+                                margin-inline: var(--gap-sm);
+                            }
+                        }
                     }
                 }
+            }
+
+            svg use {
+                fill: var(--secondary);
             }
         }
     }

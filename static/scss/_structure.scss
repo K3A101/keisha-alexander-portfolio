@@ -6,9 +6,10 @@ html {
 }
 
 body {
-    font-family: var(--bodytext);
+    font-family: var(--font-body);
     color: var(--text);
     overflow: clip visible;
+    background: var(--background);
 }
 
 header#top,
@@ -66,6 +67,70 @@ footer#bottom,
     }
 }
 
+main {
+    // P-Y-<SIZE>
+    // P-X-<SIZE>
+        --p-size-s: 2.4rem;
+        --p-size-m: 3rem;
+        --p-size-l: 6rem;
+
+    @include respond-to(from-lg) {
+        --p-size-m: 6rem;
+        --p-size-l: 12rem;
+    }
+
+    // Padding vertical
+    .p-y {
+
+        &-s {
+            padding-block: var(--p-size-s);
+        }
+
+        &-m {
+            padding-block: var(--p-size-m);
+        }
+
+        &-l {
+            padding-block: var(--p-size-l);
+
+			+ .p-y-l:not([class*="background-color"]) {
+				padding-top: 0;
+			}
+        }
+    }
+
+    // Padding horizontal
+    .p-x {
+
+        &-s {
+            padding-inline: 0;
+
+            @include respond-to(from-sm) {
+                padding-inline: var(--p-size-s);
+            }
+        }
+
+        &-m {
+            padding-inline: 0;
+
+            @include respond-to(from-sm) {
+                padding-inline: var(--p-size-m);
+            }
+        }
+
+        &-l {
+            padding-inline: 0;
+
+            @include respond-to(from-sm) {
+                padding-inline: var(--p-size-l);
+            }
+        }
+    }
+}
+
+
+
+
 // Wave styling
 [class*="no-tear"] {
     &::before,
@@ -94,7 +159,7 @@ footer#bottom,
 [class*="tear-left"] {
     &::before {
         aspect-ratio: 71.29/1440;
-        mask-image: url(../svg/hero-shape.svg);
+        // mask-image: url(../svg/hero-shape.svg);
         mask-position: left top;
         left: calc(100% - 0.1rem);
         mask-size: cover;
@@ -114,5 +179,126 @@ footer#bottom,
         mask-position: right top;
         right: calc(100% - 0.1rem);
  
+    }
+}
+
+@each $color in $colors {
+  .has-#{$color}-color {
+    color: var(--#{$color});
+  }
+}
+@each $color in $colors {
+  .has-#{$color}-background-color {
+   background: var(--#{$color});
+  }
+}
+
+
+.posts-grid {
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--gap-sm);
+
+   @include respond-to('from-sm') {
+        display: grid;
+        grid-template-columns: 1fr;
+   }
+
+   @include respond-to('from-md') {
+        grid-template-columns: repeat(2, 1fr);
+   }
+
+   @include respond-to('from-lg') {
+    grid-template-columns: repeat(3, 1fr);
+   }
+}
+
+
+.projects-container {
+    padding: var(--gap-lg);
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        background: var(--background-light);
+        border-radius: 1rem;
+        height: 100%;
+
+        picture {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem 1rem  0 0;
+            background: var(--primary);
+            aspect-ratio: 550 / 450;
+            img {
+                aspect-ratio: 550 / 450;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 100%;
+
+          a {
+             padding: var(--gap-md);
+            display: inline-flex;
+            flex-direction: column;
+            gap: var(--gap-sm);
+            height: 100%;
+
+            .button {
+                margin-top: auto;
+            }
+          }
+        }
+    }
+}
+
+// Title and button container
+.block-title-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: var(--gap-lg);
+
+    @include respond-to('from-md') {
+       flex-direction: row;
+       align-items: center;
+    }
+}
+
+
+.tags {
+    padding: var(--gap-lg);
+
+    h2 {
+      margin-left: var(--gap-md);  
+    }
+
+    .tag-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gap-sm);
+        padding: var(--gap-md);
+
+
+        li {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .1rem solid var(--border);
+            border-radius: .5rem;
+            text-align: center;
+            height: 4.8rem;
+            justify-content: center;
+            line-height: 2.4rem;
+            max-width: 100%;
+            padding: 0 2.5rem;
+        }
     }
 }

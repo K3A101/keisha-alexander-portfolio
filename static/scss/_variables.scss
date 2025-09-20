@@ -10,8 +10,10 @@
     --background-variation-4-low-opacity:#e4a7a3c9;
     --background-dark: #111;
     --text: #2e3553;
+    --text-opaque: #2e35538c;
     --text-light: #eff4f5;
     --transition: 0.3s ease;
+    --border: #c8c8c8;
 
     --overlay:#2e35537f;
 
@@ -19,6 +21,8 @@
     --gap-sm-md: 2rem;
     --gap-md:3rem;
     --gap-lg: 6rem;
+
+    --radius-round: 50%;
 
 /* lettertype */
 --font-heading: 'highgate', sans-serif;

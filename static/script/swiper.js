@@ -1,16 +1,14 @@
 
  const swiper = new Swiper('.swiper', {
     // Optional parameters
-    direction: 'horizontal',
-     loop: true,
-     centeredSlides: true,
-     centeredSlidesBounds: true,
-     grabCursor: true,
-     spaceBetween: 15,
-     slidesPerView: 1.5,
-     autoplay: {
-         delay: 5000,
-     },
+    effect: "cube",
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
 
     // If we need pagination
     pagination: {
@@ -26,3 +24,5 @@
     // And if we need scrollbar
     
 });
+
+

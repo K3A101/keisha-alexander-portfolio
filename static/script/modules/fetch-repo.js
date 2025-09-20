@@ -1,4 +1,4 @@
-import { API_URL, username, repoList, TOKEN } from "./variabele.js";
+import { API_URL, username, repoList, TOKEN, README_TOKEN } from "./variabele.js";
 import { displayRepoData, languageColorCode } from "./render.js";
 
 function handleRateLimit(response) {
@@ -13,10 +13,11 @@ function handleRateLimit(response) {
 
 
 export function fetchRepoData() {
-    fetch(`${API_URL}/users/${username}/repos`,
+    fetch(`${API_URL}/users/${encodeURIComponent(username)}/repos`,
         {
             headers: {
-                Authorization: `token ${TOKEN}`
+                Accept: "application/vnd.github+json",
+                Authorization: `Bearer ${TOKEN}`,
             }
         })
         .then((response) => {
@@ -24,17 +25,23 @@ export function fetchRepoData() {
             return response.json();
         })
         .then((repos) => {
+            console.log(repos);
             repos.forEach(repo => {
                 const repoName = repo.name;
                 const repoDescription = repo.description;
                 const githubPages = repo.homepage;
                 const starredRepo = repo.stargazers_count;
                 const programmingLanguage = repo.language;
-                const repoLink = repo.html_url
+                const repoLink = repo.html_url;
                 
                 if (starredRepo != 0) {
-                    const REPO_DOCS_URL = `${API_URL}/repos/${username}/${repoName}/readme`
-                    fetch(REPO_DOCS_URL)
+                    const REPO_DOCS_URL = `${API_URL}/repos/${encodeURIComponent(username)}/${encodeURIComponent(repoName)}/readme`;
+                    fetch(REPO_DOCS_URL,   {
+                        headers: {
+                            Accept: "application/vnd.github+json",
+                            Authorization: `Bearer ${README_TOKEN}`,
+                        }
+                    })
                         .then((response) => response.json())
                         .then((readmes) => {
                             const readmePage = readmes.html_url;
