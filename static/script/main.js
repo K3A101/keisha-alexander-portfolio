@@ -9,15 +9,6 @@ import { animate, scroll, inView } from "https://cdn.jsdelivr.net/npm/motion@lat
 // functies die de data fetchen
 // feature detection
 
-if (fetchRepoData) {
- fetchRepoData()
-}
-
-// if (getYear, onRouteChanged) {
-
-//    window.addEventListener('load', getYear);
-//    window.addEventListener('haschange', onRouteChanged)
-// }
 
 if (menuButton) {
     menuButton.addEventListener('click', showNavMenu);

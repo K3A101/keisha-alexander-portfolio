@@ -24,6 +24,7 @@ header#top {
             flex-direction: column;
             justify-content: space-between;
             transition: cubic-bezier(0.165, 0.84, 0.44, 1) transform 1s;
+            z-index: 1;
         
             @include respond-to('from-md') {
                 width: 50vw;
