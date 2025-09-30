@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/yeu8cmi.css" />
     <link rel="stylesheet" href="./static/lib/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./static/css/style.css" />
+    <link rel="stylesheet" href="./static/css/partials/slider.css" />
     <script defer src="./static/script/swiper.js"></script>
     <title>Portfolio</title>
   </head>
@@ -153,13 +154,6 @@
             </ul>
           </div>
         </section>
-
-        <!-- <section class="columns-wrapper">
-          <div class="columns">
-            <article class="col-1"></article>
-            <article class="col-2"></article>
-          </div>
-        </section> -->
 
         <section class="projects-container full-width">
           <div class="block-title-container">
@@ -347,101 +341,82 @@
             </div>
           </div>
         </section>
+
+        <section class="portfolio-carrousel">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide columns wider-col">
+                <picture class="img-container col-1">
+                  <img
+                    src="./static/images/jaar-1.png"
+                    alt="Portfolio van mijn propedeuse jaar"
+                  />
+                </picture>
+                <article class="content col-2">
+                  <h3>Jaar 1: portfolio</h3>
+                  <p>Dit is mijn portfolio gemaakt in mijn propedeuse</p>
+                  <a class="button primary" href="https://k3a101.github.io/freshman-portfolio/">
+                   <span>Bekijk portfolio</span>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide columns wider-col">
+                <picture class="img-container col-1">
+                  <img
+                    src="./static/images/jaar-2.png"
+                    alt="Portfolio van mijn tweede studie jaar"
+                  />
+                </picture>
+                <article class="content col-2">
+                  <h3>Jaar 2: Portfolio</h3>
+                  <p>
+                    Dit portfolio is gemaakt in mijn tweede jaar van de
+                    opleiding Communication and Multimedia Design.
+                  </p>
+                  <a class="button primary" href="https://k3a101.github.io/Portfolio/">
+                   <span>Bekijk portfolio</span>
+                  </a>
+                </article>
+              </div>
+              <div class="swiper-slide columns wider-col">
+                <picture class="img-container col-1">
+                  <img
+                    src="./static/images/minor-vid.png"
+                    alt="Portfolio van Minor Visual Interface Design"
+                  />
+                </picture>
+                <article class="content col-2">
+                  <h3>Visual Interface portfolio</h3>
+                  <p>
+                    Dit is mijn portfolio van alle opdrachten die ik
+                    tijdens de Minor Visual Interface And Design heb
+                    gedaan.
+                  </p>
+                  <a class="button primary" href="https://k3a101.github.io/Minor-portfolio/">
+                    <span>Bekijk portfolio</span>
+                  </a>
+                </article>
+              </div>
+              ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+          </div>
+        </section>
       </div>
 
-      <small class="quote"> Ik maak digitale en interactieve producten </small>
+      
 
       <!-- Section 2 -->
 
-      <div class="container">
-        <div class="row">
-          <div class="link-project">
-            <h2>Projecten</h2>
-            <a class="button secondary" href="./projecten.html"
-              >Meer Projecten</a
-            >
-          </div>
-        </div>
-      </div>
-
-      <small class="quote"> Portfolio van voorgaande jaren </small>
-      <section class="carrousel">
-        <div class="container">
-          <div class="row">
-            <div class="swiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <article class="">
-                    <div class="img-container">
-                      <img
-                        src="./static/images/jaar-1.png"
-                        alt="Portfolio van mijn propedeuse jaar"
-                      />
-                    </div>
-                    <a href="https://k3a101.github.io/freshman-portfolio/">
-                      <div class="position-text">
-                        <p>Dit is mijn portfolio gemaakt in mijn propedeuse</p>
-                      </div>
-                      <h3>Jaar 1: portfolio</h3>
-                    </a>
-                  </article>
-                </div>
-                <div class="swiper-slide">
-                  <article>
-                    <div class="img-container">
-                      <img
-                        src="./static/images/jaar-2.png"
-                        alt="Portfolio van mijn tweede studie jaar"
-                      />
-                    </div>
-
-                    <a href="https://k3a101.github.io/Portfolio/">
-                      <div class="position-text">
-                        <p>
-                          Dit portfolio is gemaakt in mijn tweede jaar van de
-                          opleiding Communication and Multimedia Design.
-                        </p>
-                      </div>
-                      <h3>Jaar 2: Portfolio</h3>
-                    </a>
-                  </article>
-                </div>
-                <div class="swiper-slide">
-                  <article class="slide">
-                    <div class="img-container">
-                      <img
-                        src="./static/images/minor-vid.png"
-                        alt="Portfolio van Minor Visual Interface Design"
-                      />
-                    </div>
-                    <a href="https://k3a101.github.io/Minor-portfolio/">
-                      <div class="position-text">
-                        <p>
-                          Dit is mijn portfolio van alle opdrachten die ik
-                          tijdens de Minor Visual Interface And Design heb
-                          gedaan.
-                        </p>
-                      </div>
-                      <h3>Visual Interface portfolio</h3>
-                    </a>
-                  </article>
-                </div>
-                ...
-              </div>
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
-
-              <!-- If we need scrollbar -->
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer id="bottom">
       <p class="copyright">KEA</p>

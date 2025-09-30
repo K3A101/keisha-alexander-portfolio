@@ -321,6 +321,17 @@ main {
     .col-2 {
         flex: 1;
     }
+
+    &.wider-col {
+        
+        .col-1 {
+            flex: 2;
+        }
+
+        .col-2 {
+            flex: 1;
+        }
+    }
 }
 
 .square {
