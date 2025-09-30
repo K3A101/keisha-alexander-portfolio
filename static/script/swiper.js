@@ -1,14 +1,8 @@
 
  const swiper = new Swiper('.swiper', {
     // Optional parameters
-    effect: "cube",
-    grabCursor: true,
-    cubeEffect: {
-      shadow: true,
-      slideShadows: true,
-      shadowOffset: 20,
-      shadowScale: 0.94,
-    },
+    direction: 'horizontal',
+    loop: true,
 
     // If we need pagination
     pagination: {

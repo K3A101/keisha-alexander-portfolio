@@ -102,10 +102,28 @@ button.button {
   &.tertiary {
     background: var(--secondary);
     color: var(--text-light);
-  border: .2rem solid var(--background-light);
+    border: .2rem solid var(--background-light);
 
 
     box-shadow: 11px 9px 0px 0px var(--primary);
+
+    &:hover, &:focus {
+      box-shadow: 0 0 0 0 var(--primary);
+    }
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0 0 0 0 var(--background-dark);
+  }
+  &.quaternary {
+    background: var(--secondary);
+    color: var(--text-light);
+    border: .2rem solid var(--tertiary);
+    box-shadow: 11px 9px 0px 0px var(--tertiary);
+
+    svg use {
+      fill: var(--background-light);
+    }
 
     &:hover, &:focus {
       box-shadow: 0 0 0 0 var(--primary);
