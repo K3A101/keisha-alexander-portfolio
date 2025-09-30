@@ -1,6 +1,6 @@
 // Variabele
 import { fetchRepoData } from "./modules/fetch-repo.js";
-import { menuButton } from "./modules/variabele.js";
+import { menuButton, postsGrid } from "./modules/variabele.js";
 import { showNavMenu } from "./modules//nav.js";
 import { onRouteChanged } from "./modules/routing.js";
 import { animate, scroll, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
@@ -29,7 +29,7 @@ inView("#hero .content", (element) => {
 })
 
 
-inView(".posts-grid", (element) => {
+inView(postsGrid , (element) => {
     animate(
         element,
         { opacity: 1, y: [100, 0] },
@@ -40,5 +40,5 @@ inView(".posts-grid", (element) => {
     )
 
     return () => animate(element, { opacity: 0})
-})
+} )
 

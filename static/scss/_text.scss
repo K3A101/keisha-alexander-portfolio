@@ -21,7 +21,7 @@ h2 {
   }
 }
 
-h3 {
+h3, .h3 {
   font-size: 1.8rem;
 
   @include respond-to('from-md') {
@@ -121,9 +121,8 @@ main ul,
 main ol,
 p {
   font-size: 1.6rem;
-  line-height: 1.4;
+  line-height: 1.8;
 }
-
 
 .button-container {
   display: flex;
@@ -134,4 +133,8 @@ p {
   @include respond-to('from-md') {
     flex-direction: row;
   }
+}
+
+.justify-text {
+  text-align: justify;
 }
