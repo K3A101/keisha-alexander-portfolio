@@ -343,8 +343,9 @@
         </section>
 
         <section class="portfolio-carrousel">
-          <div class="swiper">
-            <!-- Additional required wrapper -->
+          <div class="inner">
+            <div class="swiper">
+     
             <div class="swiper-wrapper">
               <!-- Slides -->
               <div class="swiper-slide columns wider-col">
@@ -399,17 +400,18 @@
                   </a>
                 </article>
               </div>
-              ...
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+            
+            <nav class="slider-pagination">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-next"></div>
+            </nav>
+            
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-
-            <!-- If we need scrollbar -->
           </div>
+          </div>
+          
         </section>
       </div>
 
@@ -419,7 +421,11 @@
 
     </main>
     <footer id="bottom">
-      <p class="copyright">KEA</p>
+     <div class="footer-cols">
+      <div class="footer-col">
+        <img src="" alt="Portfolio logo">
+      </div>
+     </div>
     </footer>
 
     <script src="./static/lib/swiper/swiper-bundle.min.js"></script>
