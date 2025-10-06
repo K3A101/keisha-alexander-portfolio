@@ -361,3 +361,63 @@ main {
         }
     }
 }
+
+footer#bottom {
+    background: var(--secondary);
+    padding-block: 5rem 0;
+    margin-top: 5rem;
+    color: var(--text-light);
+
+    .footer-cols {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+
+        @include respond-to('from-md') {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .footer-col {
+            .footer-heading {
+                color: var(--primary);
+            }
+
+            p {
+                width: 30rem;
+                margin-block: 1.5rem;
+            }
+
+            .footer-menu {
+                padding: 0;
+                margin: 0;
+
+                li {
+                    a {
+                        display: inline-block;
+                        color: var(--text-light);
+                        font-size: 2rem;
+                        padding: 1.5rem 0;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright{
+        margin-top: 5rem;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+
+            li {
+                A {
+                
+                }
+            }
+        }
+        
+    }
+}
