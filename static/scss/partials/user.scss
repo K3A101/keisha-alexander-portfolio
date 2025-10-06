@@ -68,3 +68,29 @@ body.user {
       align-items: center;
    }
 }
+
+.scroll {
+   overflow: scroll;
+   scroll-behavior: smooth;
+   scroll-snap-type: y mandatory;
+   
+   .scroller {
+      scroll-snap-align: center;
+   }
+}
+
+.scroller {
+   container-type: scroll-state;
+   container-name: fade-ib;
+   transition: all ease-in-out .6s;
+   
+   .columns {
+      background: var(--background);
+   }
+}
+
+@container fade-in scroll-state(snapped: y) {
+   .columns {
+      background: #007aff;
+   }
+}

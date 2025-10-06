@@ -1,5 +1,6 @@
 @use "./helper/mixins" as *;
 
+//noinspection CssInvalidPropertyValue
 html {
     font-size: 62.5%; // Set default px to 10px, so 16px is 1.6rem
     scroll-behavior: smooth;
