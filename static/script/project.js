@@ -15,8 +15,6 @@
         .then(response => response.json())
         .then(data => {
             displayProjectData(data)
-            
-            
         })
     }
      
@@ -25,31 +23,30 @@
         let html = '';
         data.forEach(project => {
             html += `
-            <div class="sections">
-            <section class="project-header">
-            <article>
+            <div class="project columns">
+            <section class="project-header col-1">
+            <article class="tags">
             <h1>${project.name} </h1>
             <h2 class="subtitle">${project.short_description} </h2>
-            <ul class="skills">
-            <li>${project.skill_1}</li>
-            <li>${project.skill_2}</li>
-            <li>${project.skill_3}</li>
+            <ul class="skills tag-list">
+                <li>${project.skill_1}</li>
+                <li>${project.skill_2}</li>
+                <li>${project.skill_3}</li>
             </ul>
-            </article>
-            
-            <img class="${project.custom_class}" src="${project.projectImg}" alt="Schets van mijn poster">
+            <img class="${project.custom_class}" src="${project.projectImg}" width="600" height="600" alt="Schets van mijn poster">
+                    </article>
             </section>
             
-            <section class="project-description">
+            <section class="project-description col-2">
             <article>
-            <h2>De opdracht </h2>
-            <p>${project.description}</p>
-            
-            
-            <div class="project-info">
-            <a class="button secondary" href="${project.prototype_link}">Live Demo</a>
-            <a class="button secondary" href="${project.readme_link}">Readme</a>
-            </div>
+                    <h2>De opdracht </h2>
+                    <p>${project.description}</p>
+                    
+                    
+                    <div class="project-info button-container">
+                    <a class="button secondary" href="${project.prototype_link}">Live Demo</a>
+                    <a class="button secondary" href="${project.readme_link}">Readme</a>
+                    </div>
                 
                 </article>
                 
@@ -59,7 +56,7 @@
                 `
             })
             main.insertAdjacentHTML('beforeend', html);
-            const sections = document.querySelectorAll(' main div.sections');
+            const sections = document.querySelectorAll(' main div.project');
             
             console.log('section list',sections);  
           

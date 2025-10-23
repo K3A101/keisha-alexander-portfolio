@@ -9,6 +9,8 @@ header#top {
     position: sticky;
     top: 0;
     padding: var(--gap-sm-md);
+    background: var(--primary);
+    transition: background-color .3s ease-in-out;
 
     nav {
         &.header-nav {
@@ -140,6 +142,10 @@ header#top {
                     }
                 }  
             }
+        }
+
+        &.scrolled {
+            background: rgba( 0 0 0/0);
         }
     }
 

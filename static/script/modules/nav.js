@@ -1,20 +1,27 @@
-/**
- * Name:    Responsive Navigation JS
- * Author:  Niels Lust - Go2People Websites
- * Author   URI: http://go2people-websites.nl/
- * License: GNU General Public License v2 or later
- * License  URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Version: 3.0.0
- */
-
-
+import { menu, header, top } from "./variabele.js";
 
 
 export function showNavMenu(e) {
-    const button = e.currentTarget; 
-    const menu = document.querySelector('.menu');
-    const header = document.querySelector('.header-nav');
+    e.stopPropagation();
     menu.classList.toggle('active');
     header.classList.toggle('active');
-    console.log('Button added class on');
+}
+
+export function closeNavMenuOutside(e) {
+    const isClickInsideNav = e.target.closest('.header-nav');
+    const isClickOnMenuButton = e.target.closest('.menu-button');
+
+    if (!isClickInsideNav && !isClickOnMenuButton && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+        header.classList.remove('active');
+    }
+}
+
+export function changeHeaderOnScroll() {
+
+    if (window.scrollY > 50) { // Adjust this value based on when you want the color to change
+        top.classList.add('scrolled');
+    } else {
+        top.classList.remove('scrolled');
+    }
 }

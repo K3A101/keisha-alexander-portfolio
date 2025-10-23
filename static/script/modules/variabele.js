@@ -10,3 +10,6 @@ export const menuButton = document.querySelector('body  .menu-button');
 export const postsGrid = document.querySelector('.projects-container .posts-grid')
 export const TOKEN="secret goes here";
 export const README_TOKEN="secret goes here";
+export const menu = document.querySelector('.menu');
+export const header = document.querySelector('.header-nav');
+export const top = document.querySelector('header#top');
