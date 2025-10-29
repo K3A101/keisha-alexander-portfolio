@@ -135,6 +135,26 @@ button.button {
   }
 }
 
+
+.dark-mode {
+  .button,
+  button.button {
+    color: var(--text-light);
+
+    &.secondary {
+      color: var(--text);
+    }
+
+    &.tertiary {
+      color: var(--text);
+    }
+    
+    &.quaternary {
+      color: var(--text);
+    }
+}
+}
+
 main ul,
 main ol,
 p {
