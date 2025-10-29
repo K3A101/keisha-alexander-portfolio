@@ -41,6 +41,11 @@ body.user {
       }
    }
 }
+.description {
+   .col-1 {
+      flex-direction: column;
+   }
+}
 
 .location {
 
